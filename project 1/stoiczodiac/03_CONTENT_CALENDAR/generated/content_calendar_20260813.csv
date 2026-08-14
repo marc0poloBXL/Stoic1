@@ -1,0 +1,31 @@
+Day,Date,WeekDay,Week,Sign,Symbol,Element,Philosopher,Theme,DailyPost,Reel,Carousel,Story,Status
+1,2026-08-17,Monday,Week 1,Aries,♈,Fire,Marcus Aurelius,Channeling impulse into purpose,♈ Aries - Marcus Aurelius,Quote Narration,No,Yes - Daily Prompt,PENDING
+2,2026-08-18,Tuesday,Week 1,Taurus,♉,Earth,Seneca,Letting go of attachment,♉ Taurus - Seneca,No,Yes - Sign Spotlight,Yes - Daily Prompt,PENDING
+3,2026-08-19,Wednesday,Week 1,Gemini,♊,Air,Epictetus,Mastery of the inner dialogue,♊ Gemini - Epictetus,Rapid Wisdom,No,Yes - Daily Prompt,PENDING
+4,2026-08-20,Thursday,Week 1,Cancer,♋,Water,Marcus Aurelius,Strength through vulnerability,♋ Cancer - Marcus Aurelius,No,No,Yes - Daily Prompt,PENDING
+5,2026-08-21,Friday,Week 1,Leo,♌,Fire,Seneca,Humility within greatness,♌ Leo - Seneca,Quote Narration,Yes - Sign Spotlight,Yes - Daily Prompt,PENDING
+6,2026-08-22,Saturday,Week 1,Virgo,♍,Earth,Epictetus,Perfection in imperfection,♍ Virgo - Epictetus,No,No,Yes - Daily Prompt,PENDING
+7,2026-08-23,Sunday,Week 1,Libra,♎,Air,Marcus Aurelius,Justice as inner harmony,♎ Libra - Marcus Aurelius,No,Yes - Weekly Forecast,Yes - Daily Prompt,PENDING
+8,2026-08-24,Monday,Week 2,Scorpio,♏,Water,Seneca,Transformation through adversity,♏ Scorpio - Seneca,Philosopher Speaks,No,Yes - Daily Prompt,PENDING
+9,2026-08-25,Tuesday,Week 2,Sagittarius,♐,Fire,Epictetus,Freedom through discipline,♐ Sagittarius - Epictetus,No,Yes - Sign Spotlight,Yes - Daily Prompt,PENDING
+10,2026-08-26,Wednesday,Week 2,Capricorn,♑,Earth,Marcus Aurelius,Ambition aligned with virtue,♑ Capricorn - Marcus Aurelius,Sign Comparison,No,Yes - Daily Prompt,PENDING
+11,2026-08-27,Thursday,Week 2,Aquarius,♒,Air,Seneca,Individuality within the whole,♒ Aquarius - Seneca,No,No,Yes - Daily Prompt,PENDING
+12,2026-08-28,Friday,Week 2,Pisces,♓,Water,Epictetus,Boundaries of the compassionate soul,♓ Pisces - Epictetus,Philosopher Speaks,Yes - Sign Spotlight,Yes - Daily Prompt,PENDING
+13,2026-08-29,Saturday,Week 2,Aries,♈,Fire,Seneca,Restraint as strength,♈ Aries - Seneca,No,No,Yes - Daily Prompt,PENDING
+14,2026-08-30,Sunday,Week 2,Taurus,♉,Earth,Marcus Aurelius,Change is the only constant,♉ Taurus - Marcus Aurelius,No,Yes - Weekly Forecast,Yes - Daily Prompt,PENDING
+15,2026-08-31,Monday,Week 3,Gemini,♊,Air,Zeno,The art of listening,♊ Gemini - Zeno,Rapid Wisdom,No,Yes - Daily Prompt,PENDING
+16,2026-09-01,Tuesday,Week 3,Cancer,♋,Water,Epictetus,What is and isn't yours to carry,♋ Cancer - Epictetus,No,Yes - Sign Spotlight,Yes - Daily Prompt,PENDING
+17,2026-09-02,Wednesday,Week 3,Leo,♌,Fire,Marcus Aurelius,Service over spectacle,♌ Leo - Marcus Aurelius,Quote Narration,No,Yes - Daily Prompt,PENDING
+18,2026-09-03,Thursday,Week 3,Virgo,♍,Earth,Seneca,"Progress, not perfection",♍ Virgo - Seneca,No,No,Yes - Daily Prompt,PENDING
+19,2026-09-04,Friday,Week 3,Libra,♎,Air,Epictetus,The peace of right action,♎ Libra - Epictetus,Rapid Wisdom,Yes - Sign Spotlight,Yes - Daily Prompt,PENDING
+20,2026-09-05,Saturday,Week 3,Scorpio,♏,Water,Marcus Aurelius,The obstacle is the way,♏ Scorpio - Marcus Aurelius,No,No,Yes - Daily Prompt,PENDING
+21,2026-09-06,Sunday,Week 3,Sagittarius,♐,Fire,Seneca,The disciplined adventurer,♐ Sagittarius - Seneca,No,Yes - Weekly Forecast,Yes - Daily Prompt,PENDING
+22,2026-09-07,Monday,Week 4,Capricorn,♑,Earth,Epictetus,The weight of responsibility,♑ Capricorn - Epictetus,Sign Comparison,No,Yes - Daily Prompt,PENDING
+23,2026-09-08,Tuesday,Week 4,Aquarius,♒,Air,Marcus Aurelius,The common good,♒ Aquarius - Marcus Aurelius,No,Yes - Sign Spotlight,Yes - Daily Prompt,PENDING
+24,2026-09-09,Wednesday,Week 4,Pisces,♓,Water,Seneca,The courage to let go,♓ Pisces - Seneca,Philosopher Speaks,No,Yes - Daily Prompt,PENDING
+25,2026-09-10,Thursday,Week 4,Aries,♈,Fire,Epictetus,Choosing your battles,♈ Aries - Epictetus,No,No,Yes - Daily Prompt,PENDING
+26,2026-09-11,Friday,Week 4,Taurus,♉,Earth,Zeno,Nature's rhythm,♉ Taurus - Zeno,Sign Comparison,Yes - Sign Spotlight,Yes - Daily Prompt,PENDING
+27,2026-09-12,Saturday,Week 4,Gemini,♊,Air,Marcus Aurelius,The power of stillness,♊ Gemini - Marcus Aurelius,No,No,Yes - Daily Prompt,PENDING
+28,2026-09-13,Sunday,Week 4,Cancer,♋,Water,Seneca,Resilience of the heart,♋ Cancer - Seneca,No,Yes - Weekly Forecast,Yes - Daily Prompt,PENDING
+29,2026-09-14,Monday,Week 5,Leo,♌,Fire,Epictetus,True worth,♌ Leo - Epictetus,Quote Narration,No,Yes - Daily Prompt,PENDING
+30,2026-09-15,Tuesday,Week 5,Libra,♎,Air,Marcus Aurelius,Balance within chaos,♎ Libra - Marcus Aurelius,No,Yes - Sign Spotlight,Yes - Daily Prompt,PENDING

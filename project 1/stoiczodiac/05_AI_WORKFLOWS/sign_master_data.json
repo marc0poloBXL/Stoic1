@@ -1,0 +1,202 @@
+{
+  "description": "Single source of truth for all sign data across the Stoic Wisdom × Zodiac Signs project.",
+  "last_updated": "2026-08-13",
+  "signs": [
+    {
+      "id": "aries",
+      "name": "Aries",
+      "symbol": "♈",
+      "element": "Fire",
+      "color": "#E63946",
+      "philosopher": "Marcus Aurelius",
+      "philosopher_reason": "Warrior-emperor, action-oriented",
+      "stoic_archetype": "The Warrior",
+      "leonardo_prompt": "Marble ram statue, firelight glow, dramatic shadows, cinematic"
+    },
+    {
+      "id": "taurus",
+      "name": "Taurus",
+      "symbol": "♉",
+      "element": "Earth",
+      "color": "#2A9D8F",
+      "philosopher": "Seneca",
+      "philosopher_reason": "Teacher of letting go, wealth and simplicity",
+      "stoic_archetype": "The Steadfast",
+      "leonardo_prompt": "Marble bull statue, earthy tones, moss accents, ancient"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "symbol": "♊",
+      "element": "Air",
+      "color": "#E9C46A",
+      "philosopher": "Epictetus",
+      "philosopher_reason": "Brilliant logician, master of inner dialogue",
+      "stoic_archetype": "The Thinker",
+      "leonardo_prompt": "Dual marble bust, split lighting, mirror effect, symmetrical"
+    },
+    {
+      "id": "cancer",
+      "name": "Cancer",
+      "symbol": "♋",
+      "element": "Water",
+      "color": "#A8DADC",
+      "philosopher": "Marcus Aurelius",
+      "philosopher_reason": "Emperor who wrote about compassion and resilience",
+      "stoic_archetype": "The Protector",
+      "leonardo_prompt": "Moonlit marble crab, ocean mist, silver highlights, ethereal"
+    },
+    {
+      "id": "leo",
+      "name": "Leo",
+      "symbol": "♌",
+      "element": "Fire",
+      "color": "#F4A261",
+      "philosopher": "Seneca",
+      "philosopher_reason": "Powerful advisor, eloquent, wise",
+      "stoic_archetype": "The Radiant",
+      "leonardo_prompt": "Marble lion statue, golden hour light, majestic, royal"
+    },
+    {
+      "id": "virgo",
+      "name": "Virgo",
+      "symbol": "♍",
+      "element": "Earth",
+      "color": "#8D6E63",
+      "philosopher": "Epictetus",
+      "philosopher_reason": "Discipline, precision, clarity",
+      "stoic_archetype": "The Precise",
+      "leonardo_prompt": "Marble maiden statue, wheat fields, soft light, pure"
+    },
+    {
+      "id": "libra",
+      "name": "Libra",
+      "symbol": "♎",
+      "element": "Air",
+      "color": "#457B9D",
+      "philosopher": "Marcus Aurelius",
+      "philosopher_reason": "Justice, balance, inner harmony",
+      "stoic_archetype": "The Harmonizer",
+      "leonardo_prompt": "Marble scales, balanced light, harmony, gold accents"
+    },
+    {
+      "id": "scorpio",
+      "name": "Scorpio",
+      "symbol": "♏",
+      "element": "Water",
+      "color": "#6C3483",
+      "philosopher": "Seneca",
+      "philosopher_reason": "Writer on adversity, transformation, and mortality",
+      "stoic_archetype": "The Transformer",
+      "leonardo_prompt": "Marble scorpion, deep purple shadows, intense, dramatic"
+    },
+    {
+      "id": "sagittarius",
+      "name": "Sagittarius",
+      "symbol": "♐",
+      "element": "Fire",
+      "color": "#1D3557",
+      "philosopher": "Epictetus",
+      "philosopher_reason": "Philosopher of freedom through discipline",
+      "stoic_archetype": "The Seeker",
+      "leonardo_prompt": "Marble archer, celestial arrows, starry background, dynamic"
+    },
+    {
+      "id": "capricorn",
+      "name": "Capricorn",
+      "symbol": "♑",
+      "element": "Earth",
+      "color": "#1B4332",
+      "philosopher": "Marcus Aurelius",
+      "philosopher_reason": "Emperor who wrote on duty, ambition, and virtue",
+      "stoic_archetype": "The Builder",
+      "leonardo_prompt": "Marble sea-goat, mountain peaks, ancient, weathered"
+    },
+    {
+      "id": "aquarius",
+      "name": "Aquarius",
+      "symbol": "♒",
+      "element": "Air",
+      "color": "#00B4D8",
+      "philosopher": "Seneca",
+      "philosopher_reason": "Big-picture thinker, humanitarian, cosmic perspective",
+      "stoic_archetype": "The Visionary",
+      "leonardo_prompt": "Marble water bearer, flowing light, electric blue, visionary"
+    },
+    {
+      "id": "pisces",
+      "name": "Pisces",
+      "symbol": "♓",
+      "element": "Water",
+      "color": "#80CED7",
+      "philosopher": "Epictetus",
+      "philosopher_reason": "Teacher of compassion, boundaries, and acceptance",
+      "stoic_archetype": "The Dreamer",
+      "leonardo_prompt": "Marble fish, ocean depths, bioluminescent, dreamy"
+    }
+  ],
+  "philosophers": [
+    {
+      "name": "Marcus Aurelius",
+      "era": "121–180 AD",
+      "known_for": "Meditations, Stoic emperor",
+      "stoic_role": "Practitioner of Stoic virtue in power"
+    },
+    {
+      "name": "Seneca",
+      "era": "4 BC–65 AD",
+      "known_for": "Letters from a Stoic, tragedies",
+      "stoic_role": "Teacher of virtue and detachment"
+    },
+    {
+      "name": "Epictetus",
+      "era": "50–135 AD",
+      "known_for": "Discourses, Enchiridion",
+      "stoic_role": "Philosopher of inner freedom and discipline"
+    },
+    {
+      "name": "Zeno",
+      "era": "334–262 BC",
+      "known_for": "Founder of Stoicism",
+      "stoic_role": "Founder, grounded, enduring"
+    },
+    {
+      "name": "Musonius Rufus",
+      "era": "25–80 AD",
+      "known_for": "Lectures, Roman Socrates",
+      "stoic_role": "Teacher of compassion and practical ethics"
+    }
+  ],
+  "30_day_rotation": [
+    { "day": 1, "sign_id": "aries", "philosopher": "Marcus Aurelius", "theme": "Channeling impulse into purpose" },
+    { "day": 2, "sign_id": "taurus", "philosopher": "Seneca", "theme": "Letting go of attachment" },
+    { "day": 3, "sign_id": "gemini", "philosopher": "Epictetus", "theme": "Mastery of the inner dialogue" },
+    { "day": 4, "sign_id": "cancer", "philosopher": "Marcus Aurelius", "theme": "Strength through vulnerability" },
+    { "day": 5, "sign_id": "leo", "philosopher": "Seneca", "theme": "Humility within greatness" },
+    { "day": 6, "sign_id": "virgo", "philosopher": "Epictetus", "theme": "Perfection in imperfection" },
+    { "day": 7, "sign_id": "libra", "philosopher": "Marcus Aurelius", "theme": "Justice as inner harmony" },
+    { "day": 8, "sign_id": "scorpio", "philosopher": "Seneca", "theme": "Transformation through adversity" },
+    { "day": 9, "sign_id": "sagittarius", "philosopher": "Epictetus", "theme": "Freedom through discipline" },
+    { "day": 10, "sign_id": "capricorn", "philosopher": "Marcus Aurelius", "theme": "Ambition aligned with virtue" },
+    { "day": 11, "sign_id": "aquarius", "philosopher": "Seneca", "theme": "Individuality within the whole" },
+    { "day": 12, "sign_id": "pisces", "philosopher": "Epictetus", "theme": "Boundaries of the compassionate soul" },
+    { "day": 13, "sign_id": "aries", "philosopher": "Seneca", "theme": "Restraint as strength" },
+    { "day": 14, "sign_id": "taurus", "philosopher": "Marcus Aurelius", "theme": "Change is the only constant" },
+    { "day": 15, "sign_id": "gemini", "philosopher": "Zeno", "theme": "The art of listening" },
+    { "day": 16, "sign_id": "cancer", "philosopher": "Epictetus", "theme": "What is and isn't yours to carry" },
+    { "day": 17, "sign_id": "leo", "philosopher": "Marcus Aurelius", "theme": "Service over spectacle" },
+    { "day": 18, "sign_id": "virgo", "philosopher": "Seneca", "theme": "Progress, not perfection" },
+    { "day": 19, "sign_id": "libra", "philosopher": "Epictetus", "theme": "The peace of right action" },
+    { "day": 20, "sign_id": "scorpio", "philosopher": "Marcus Aurelius", "theme": "The obstacle is the way" },
+    { "day": 21, "sign_id": "sagittarius", "philosopher": "Seneca", "theme": "The disciplined adventurer" },
+    { "day": 22, "sign_id": "capricorn", "philosopher": "Epictetus", "theme": "The weight of responsibility" },
+    { "day": 23, "sign_id": "aquarius", "philosopher": "Marcus Aurelius", "theme": "The common good" },
+    { "day": 24, "sign_id": "pisces", "philosopher": "Seneca", "theme": "The courage to let go" },
+    { "day": 25, "sign_id": "aries", "philosopher": "Epictetus", "theme": "Choosing your battles" },
+    { "day": 26, "sign_id": "taurus", "philosopher": "Zeno", "theme": "Nature's rhythm" },
+    { "day": 27, "sign_id": "gemini", "philosopher": "Marcus Aurelius", "theme": "The power of stillness" },
+    { "day": 28, "sign_id": "cancer", "philosopher": "Seneca", "theme": "Resilience of the heart" },
+    { "day": 29, "sign_id": "leo", "philosopher": "Epictetus", "theme": "True worth" },
+    { "day": 30, "sign_id": "libra", "philosopher": "Marcus Aurelius", "theme": "Balance within chaos" }
+  ]
+}
