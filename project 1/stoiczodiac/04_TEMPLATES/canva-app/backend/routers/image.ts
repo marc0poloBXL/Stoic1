@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import express from "express";
 import { generateImages } from "backend/services/image-generator";
 import type { ImageResponse } from "backend/services/image-generator";
@@ -179,10 +180,10 @@ export const createImageRouter = () => {
   });
 
   /**
-   * Generates a unique job ID.
+   * Generates a unique job ID using crypto.randomUUID.
    */
   function generateJobId(): string {
-    return Math.random().toString(36).substring(2, 15);
+    return randomUUID();
   }
 
   return router;
