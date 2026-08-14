@@ -113,6 +113,12 @@ Slide 7: CTA — "Save this for your sign. Tag a Scorpio. Follow @stoiczodiac"
 - **Wednesday**: R2 — Sign Comparison or R4 — Philosopher Speaks
 - **Friday**: R3 — Rapid Wisdom
 
+> **💡 Reel sign alignment**: The calendar generator assigns Reels on fixed weekdays
+> (Mon/Wed/Fri) independently of which sign gets the daily post. This means your
+> Monday Reel sign may differ from Monday's daily quote sign. That's fine for reach
+> (Reels attract a different audience segment), but if you prefer tighter thematic
+> alignment, manually match the Reel sign to the day's featured sign when editing.
+
 ---
 
 ## P4: Weekly Stoic Forecast (1x/week)

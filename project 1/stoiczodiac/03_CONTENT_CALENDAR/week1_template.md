@@ -90,7 +90,7 @@
 
 | Item | Detail | Status |
 |------|--------|--------|
-| **Post** | ♎ Libra — Marcus Aurelius: "The happiness of your life depends upon the quality of your thoughts." | □ |
+| **Post** | ♎ Libra — Marcus Aurelius: "The best revenge is to be unlike him who performed the injury." | □ |
 | **Carousel** | Weekly Stoic Forecast (Week 2 preview) | □ |
 | **Story** | "Which quote was your favorite this week?" | □ |
 | **Analytics** | Run Week 1 audit | □ |

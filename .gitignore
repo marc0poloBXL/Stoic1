@@ -27,3 +27,9 @@ venv/
 
 # Logs
 *.log
+
+# Claude Code session files
+.claude/
+
+# Notebook scratchpad
+scratch.ipynb

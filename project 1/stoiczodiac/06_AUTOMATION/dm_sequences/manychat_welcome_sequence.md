@@ -131,6 +131,15 @@ Epictetus taught: "Make the best use of what is in your power, and take the rest
 Your intuition is profound. But the stoic path is boundaries — compassion without losing yourself. You can feel deeply AND act wisely.
 Today, ask yourself: "Is this mine to carry?"
 Save this. Come back tomorrow for your Pisces wisdom.
+
+=== 🔄 UNRECOGNIZED REPLY ===
+[Fallback for when the user types something other than a sign name]
+I didn't quite catch your sign! Tap one below and I'll send you personalized Stoic wisdom 🏛️
+
+[Quick Replies — same 12-sign grid as Message 1]
+♈ Aries  ♉ Taurus  ♊ Gemini  ♋ Cancer
+♌ Leo    ♍ Virgo   ♎ Libra   ♏ Scorpio
+♐ Sagittarius  ♑ Capricorn  ♒ Aquarius  ♓ Pisces
 ```
 
 ---

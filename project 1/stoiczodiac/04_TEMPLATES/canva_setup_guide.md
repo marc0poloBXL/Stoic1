@@ -120,6 +120,14 @@
 
 **Use for**: Unique bust images, zodiac-themed AI art, philosopher portraits
 
+> **Note on the Canva Developer App** (`canva-app/`): The Canva app is a
+> general-purpose AI image generator — it lets users type any prompt and get
+> AI-generated images. It does **not** have preset Stoic Zodiac themes.
+> The prompts below are for **manual use** in Leonardo AI's web interface
+> (https://leonardo.ai) when creating custom assets outside of Canva.
+> If you build a feature to add preset theme buttons to the Canva app,
+> these prompts are a good starting point.
+
 ### Leonardo AI Prompt Template
 ```
 Marble bust of an ancient Greek philosopher, dramatic lighting,

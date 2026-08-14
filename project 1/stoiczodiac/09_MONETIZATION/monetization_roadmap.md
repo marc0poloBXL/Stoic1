@@ -167,6 +167,32 @@ Follow → Welcome DM → Guide offer → Newsletter signup → Paid membership
 
 ---
 
+---
+
+## 🤖 Bonus: Automated Content Feeds (Long-Term)
+
+**Goal**: Reduce manual creation load by automating evergreen content.
+
+### Option 1: Quote-of-the-Day Bot
+- A simple script that picks a random (sign, philosopher, quote) tuple from
+  `sign_master_data.json` and posts via Instagram Graph API
+- **Cost**: Free (API access, no paid tools)
+- **Effort**: Minimal (single script, runs on a cron/scheduler)
+- **When**: Month 4+ — once the account is established and you need a content buffer
+
+### Option 2: AI-Generated Reel Backgrounds
+- Use the Canva app (`canva-app/`) + Leonardo AI to auto-generate background
+  images for Reels based on the day's sign/element
+- **Effort**: Moderate (requires connecting the Canva app output to your editing pipeline)
+- **When**: Month 4+ — as a time-saver during scale-up
+
+### Option 3: Embeddable Quote Widget
+- A small HTML widget showing the daily Stoic Zodiac quote
+- Embed in your Linktree/bio link or Substack newsletter
+- **Benefit**: Drives cross-platform engagement without daily effort
+
+---
+
 ## ⚡ Quick-Start Monetization Checklist
 
 ```markdown

@@ -19,20 +19,25 @@
 
 ### Zodiac Sign Colors
 
-| Sign | Color | Hex |
-|------|-------|-----|
-| ♈ Aries | Fire Red | `#E63946` |
-| ♉ Taurus | Earth Green | `#2A9D8F` |
-| ♊ Gemini | Air Yellow | `#E9C46A` |
-| ♋ Cancer | Moon Silver | `#A8DADC` |
-| ♌ Leo | Sun Gold | `#F4A261` |
-| ♍ Virgo | Earth Brown | `#8D6E63` |
-| ♎ Libra | Sky Blue | `#457B9D` |
-| ♏ Scorpio | Deep Purple | `#6C3483` |
-| ♐ Sagittarius | Royal Blue | `#1D3557` |
-| ♑ Capricorn | Dark Green | `#1B4332` |
-| ♒ Aquarius | Electric Blue | `#00B4D8` |
-| ♓ Pisces | Sea Foam | `#80CED7` |
+| Sign | Color | Hex | Text on `#0A0A0A` | Text on `#1A1A2E` |
+|------|-------|-----|-------------------|-------------------|
+| ♈ Aries | Fire Red | `#E63946` | ✅ Good | ✅ Good |
+| ♉ Taurus | Earth Green | `#2A9D8F` | ⚠️ Borderline | ⚠️ Borderline |
+| ♊ Gemini | Air Yellow | `#E9C46A` | ✅ Good | ✅ Good |
+| ♋ Cancer | Moon Silver | `#A8DADC` | ✅ Good | ⚠️ Borderline |
+| ♌ Leo | Sun Gold | `#F4A261` | ✅ Good | ✅ Good |
+| ♍ Virgo | Earth Brown | `#8D6E63` | ⚠️ Use on gold bg | ⚠️ Use on gold bg |
+| ♎ Libra | Sky Blue | `#457B9D` | ✅ Good | ⚠️ Borderline |
+| ♏ Scorpio | Deep Purple | `#6C3483` | ⚠️ Borderline | ⚠️ Borderline |
+| ♐ Sagittarius | Royal Blue | `#1D3557` | ✅ Good | ⚠️ Borderline |
+| ♑ Capricorn | Dark Green | `#1B4332` | ❌ Too dark | ❌ Too dark |
+| ♒ Aquarius | Electric Blue | `#00B4D8` | ✅ Good | ✅ Good |
+| ♓ Pisces | Sea Foam | `#80CED7` | ✅ Good | ⚠️ Borderline |
+
+> **⚠️ Contrast note**: Sign colors are for **accent use only** (borders, icons, small labels).
+> For body text on dark backgrounds, always use `#F5F5F5` (Marble White) or `#D4AF37` (Stoic Gold).
+> Colors marked ❌ or ⚠️ need a lighter variant for text — use the color at 60% opacity
+> or pair with a white/gold stroke for readability.
 
 ---
 

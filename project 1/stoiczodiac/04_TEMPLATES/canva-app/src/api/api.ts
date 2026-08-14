@@ -1,5 +1,5 @@
 import { auth } from "@canva/user";
-import { POLLING_INTERVAL_IN_SECONDS } from "src/config";
+import { MAX_POLLING_ATTEMPTS, POLLING_INTERVAL_IN_SECONDS } from "src/config";
 
 /**
  * Represents the structure of an image.
@@ -85,8 +85,8 @@ export const getImageGenerationJobStatus = async ({
   const url = new URL(endpoints.getImageGenerationJobStatus, BACKEND_HOST);
   url.searchParams.append("jobId", jobId);
 
-  // Define a maximum number of polling attempts
-  const maxAttempts = 10;
+  // Maximum number of polling attempts (sourced from config)
+  const maxAttempts = MAX_POLLING_ATTEMPTS;
   let attempts = 0;
 
   while (attempts < maxAttempts) {

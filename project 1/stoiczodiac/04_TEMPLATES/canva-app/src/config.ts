@@ -15,6 +15,13 @@ export const NUMBER_OF_IMAGES_TO_GENERATE = 4;
 export const POLLING_INTERVAL_IN_SECONDS = 3;
 
 /**
+ * Maximum number of polling attempts before giving up on a generation job.
+ * At 3s per interval this gives a ~60s timeout, which accommodates
+ * Leonardo AI generation times of 15–45s with margin for queue delays.
+ */
+export const MAX_POLLING_ATTEMPTS = 20;
+
+/**
  * Your app's name. This is used when reporting generated content.
  */
 export const APP_NAME = "Stoic Zodiac";
