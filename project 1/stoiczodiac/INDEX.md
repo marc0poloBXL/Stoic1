@@ -23,8 +23,9 @@ stoiczodiac/
 ├── 03_CONTENT_CALENDAR/
 │   ├── week1_template.md             ← Launch week day-by-day
 │   └── generated/
-│       ├── content_calendar_20260810.csv  ← 30-day calendar (CSV)
-│       └── content_calendar_20260810.md   ← 30-day calendar (markdown)
+│       ├── content_calendar_20260813.md   ← 60-day calendar
+│       ├── week2_20260824.md              ← Week 2 calendar
+│       └── ...weekly generated files
 │
 ├── 04_TEMPLATES/
 │   ├── canva_setup_guide.md          ← Canva brand kit + 3 templates
@@ -39,8 +40,9 @@ stoiczodiac/
 │   ├── prompts/
 │   │   └── master_prompt_library.md  ← 10 ChatGPT prompts (copy-paste)
 │   └── scripts/
-│       ├── batch_content_generator.py   ← Python calendar generator
-│       └── batch_content_generator.ps1  ← PowerShell version
+│       ├── batch_content_generator.py   ← Python calendar generator (--week N flag)
+│       ├── batch_content_generator.ps1  ← PowerShell version
+│       └── run_weekly_batch.py          ← One-command weekly batch routine
 │
 ├── 06_AUTOMATION/
 │   ├── dm_sequences/
@@ -49,6 +51,9 @@ stoiczodiac/
 │       └── later_setup_guide.md          ← Later + Buffer free tier config
 │
 ├── 07_AUDIO/
+│   ├── music/                        ← Background music (royalty-free + original)
+│   ├── sound_effects/                ← SFX library
+│   ├── voiceover_audio/              ← Recorded voiceover files
 │   └── voiceover_scripts/
 │       └── reel_voiceover_bank.md        ← 15 Reel scripts + production notes
 │
@@ -60,6 +65,27 @@ stoiczodiac/
 │
 ├── 10_ANALYTICS/
 │   └── weekly_audit_template.md         ← Weekly audit template + KPIs
+│
+├── 11_MEDIA_LIBRARY/                    ← All visual media + batch production
+│   ├── IMAGES/zodiac/{12 signs}        ← Sign-specific imagery
+│   ├── IMAGES/backgrounds/             ← Backgrounds, textures, gradients
+│   ├── IMAGES/stock/                   ← Licensed stock photography
+│   ├── VIDEO/reels/                    ← Reel exports
+│   ├── VIDEO/animations/               ← Motion graphics, Lottie, GIFs
+│   ├── GRAPHICS/overlays/             ← Text overlays, stickers, frames
+│   ├── GRAPHICS/icons/                 ← Zodiac symbols, social icons
+│   ├── SCREENSHOTS/                    ← App UI + analytics screenshots
+│   └── SCHEDULED/                      ← Weekly batch production folders
+│       ├── week_YYYYMMDD/              ← One per week (auto-created)
+│       │   ├── WEEKLY_BATCH_BRIEF.md   ← Sign assignments + pre-filled prompts
+│       │   ├── quotes/                 → Drop designed quote images
+│       │   ├── reels/                  → Drop reel exports
+│       │   ├── carousels/              → Drop carousel exports
+│       │   ├── stories/                → Save story texts
+│       │   └── captions/               → Save caption texts
+│       ├── MASTER_PRODUCTION_TRACKER.md← Progress across all weeks
+│       ├── BATCH_PROMPT_CARDS.md       ← Quick-copy AI prompts
+│       └── BATCH_HISTORY.md            ← Log of all batch runs
 │
 └── _ARCHIVE/                            ← Spent/deleted content goes here
 ```

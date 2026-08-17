@@ -1,6 +1,6 @@
 {
   "description": "Single source of truth for all sign data across the Stoic Wisdom × Zodiac Signs project.",
-  "last_updated": "2026-08-13",
+  "last_updated": "2026-08-17",
   "signs": [
     {
       "id": "aries",
@@ -168,35 +168,545 @@
     }
   ],
   "30_day_rotation": [
-    { "day": 1, "sign_id": "aries", "philosopher": "Marcus Aurelius", "theme": "Channeling impulse into purpose" },
-    { "day": 2, "sign_id": "taurus", "philosopher": "Seneca", "theme": "Letting go of attachment" },
-    { "day": 3, "sign_id": "gemini", "philosopher": "Epictetus", "theme": "Mastery of the inner dialogue" },
-    { "day": 4, "sign_id": "cancer", "philosopher": "Marcus Aurelius", "theme": "Strength through vulnerability" },
-    { "day": 5, "sign_id": "leo", "philosopher": "Seneca", "theme": "Humility within greatness" },
-    { "day": 6, "sign_id": "virgo", "philosopher": "Epictetus", "theme": "Perfection in imperfection" },
-    { "day": 7, "sign_id": "libra", "philosopher": "Marcus Aurelius", "theme": "Justice as inner harmony" },
-    { "day": 8, "sign_id": "scorpio", "philosopher": "Seneca", "theme": "Transformation through adversity" },
-    { "day": 9, "sign_id": "sagittarius", "philosopher": "Epictetus", "theme": "Freedom through discipline" },
-    { "day": 10, "sign_id": "capricorn", "philosopher": "Marcus Aurelius", "theme": "Ambition aligned with virtue" },
-    { "day": 11, "sign_id": "aquarius", "philosopher": "Seneca", "theme": "Individuality within the whole" },
-    { "day": 12, "sign_id": "pisces", "philosopher": "Epictetus", "theme": "Boundaries of the compassionate soul" },
-    { "day": 13, "sign_id": "aries", "philosopher": "Seneca", "theme": "Restraint as strength" },
-    { "day": 14, "sign_id": "taurus", "philosopher": "Marcus Aurelius", "theme": "Change is the only constant" },
-    { "day": 15, "sign_id": "gemini", "philosopher": "Zeno", "theme": "The art of listening" },
-    { "day": 16, "sign_id": "cancer", "philosopher": "Epictetus", "theme": "What is and isn't yours to carry" },
-    { "day": 17, "sign_id": "leo", "philosopher": "Marcus Aurelius", "theme": "Service over spectacle" },
-    { "day": 18, "sign_id": "virgo", "philosopher": "Seneca", "theme": "Progress, not perfection" },
-    { "day": 19, "sign_id": "libra", "philosopher": "Epictetus", "theme": "The peace of right action" },
-    { "day": 20, "sign_id": "scorpio", "philosopher": "Marcus Aurelius", "theme": "The obstacle is the way" },
-    { "day": 21, "sign_id": "sagittarius", "philosopher": "Seneca", "theme": "The disciplined adventurer" },
-    { "day": 22, "sign_id": "capricorn", "philosopher": "Epictetus", "theme": "The weight of responsibility" },
-    { "day": 23, "sign_id": "aquarius", "philosopher": "Marcus Aurelius", "theme": "The common good" },
-    { "day": 24, "sign_id": "pisces", "philosopher": "Seneca", "theme": "The courage to let go" },
-    { "day": 25, "sign_id": "aries", "philosopher": "Epictetus", "theme": "Choosing your battles" },
-    { "day": 26, "sign_id": "taurus", "philosopher": "Zeno", "theme": "Nature's rhythm" },
-    { "day": 27, "sign_id": "gemini", "philosopher": "Marcus Aurelius", "theme": "The power of stillness" },
-    { "day": 28, "sign_id": "cancer", "philosopher": "Seneca", "theme": "Resilience of the heart" },
-    { "day": 29, "sign_id": "leo", "philosopher": "Epictetus", "theme": "True worth" },
-    { "day": 30, "sign_id": "libra", "philosopher": "Marcus Aurelius", "theme": "Balance within chaos" }
+    {
+      "day": 1,
+      "sign_id": "aries",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Channeling impulse into purpose"
+    },
+    {
+      "day": 2,
+      "sign_id": "taurus",
+      "philosopher": "Seneca",
+      "theme": "Letting go of attachment"
+    },
+    {
+      "day": 3,
+      "sign_id": "gemini",
+      "philosopher": "Epictetus",
+      "theme": "Mastery of the inner dialogue"
+    },
+    {
+      "day": 4,
+      "sign_id": "cancer",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Strength through vulnerability"
+    },
+    {
+      "day": 5,
+      "sign_id": "leo",
+      "philosopher": "Seneca",
+      "theme": "Humility within greatness"
+    },
+    {
+      "day": 6,
+      "sign_id": "virgo",
+      "philosopher": "Epictetus",
+      "theme": "Perfection in imperfection"
+    },
+    {
+      "day": 7,
+      "sign_id": "libra",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Justice as inner harmony"
+    },
+    {
+      "day": 8,
+      "sign_id": "scorpio",
+      "philosopher": "Seneca",
+      "theme": "Transformation through adversity"
+    },
+    {
+      "day": 9,
+      "sign_id": "sagittarius",
+      "philosopher": "Epictetus",
+      "theme": "Freedom through discipline"
+    },
+    {
+      "day": 10,
+      "sign_id": "capricorn",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Ambition aligned with virtue"
+    },
+    {
+      "day": 11,
+      "sign_id": "aquarius",
+      "philosopher": "Seneca",
+      "theme": "Individuality within the whole"
+    },
+    {
+      "day": 12,
+      "sign_id": "pisces",
+      "philosopher": "Epictetus",
+      "theme": "Boundaries of the compassionate soul"
+    },
+    {
+      "day": 13,
+      "sign_id": "aries",
+      "philosopher": "Seneca",
+      "theme": "Restraint as strength"
+    },
+    {
+      "day": 14,
+      "sign_id": "taurus",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Change is the only constant"
+    },
+    {
+      "day": 15,
+      "sign_id": "gemini",
+      "philosopher": "Zeno",
+      "theme": "The art of listening"
+    },
+    {
+      "day": 16,
+      "sign_id": "cancer",
+      "philosopher": "Epictetus",
+      "theme": "What is and isn't yours to carry"
+    },
+    {
+      "day": 17,
+      "sign_id": "leo",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Service over spectacle"
+    },
+    {
+      "day": 18,
+      "sign_id": "virgo",
+      "philosopher": "Seneca",
+      "theme": "Progress, not perfection"
+    },
+    {
+      "day": 19,
+      "sign_id": "libra",
+      "philosopher": "Epictetus",
+      "theme": "The peace of right action"
+    },
+    {
+      "day": 20,
+      "sign_id": "scorpio",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The obstacle is the way"
+    },
+    {
+      "day": 21,
+      "sign_id": "sagittarius",
+      "philosopher": "Seneca",
+      "theme": "The disciplined adventurer"
+    },
+    {
+      "day": 22,
+      "sign_id": "capricorn",
+      "philosopher": "Epictetus",
+      "theme": "The weight of responsibility"
+    },
+    {
+      "day": 23,
+      "sign_id": "aquarius",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The common good"
+    },
+    {
+      "day": 24,
+      "sign_id": "pisces",
+      "philosopher": "Seneca",
+      "theme": "The courage to let go"
+    },
+    {
+      "day": 25,
+      "sign_id": "aries",
+      "philosopher": "Epictetus",
+      "theme": "Choosing your battles"
+    },
+    {
+      "day": 26,
+      "sign_id": "taurus",
+      "philosopher": "Zeno",
+      "theme": "Nature's rhythm"
+    },
+    {
+      "day": 27,
+      "sign_id": "gemini",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The power of stillness"
+    },
+    {
+      "day": 28,
+      "sign_id": "cancer",
+      "philosopher": "Seneca",
+      "theme": "Resilience of the heart"
+    },
+    {
+      "day": 29,
+      "sign_id": "leo",
+      "philosopher": "Epictetus",
+      "theme": "True worth"
+    },
+    {
+      "day": 30,
+      "sign_id": "libra",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Balance within chaos"
+    },
+    {
+      "day": 31,
+      "sign_id": "aries",
+      "philosopher": "Zeno",
+      "theme": "The courageous beginning"
+    },
+    {
+      "day": 32,
+      "sign_id": "taurus",
+      "philosopher": "Epictetus",
+      "theme": "Contentment with enough"
+    },
+    {
+      "day": 33,
+      "sign_id": "gemini",
+      "philosopher": "Seneca",
+      "theme": "The focused mind"
+    },
+    {
+      "day": 34,
+      "sign_id": "cancer",
+      "philosopher": "Zeno",
+      "theme": "The nurturing will"
+    },
+    {
+      "day": 35,
+      "sign_id": "leo",
+      "philosopher": "Musonius Rufus",
+      "theme": "Strength in service"
+    },
+    {
+      "day": 36,
+      "sign_id": "virgo",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Order in all things"
+    },
+    {
+      "day": 37,
+      "sign_id": "libra",
+      "philosopher": "Seneca",
+      "theme": "The weight of choice"
+    },
+    {
+      "day": 38,
+      "sign_id": "scorpio",
+      "philosopher": "Epictetus",
+      "theme": "Mastery of desire"
+    },
+    {
+      "day": 39,
+      "sign_id": "sagittarius",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The journey within"
+    },
+    {
+      "day": 40,
+      "sign_id": "capricorn",
+      "philosopher": "Seneca",
+      "theme": "Legacy over status"
+    },
+    {
+      "day": 41,
+      "sign_id": "aquarius",
+      "philosopher": "Epictetus",
+      "theme": "The examined life"
+    },
+    {
+      "day": 42,
+      "sign_id": "pisces",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The boundless self"
+    },
+    {
+      "day": 43,
+      "sign_id": "aries",
+      "philosopher": "Musonius Rufus",
+      "theme": "Temper your fire"
+    },
+    {
+      "day": 44,
+      "sign_id": "taurus",
+      "philosopher": "Zeno",
+      "theme": "Rooted in virtue"
+    },
+    {
+      "day": 45,
+      "sign_id": "gemini",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Stillness between thoughts"
+    },
+    {
+      "day": 46,
+      "sign_id": "cancer",
+      "philosopher": "Seneca",
+      "theme": "The anchored heart"
+    },
+    {
+      "day": 47,
+      "sign_id": "leo",
+      "philosopher": "Epictetus",
+      "theme": "The humble throne"
+    },
+    {
+      "day": 48,
+      "sign_id": "virgo",
+      "philosopher": "Zeno",
+      "theme": "Mastery of detail"
+    },
+    {
+      "day": 49,
+      "sign_id": "libra",
+      "philosopher": "Musonius Rufus",
+      "theme": "Harmony in action"
+    },
+    {
+      "day": 50,
+      "sign_id": "scorpio",
+      "philosopher": "Zeno",
+      "theme": "The depths of character"
+    },
+    {
+      "day": 51,
+      "sign_id": "sagittarius",
+      "philosopher": "Musonius Rufus",
+      "theme": "Aiming with wisdom"
+    },
+    {
+      "day": 52,
+      "sign_id": "capricorn",
+      "philosopher": "Zeno",
+      "theme": "The patient ascent"
+    },
+    {
+      "day": 53,
+      "sign_id": "aquarius",
+      "philosopher": "Musonius Rufus",
+      "theme": "Unity in difference"
+    },
+    {
+      "day": 54,
+      "sign_id": "pisces",
+      "philosopher": "Zeno",
+      "theme": "The soul tide"
+    },
+    {
+      "day": 55,
+      "sign_id": "aries",
+      "philosopher": "Epictetus",
+      "theme": "The disciplined warrior"
+    },
+    {
+      "day": 56,
+      "sign_id": "taurus",
+      "philosopher": "Seneca",
+      "theme": "Freedom in simplicity"
+    },
+    {
+      "day": 57,
+      "sign_id": "gemini",
+      "philosopher": "Zeno",
+      "theme": "The coherent self"
+    },
+    {
+      "day": 58,
+      "sign_id": "cancer",
+      "philosopher": "Musonius Rufus",
+      "theme": "Love with wisdom"
+    },
+    {
+      "day": 59,
+      "sign_id": "leo",
+      "philosopher": "Zeno",
+      "theme": "The generous ruler"
+    },
+    {
+      "day": 60,
+      "sign_id": "virgo",
+      "philosopher": "Seneca",
+      "theme": "The art of enough"
+    },
+    {
+      "day": 61,
+      "sign_id": "libra",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The just measure"
+    },
+    {
+      "day": 62,
+      "sign_id": "scorpio",
+      "philosopher": "Musonius Rufus",
+      "theme": "Transmute the pain"
+    },
+    {
+      "day": 63,
+      "sign_id": "sagittarius",
+      "philosopher": "Seneca",
+      "theme": "The boundless horizon"
+    },
+    {
+      "day": 64,
+      "sign_id": "capricorn",
+      "philosopher": "Musonius Rufus",
+      "theme": "Duty as devotion"
+    },
+    {
+      "day": 65,
+      "sign_id": "aquarius",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The world as one"
+    },
+    {
+      "day": 66,
+      "sign_id": "pisces",
+      "philosopher": "Seneca",
+      "theme": "The resilient heart"
+    },
+    {
+      "day": 67,
+      "sign_id": "aries",
+      "philosopher": "Seneca",
+      "theme": "Reckoning with patience"
+    },
+    {
+      "day": 68,
+      "sign_id": "taurus",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The eternal now"
+    },
+    {
+      "day": 69,
+      "sign_id": "gemini",
+      "philosopher": "Epictetus",
+      "theme": "The disciplined tongue"
+    },
+    {
+      "day": 70,
+      "sign_id": "cancer",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The open hand"
+    },
+    {
+      "day": 71,
+      "sign_id": "leo",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The quiet leader"
+    },
+    {
+      "day": 72,
+      "sign_id": "virgo",
+      "philosopher": "Musonius Rufus",
+      "theme": "The practical idealist"
+    },
+    {
+      "day": 73,
+      "sign_id": "libra",
+      "philosopher": "Epictetus",
+      "theme": "Balance of the soul"
+    },
+    {
+      "day": 74,
+      "sign_id": "scorpio",
+      "philosopher": "Marcus Aurelius",
+      "theme": "Letting go"
+    },
+    {
+      "day": 75,
+      "sign_id": "sagittarius",
+      "philosopher": "Epictetus",
+      "theme": "The disciplined dreamer"
+    },
+    {
+      "day": 76,
+      "sign_id": "capricorn",
+      "philosopher": "Marcus Aurelius",
+      "theme": "The servant leader"
+    },
+    {
+      "day": 77,
+      "sign_id": "aquarius",
+      "philosopher": "Zeno",
+      "theme": "The cosmic citizen"
+    },
+    {
+      "day": 78,
+      "sign_id": "pisces",
+      "philosopher": "Musonius Rufus",
+      "theme": "The empathetic boundary"
+    },
+    {
+      "day": 79,
+      "sign_id": "aries",
+      "philosopher": "Zeno",
+      "theme": "Action with wisdom"
+    },
+    {
+      "day": 80,
+      "sign_id": "taurus",
+      "philosopher": "Zeno",
+      "theme": "The steady flame"
+    },
+    {
+      "day": 81,
+      "sign_id": "gemini",
+      "philosopher": "Musonius Rufus",
+      "theme": "Words that heal"
+    },
+    {
+      "day": 82,
+      "sign_id": "cancer",
+      "philosopher": "Zeno",
+      "theme": "The safe harbor"
+    },
+    {
+      "day": 83,
+      "sign_id": "leo",
+      "philosopher": "Zeno",
+      "theme": "Majesty in humility"
+    },
+    {
+      "day": 84,
+      "sign_id": "virgo",
+      "philosopher": "Epictetus",
+      "theme": "The sharpened mind"
+    },
+    {
+      "day": 85,
+      "sign_id": "libra",
+      "philosopher": "Zeno",
+      "theme": "The balanced life"
+    },
+    {
+      "day": 86,
+      "sign_id": "scorpio",
+      "philosopher": "Seneca",
+      "theme": "The reborn soul"
+    },
+    {
+      "day": 87,
+      "sign_id": "sagittarius",
+      "philosopher": "Zeno",
+      "theme": "The upward path"
+    },
+    {
+      "day": 88,
+      "sign_id": "capricorn",
+      "philosopher": "Zeno",
+      "theme": "Time worthy steward"
+    },
+    {
+      "day": 89,
+      "sign_id": "aquarius",
+      "philosopher": "Seneca",
+      "theme": "The greater good"
+    },
+    {
+      "day": 90,
+      "sign_id": "pisces",
+      "philosopher": "Epictetus",
+      "theme": "The river of change"
+    }
   ]
 }
