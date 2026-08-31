@@ -23,8 +23,9 @@ stoiczodiac/
 ├── 03_CONTENT_CALENDAR/
 │   ├── week1_template.md             ← Launch week day-by-day
 │   └── generated/
-│       ├── content_calendar_20260810.csv  ← 30-day calendar (CSV)
-│       └── content_calendar_20260810.md   ← 30-day calendar (markdown)
+│       ├── content_calendar_20260813.md   ← 60-day calendar
+│       ├── week2_20260824.md              ← Week 2 calendar
+│       └── ...weekly generated files
 │
 ├── 04_TEMPLATES/
 │   ├── canva_setup_guide.md          ← Canva brand kit + 3 templates
@@ -39,16 +40,20 @@ stoiczodiac/
 │   ├── prompts/
 │   │   └── master_prompt_library.md  ← 10 ChatGPT prompts (copy-paste)
 │   └── scripts/
-│       ├── batch_content_generator.py   ← Python calendar generator
-│       └── batch_content_generator.ps1  ← PowerShell version
+│       ├── batch_content_generator.py   ← Python calendar generator (--week N flag)
+│       ├── batch_content_generator.ps1  ← PowerShell version
+│       └── run_weekly_batch.py          ← One-command weekly batch routine
 │
 ├── 06_AUTOMATION/
 │   ├── dm_sequences/
-│   │   └── manychat_welcome_sequence.md  ← 4-message DM flow
+│   │   └── dm_welcome_sequence.md  ← 4-message DM flow
 │   └── scheduler_setup/
 │       └── later_setup_guide.md          ← Later + Buffer free tier config
 │
 ├── 07_AUDIO/
+│   ├── music/                        ← Background music (royalty-free + original)
+│   ├── sound_effects/                ← SFX library
+│   ├── voiceover_audio/              ← Recorded voiceover files
 │   └── voiceover_scripts/
 │       └── reel_voiceover_bank.md        ← 15 Reel scripts + production notes
 │
@@ -60,6 +65,27 @@ stoiczodiac/
 │
 ├── 10_ANALYTICS/
 │   └── weekly_audit_template.md         ← Weekly audit template + KPIs
+│
+├── 11_MEDIA_LIBRARY/                    ← All visual media + batch production
+│   ├── IMAGES/zodiac/{12 signs}        ← Sign-specific imagery
+│   ├── IMAGES/backgrounds/             ← Backgrounds, textures, gradients
+│   ├── IMAGES/stock/                   ← Licensed stock photography
+│   ├── VIDEO/reels/                    ← Reel exports
+│   ├── VIDEO/animations/               ← Motion graphics, Lottie, GIFs
+│   ├── GRAPHICS/overlays/             ← Text overlays, stickers, frames
+│   ├── GRAPHICS/icons/                 ← Zodiac symbols, social icons
+│   ├── SCREENSHOTS/                    ← App UI + analytics screenshots
+│   └── SCHEDULED/                      ← Weekly batch production folders
+│       ├── week_YYYYMMDD/              ← One per week (auto-created)
+│       │   ├── WEEKLY_BATCH_BRIEF.md   ← Sign assignments + pre-filled prompts
+│       │   ├── quotes/                 → Drop designed quote images
+│       │   ├── reels/                  → Drop reel exports
+│       │   ├── carousels/              → Drop carousel exports
+│       │   ├── stories/                → Save story texts
+│       │   └── captions/               → Save caption texts
+│       ├── MASTER_PRODUCTION_TRACKER.md← Progress across all weeks
+│       ├── BATCH_PROMPT_CARDS.md       ← Quick-copy AI prompts
+│       └── BATCH_HISTORY.md            ← Log of all batch runs
 │
 └── _ARCHIVE/                            ← Spent/deleted content goes here
 ```
@@ -80,7 +106,7 @@ stoiczodiac/
 | 4 | Design 30 quote images | Canva template batch |
 | 5 | Set up Later scheduler | `06_AUTOMATION/scheduler_setup/later_setup_guide.md` |
 | 5-6 | Edit 3 Reels | `07_AUDIO/voiceover_scripts/reel_voiceover_bank.md` + CapCut |
-| 6 | Set up ManyChat DM flow | `06_AUTOMATION/dm_sequences/manychat_welcome_sequence.md` |
+| 6 | Set up DM automation (OpenReply) | `06_AUTOMATION/dm_sequences/dm_welcome_sequence.md` |
 | **7** | **LAUNCH DAY** | `03_CONTENT_CALENDAR/week1_template.md` |
 
 ### Week 2: Build Momentum (Days 8–14)
@@ -115,7 +141,7 @@ stoiczodiac/
 | **ElevenLabs** | 10K chars/month | Needs signup |
 | **Pexels** | Unlimited | ✅ Ready |
 | **Later** | 30 posts/month | Needs signup |
-| **ManyChat** | 1K contacts | Needs signup |
+| **OpenReply** | Self-hosted (free) | Needs setup |
 | **Gumroad** | Free (10% fee) | For PDF sales |
 | **Substack** | Free | For newsletter |
 
@@ -130,7 +156,7 @@ stoiczodiac/
 | Avg. Reel Views | 1,000+ | Instagram Insights |
 | Engagement Rate | 5%+ | `(L+C+S+Sh) / Reach × 100` |
 | Story Views | 100+ | Instagram Insights |
-| DM Conversations | 50+ | ManyChat Dashboard |
+| DM Conversations | 50+ | OpenReply Dashboard |
 | Saved Posts | 20+/post | Instagram Insights |
 
 ---
@@ -159,7 +185,7 @@ flowchart TD
 
 - **Scale**: 2 accounts (Stoic × Zodiac + one more niche)
 - **Monetize**: PDF journal, readings, affiliate, sponsorships
-- **Automate**: Full ManyChat flows, auto-DM, content repurposing
+- **Automate**: Full OpenReply campaigns, auto-DM, content repurposing
 - **Grow**: Collab loops, cross-promotion, TikTok expansion
 
 ---

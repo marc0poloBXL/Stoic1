@@ -10,7 +10,7 @@ import csv
 import json
 import os
 import sys
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 # Path to the canonical sign data (single source of truth)
 MASTER_DATA_PATH = os.path.join(
@@ -50,8 +50,9 @@ def generate_calendar(days=30, start_date=None, data=None):
         data = load_sign_data()
     sign_by_id, sign_order = build_lookup(data)
 
-    # Use the 30-day rotation from master data when generating the first 30 days;
-    # for cycles beyond 30 days, fall back to cycling through the sign list.
+    # The project launched Aug 17, 2026 (Monday).
+    # Rotation index advances by the day offset from launch.
+    LAUNCH_DATE = date(2026, 8, 17)
     rotation = data.get("30_day_rotation", [])
 
     if start_date is None:
@@ -60,15 +61,20 @@ def generate_calendar(days=30, start_date=None, data=None):
         while start_date.weekday() != 0:  # 0 = Monday
             start_date += timedelta(days=1)
 
+    # Compute how many days we've advanced since launch
+    days_since_launch = (start_date - LAUNCH_DATE).days
+    rotation_offset = max(0, days_since_launch)
+
     calendar = []
     for i in range(days):
         current_date = start_date + timedelta(days=i)
         day_name = WEEKDAYS[current_date.weekday()]
         week_num = i // 7 + 1
 
-        # Use the curated rotation for the first 30 days, then cycle
-        if i < len(rotation):
-            day_entry = rotation[i]
+        # Use the curated rotation, advancing by the date offset
+        rot_idx = (rotation_offset + i) % max(len(rotation), 1)
+        if rotation:
+            day_entry = rotation[rot_idx]
             sign_id = day_entry["sign_id"]
             philosopher = day_entry["philosopher"]
             theme = day_entry["theme"]
@@ -168,6 +174,10 @@ def main():
     import argparse
     parser = argparse.ArgumentParser(description="Generate Stoic Zodiac content calendar")
     parser.add_argument("--days", type=int, default=30, help="Number of days to generate")
+    parser.add_argument("--start-date", type=str, default=None,
+                        help="Start date YYYY-MM-DD (default: next Monday)")
+    parser.add_argument("--week", type=int, default=None,
+                        help="Week number from launch (week 1 = Aug 17, 2026). Overrides --start-date")
     parser.add_argument("--output-dir", default=os.path.join("..", "..", "03_CONTENT_CALENDAR", "generated"),
                         help="Output directory")
     parser.add_argument("--master-data", default=None,
@@ -178,11 +188,26 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
 
     data = load_sign_data(args.master_data)
-    calendar = generate_calendar(days=args.days, data=data)
-    date_str = datetime.now().strftime("%Y%m%d")
 
-    csv_path = os.path.join(output_dir, f"content_calendar_{date_str}.csv")
-    md_path = os.path.join(output_dir, f"content_calendar_{date_str}.md")
+    # Resolve start date: --week → --start-date → next Monday
+    start_date = None
+    if args.week is not None:
+        # Week 1 = Aug 17 (launch Monday)
+        launch = date(2026, 8, 17)
+        start_date = launch + timedelta(weeks=args.week - 1)
+    elif args.start_date is not None:
+        start_date = datetime.strptime(args.start_date, "%Y-%m-%d").date()
+
+    calendar = generate_calendar(days=args.days, start_date=start_date, data=data)
+
+    # Use the calendar's start date for the filename, not today
+    date_str = calendar[0]["Date"].replace("-", "")  # YYYYMMDD
+    if args.week is not None:
+        csv_path = os.path.join(output_dir, f"week{args.week}_{date_str}.csv")
+        md_path = os.path.join(output_dir, f"week{args.week}_{date_str}.md")
+    else:
+        csv_path = os.path.join(output_dir, f"content_calendar_{date_str}.csv")
+        md_path = os.path.join(output_dir, f"content_calendar_{date_str}.md")
 
     export_csv(calendar, csv_path)
     export_markdown(calendar, md_path)

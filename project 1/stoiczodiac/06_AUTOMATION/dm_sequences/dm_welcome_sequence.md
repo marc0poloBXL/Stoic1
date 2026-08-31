@@ -1,27 +1,57 @@
-# ManyChat DM Automation — Welcome Sequence
+# OpenReply DM Automation — Welcome Sequence
 
 > **🔗 Source of truth for sign data**: `05_AI_WORKFLOWS/sign_master_data.json`
 > Sign names, symbols, and philosopher mappings should be kept in sync with that file.
 
-**Tool**: ManyChat (Free tier — up to 1,000 contacts)  
-**Trigger**: User follows @stoiczodiac  
+**Tool**: OpenReply (self-hosted, free)  
+**Trigger**: User comments a keyword on your post  
 **Goal**: Convert followers into engaged community → eventual monetization
 
 ---
 
-## 🧩 ManyChat Free Setup Steps
+## 🚀 Quick Start
 
-1. **Sign up** at [manychat.com](https://manychat.com) (free tier)
-2. **Connect Instagram** Business account (convert personal if needed)
-3. **Create a new flow**: "Welcome New Followers"
-4. **Set trigger**: "User sends first message" (or "User follows" — may require Business)
-5. **Build the sequence below** in the flow builder
+```bash
+# OpenReply lives at:
+cd "06_AUTOMATION/openreply"
+
+# See the app README for setup instructions:
+# https://github.com/diwenne/openreply
+```
+
+## 📁 File location
+
+| File | Purpose |
+|------|---------|
+| `06_AUTOMATION/dm_sequences/dm_welcome_sequence.md` | Full DM copy for the welcome flow (this file) |
+| `06_AUTOMATION/openreply/` | OpenReply app (Next.js, self-hosted) |
+
+---
+
+## 🧩 OpenReply Setup Steps
+
+### Step 1 — Deploy OpenReply
+
+Follow the instructions in `06_AUTOMATION/openreply/README.md` or the [official repo](https://github.com/diwenne/openreply).
+
+### Step 2 — Create a Campaign
+
+In the OpenReply dashboard:
+1. **Create a campaign** — name it "Welcome Sequence"
+2. **Set a keyword trigger** — e.g. `LINK`, `WISDOM`, `STOIC`, or your sign name
+3. **Paste the DM message** from the appropriate section below
+4. **Optionally add a public reply** — e.g. "Check your DMs 🙏"
+5. **Optionally enable follow gate** — require a follow before sending the link
+
+### Step 3 — Customize by Sign
+
+You can create separate campaigns per keyword (e.g. one for "ARIES", one for "TAURUS") so each sign gets its own personalized message. Or use a single keyword with `{username}` personalization and a generic welcome.
 
 ---
 
 ## 💬 Message 1: Welcome (Instant)
 
-**Trigger**: User follows or sends "Hi"
+**Trigger**: User comments a keyword on your post
 
 ```
 [Text]
@@ -146,7 +176,7 @@ I didn't quite catch your sign! Tap one below and I'll send you personalized Sto
 
 ## 💬 Message 3: Free Guide Offer (24 hours later)
 
-**Trigger**: 24-hour delay after Message 2  
+**Trigger**: 24-hour delay after Message 2 (requires OpenReply to send a follow-up DM)  
 **Condition**: User has not yet received a download link
 
 ```
@@ -173,7 +203,7 @@ Maybe later
 
 ## 💬 Message 4: Daily Challenge (48 hours later, if no guide requested)
 
-**Trigger**: 48-hour delay after Message 2  
+**Trigger**: 48-hour delay after Message 2 (requires OpenReply follow-up)  
 **Condition**: User did NOT request the guide
 
 ```
@@ -192,15 +222,14 @@ If you ever want personalized wisdom for your sign, just reply with your sign. I
 
 ---
 
-## 🔄 Follow-up Automation Ideas (Free Tier Compatible)
+## 🔄 Follow-up Automation Ideas
 
 | Trigger | Action | Notes |
 |---------|--------|-------|
 | User replies "YES" | Send PDF link | Use Google Drive link (free) |
-| User replies "Maybe later" | Resend offer in 7 days | Use ManyChat timer |
-| User replies with sign | Send sign-specific quote | Branch condition |
-| User replies with "Stoic" | Add to "Engaged" tag | Use ManyChat tags |
-| User replies 3+ times | Add to "Hot Lead" tag | Manual tag for now |
+| User replies "Maybe later" | Resend offer in 7 days | Manual or schedule in OpenReply |
+| User replies with sign | Send sign-specific quote | Create a keyword campaign per sign |
+| User replies 3+ times | Add to "Engaged" list | Track manually for now |
 
 ---
 
@@ -209,7 +238,7 @@ If you ever want personalized wisdom for your sign, just reply with your sign. I
 1. Create a **Google Doc** with the Stoic Guide content
 2. Set sharing to "Anyone with the link can view"
 3. Use a **URL shortener** (bit.ly free) for clean tracking
-4. Paste the link in ManyChat Message 3
+4. Paste the link in the OpenReply DM message
 
 ### Guide Content Structure (1 page per sign = 12 pages)
 ```
