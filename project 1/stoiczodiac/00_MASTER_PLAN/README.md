@@ -37,7 +37,7 @@ This is a **high-engagement, low-competition niche intersection**:
 | **Analytics** | Instagram Insights | Native |
 | **Hashtag Research** | Display Purposes | Free |
 | **Caption Writing** | ChatGPT Free | Unlimited |
-| **DM Automation** | ManyChat (Free) | 1K contacts |
+| **DM Automation** | OpenReply (Self-hosted) | Unlimited (self-hosted) |
 
 ---
 
@@ -67,7 +67,7 @@ This is a **high-engagement, low-competition niche intersection**:
 - [ ] **Day 4**: Write caption bank (30 captions)
 - [ ] **Day 5**: Set up scheduling tool (Later / Buffer)
 - [ ] **Day 5–6**: Film/edit 3 Reels (CapCut)
-- [ ] **Day 6**: Set up DM automation sequence (ManyChat)
+- [ ] **Day 6**: Set up DM automation sequence (OpenReply)
 - [ ] **Day 7**: First post goes live — **LAUNCH DAY**
 - [ ] **Day 7**: Post welcome story + first Reel
 
@@ -141,7 +141,7 @@ This is a **high-engagement, low-competition niche intersection**:
 [ ] Scheduling tool connected
 [ ] 3 Reels edited & ready
 [ ] DM automation sequence written
-[ ] ManyChat account created
+[ ] OpenReply deployed
 [ ] First post scheduled
 [ ] LAUNCH DAY
 ```

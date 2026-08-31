@@ -176,9 +176,9 @@ Each tag should be lowercase, no spaces. Rank by popularity within group.
 
 ---
 
-## 📝 Prompt 8: DM Sequence (ManyChat)
+## 📝 Prompt 8: DM Sequence (OpenReply)
 
-**Purpose**: Welcome message for new followers  
+**Purpose**: Welcome message for new followers (comment-to-DM)  
 **Tool**: ChatGPT (GPT-3.5 free)
 
 ```

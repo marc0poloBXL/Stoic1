@@ -46,7 +46,7 @@ stoiczodiac/
 │
 ├── 06_AUTOMATION/
 │   ├── dm_sequences/
-│   │   └── manychat_welcome_sequence.md  ← 4-message DM flow
+│   │   └── dm_welcome_sequence.md  ← 4-message DM flow
 │   └── scheduler_setup/
 │       └── later_setup_guide.md          ← Later + Buffer free tier config
 │
@@ -106,7 +106,7 @@ stoiczodiac/
 | 4 | Design 30 quote images | Canva template batch |
 | 5 | Set up Later scheduler | `06_AUTOMATION/scheduler_setup/later_setup_guide.md` |
 | 5-6 | Edit 3 Reels | `07_AUDIO/voiceover_scripts/reel_voiceover_bank.md` + CapCut |
-| 6 | Set up ManyChat DM flow | `06_AUTOMATION/dm_sequences/manychat_welcome_sequence.md` |
+| 6 | Set up DM automation (OpenReply) | `06_AUTOMATION/dm_sequences/dm_welcome_sequence.md` |
 | **7** | **LAUNCH DAY** | `03_CONTENT_CALENDAR/week1_template.md` |
 
 ### Week 2: Build Momentum (Days 8–14)
@@ -141,7 +141,7 @@ stoiczodiac/
 | **ElevenLabs** | 10K chars/month | Needs signup |
 | **Pexels** | Unlimited | ✅ Ready |
 | **Later** | 30 posts/month | Needs signup |
-| **ManyChat** | 1K contacts | Needs signup |
+| **OpenReply** | Self-hosted (free) | Needs setup |
 | **Gumroad** | Free (10% fee) | For PDF sales |
 | **Substack** | Free | For newsletter |
 
@@ -156,7 +156,7 @@ stoiczodiac/
 | Avg. Reel Views | 1,000+ | Instagram Insights |
 | Engagement Rate | 5%+ | `(L+C+S+Sh) / Reach × 100` |
 | Story Views | 100+ | Instagram Insights |
-| DM Conversations | 50+ | ManyChat Dashboard |
+| DM Conversations | 50+ | OpenReply Dashboard |
 | Saved Posts | 20+/post | Instagram Insights |
 
 ---
@@ -185,7 +185,7 @@ flowchart TD
 
 - **Scale**: 2 accounts (Stoic × Zodiac + one more niche)
 - **Monetize**: PDF journal, readings, affiliate, sponsorships
-- **Automate**: Full ManyChat flows, auto-DM, content repurposing
+- **Automate**: Full OpenReply campaigns, auto-DM, content repurposing
 - **Grow**: Collab loops, cross-promotion, TikTok expansion
 
 ---

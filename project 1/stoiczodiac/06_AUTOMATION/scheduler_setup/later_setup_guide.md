@@ -134,4 +134,4 @@ Keep this checklist visible:
 | ElevenLabs | 10K chars/month | ~15 voiceover scripts/month |
 | TTSMaker | 20K chars/day | Backup for voiceovers |
 | Leonardo AI | 150 credits/day | Generate ~15 images/day |
-| ManyChat | 1K contacts | Free up to 1K followers |
+| OpenReply | Self-hosted (free) | Unlimited (self-hosted) |
