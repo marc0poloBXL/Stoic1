@@ -18,3 +18,4 @@
 | 2026-08-17 17:58 | Week 7 | Sep 28 – Oct 4 | `week_20260928` | [OK]  Staged |
 | 2026-08-17 17:58 | Week 8 | Oct 5 – Oct 11 | `week_20261005` | [OK]  Staged |
 | 2026-08-17 17:58 | Week 9 | Oct 12 – Oct 18 | `week_20261012` | [OK]  Staged |
+| 2026-08-17 18:18 | Week 10 | Oct 19 – Oct 25 | `week_20261019` | [OK]  Staged |

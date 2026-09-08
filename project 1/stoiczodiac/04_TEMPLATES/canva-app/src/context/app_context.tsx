@@ -27,6 +27,8 @@ export interface AppContextType {
   setPromptInputError: (value: PromptInputErrorType) => void;
   generatedImages: ImageType[];
   setGeneratedImages: (value: ImageType[]) => void;
+  selectedStyleUuid: string;
+  setSelectedStyleUuid: (value: string) => void;
 }
 
 export const AppContext = createContext<AppContextType>({
@@ -48,6 +50,8 @@ export const AppContext = createContext<AppContextType>({
   setPromptInputError: () => {},
   generatedImages: [] as ImageType[],
   setGeneratedImages: () => {},
+  selectedStyleUuid: "",
+  setSelectedStyleUuid: () => {},
 });
 
 /**
@@ -77,6 +81,7 @@ export const ContextProvider = ({
   const [creditsError, setCreditsError] = useState<CreditsErrorType>(
     CreditsErrorType.None,
   );
+  const [selectedStyleUuid, setSelectedStyleUuid] = useState<string>("");
 
   // Fetches initial data on component mount
   useEffect(() => {
@@ -145,6 +150,8 @@ export const ContextProvider = ({
     setPromptInputError,
     generatedImages,
     setGeneratedImages,
+    selectedStyleUuid,
+    setSelectedStyleUuid,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

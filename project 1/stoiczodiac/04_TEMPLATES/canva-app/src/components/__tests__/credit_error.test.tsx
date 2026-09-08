@@ -31,6 +31,8 @@ const baseContext: AppContextType = {
   setPromptInputError: () => {},
   generatedImages: [],
   setGeneratedImages: () => {},
+  selectedStyleUuid: "",
+  setSelectedStyleUuid: () => {},
 };
 
 const renderCreditError = (overrides: Partial<AppContextType>) =>

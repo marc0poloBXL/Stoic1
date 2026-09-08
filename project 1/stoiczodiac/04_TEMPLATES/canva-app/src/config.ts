@@ -32,4 +32,4 @@ export const APP_NAME = "Stoic Zodiac";
  * subscription link, a Gumroad upsell, or a Canva app purchase flow).
  * @TODO: Replace with your actual credit purchase URL.
  */
-export const PURCHASE_URL = "https://example.com";
+export const PURCHASE_URL = "https://leonardo.ai/subscription";

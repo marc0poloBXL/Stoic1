@@ -164,9 +164,9 @@ export const PromptInput = () => {
   return (
     <FormField
       label={intl.formatMessage({
-        defaultMessage: "Describe what you'd like to create",
+        defaultMessage: "Describe your stoic scene or concept",
         description:
-          "A label for the input field to describe what the user wants to create",
+          "A label for the input field prompting the user to describe a stoic-themed scene",
       })}
       error={getPromptInputErrorMessage(promptInputError, intl)}
       value={promptInput}
@@ -174,9 +174,9 @@ export const PromptInput = () => {
         <MultilineInput
           {...props}
           placeholder={intl.formatMessage({
-            defaultMessage: "Enter 5+ words to describe...",
+            defaultMessage: 'e.g. "Marble bust of Marcus Aurelius in golden moonlight"',
             description:
-              "A placeholder for the input field where the user can describe what they want the AI image generator to create, encouraging them to use a longer, more descriptive phrase. The number of words is not validated, but a longer text will likely improve the quality of the results. Feel free to translate loosely or idiomatically.",
+              "A placeholder for the input field showing an example stoic-themed prompt",
           })}
           onChange={onPromptInputChange}
           maxLength={MAX_INPUT_LENGTH}

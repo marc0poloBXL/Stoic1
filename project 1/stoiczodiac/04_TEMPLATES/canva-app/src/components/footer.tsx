@@ -34,6 +34,7 @@ export const Footer = () => {
     setIsLoadingImages,
     remainingCredits,
     setRemainingCredits,
+    selectedStyleUuid,
   } = useAppContext();
   const intl = useIntl();
 
@@ -89,6 +90,7 @@ export const Footer = () => {
       const { jobId } = await queueImageGeneration({
         prompt: promptInput,
         numberOfImages: NUMBER_OF_IMAGES_TO_GENERATE,
+        styleUuid: selectedStyleUuid || undefined,
       });
 
       setJobId(jobId);

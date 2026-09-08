@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <style>
+      .title { font-family: 'Raleway', sans-serif; font-size: 14px; fill: #D4AF37; font-weight: bold; }
+      .label { font-family: 'Raleway', sans-serif; font-size: 11px; fill: #C9A96E; }
+      .time { font-family: monospace; font-size: 10px; fill: #888; }
+      .caption { font-family: 'Raleway', sans-serif; font-size: 9px; fill: #AAA; }
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="#1A1A1A" rx="8"/>
+  <text x="600" y="30" class="title" text-anchor="middle" font-size="16">REEL STORYBOARD — R3: Daily Stoic Prompt</text>
+  <text x="600" y="48" class="label" text-anchor="middle">Duration: 15s | Format: 1080×1920 | Minimalist | Soothing</text>
+  <line x1="20" y1="56" x2="1180" y2="56" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Frame 1: 0:00-0:02 Opening -->
+  <g transform="translate(80, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:00 - 0:02</text>
+    <rect x="60" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <!-- Gentle chime visual -->
+    <circle cx="130" cy="100" r="15" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="130" cy="100" r="5" fill="#D4AF37" opacity="0.2"/>
+    <text x="130" y="175" text-anchor="middle" class="label" font-size="9">Today's</text>
+    <text x="130" y="195" text-anchor="middle" class="label" font-size="11">Stoic Prompt</text>
+    <text x="130" y="260" class="caption" text-anchor="middle">Gentle chime audio</text>
+    <text x="130" y="275" class="caption" text-anchor="middle">Text fades in</text>
+    <text x="130" y="315" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">FADE IN</text>
+    <text x="10" y="370" class="caption">OPENING: "Today's Stoic</text>
+    <text x="10" y="380" class="caption">Prompt" — Raleway 18pt Gold</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="350" y="260" text-anchor="middle" fill="#D4AF37" font-size="18" opacity="0.3">→</text>
+
+  <!-- Frame 2: 0:02-0:08 Prompt -->
+  <g transform="translate(380, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:02 - 0:08</text>
+    <rect x="60" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <!-- Starry bg hint -->
+    <text x="130" y="80" class="caption" text-anchor="middle" opacity="0.3">*  *  *</text>
+    <text x="130" y="95" class="caption" text-anchor="middle" opacity="0.3">*  *  *  *</text>
+    <text x="130" y="140" text-anchor="middle" fill="#F5F5F5" font-size="10" font-family="'Playfair Display', serif">"What would you do</text>
+    <text x="130" y="158" text-anchor="middle" fill="#F5F5F5" font-size="10" font-family="'Playfair Display', serif">if failure was</text>
+    <text x="130" y="176" text-anchor="middle" fill="#F5F5F5" font-size="10" font-family="'Playfair Display', serif">not an option?"</text>
+    <text x="130" y="230" class="caption" text-anchor="middle">Playfair Display, 36pt</text>
+    <text x="130" y="245" class="caption" text-anchor="middle">White #F5F5F5</text>
+    <text x="130" y="260" class="caption" text-anchor="middle">Drop shadow on text</text>
+    <text x="130" y="315" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">FADE UP (2s)</text>
+    <text x="10" y="370" class="caption">PROMPT: Large centered</text>
+    <text x="10" y="380" class="caption">question or statement.</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="650" y="260" text-anchor="middle" fill="#D4AF37" font-size="18" opacity="0.3">→</text>
+
+  <!-- Frame 3: 0:08-0:12 Reflection -->
+  <g transform="translate(680, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:08 - 0:12</text>
+    <rect x="60" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <!-- Prompt persists smaller -->
+    <text x="130" y="100" text-anchor="middle" fill="#F5F5F5" font-size="7" font-family="'Playfair Display', serif" opacity="0.5">"What would you do</text>
+    <text x="130" y="112" text-anchor="middle" fill="#F5F5F5" font-size="7" font-family="'Playfair Display', serif" opacity="0.5">if failure was not</text>
+    <text x="130" y="124" text-anchor="middle" fill="#F5F5F5" font-size="7" font-family="'Playfair Display', serif" opacity="0.5">an option?"</text>
+    <!-- Reflection cue fades in -->
+    <line x1="80" y1="155" x2="180" y2="155" stroke="#C9A96E" stroke-width="0.5" opacity="0.3"/>
+    <text x="130" y="180" text-anchor="middle" class="frame-text-sm" fill="#C9A96E" font-size="8" font-style="italic">Reflect on this</text>
+    <text x="130" y="198" text-anchor="middle" class="frame-text-sm" fill="#C9A96E" font-size="8" font-style="italic">today.</text>
+    <text x="130" y="260" class="caption" text-anchor="middle">Raleway 16pt italic</text>
+    <text x="130" y="275" class="caption" text-anchor="middle">Bronze #C9A96E</text>
+    <text x="130" y="315" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">FADE IN</text>
+    <text x="10" y="370" class="caption">REFLECTION: Cue text</text>
+    <text x="10" y="380" class="caption">fades in below prompt.</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="950" y="260" text-anchor="middle" fill="#D4AF37" font-size="18" opacity="0.3">→</text>
+
+  <!-- frame 4: 0:12-0:15 CTA -->
+  <g transform="translate(950, 70)">
+    <rect width="210" height="380" class="frame-bg" rx="4"/>
+    <rect x="8" y="10" width="194" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="105" y="25" class="time" text-anchor="middle">0:12 - 0:15</text>
+    <rect x="35" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <text x="105" y="140" text-anchor="middle" class="label" font-size="8">@stoiczodiac</text>
+    <text x="105" y="200" class="caption" text-anchor="middle">Follow CTA</text>
+    <text x="105" y="215" class="caption" text-anchor="middle">Fade out</text>
+    <text x="105" y="240" class="caption" text-anchor="middle">Music fades out</text>
+    <text x="105" y="310" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">FADE OUT</text>
+    <text x="8" y="370" class="caption">CLOSE: @ handle +</text>
+    <text x="8" y="380" class="caption">follow CTA, fade out.</text>
+  </g>
+
+  <!-- Bottom notes -->
+  <line x1="20" y1="470" x2="1180" y2="470" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+  <text x="30" y="490" class="label" font-size="13">PRODUCTION NOTES — Reel R3</text>
+
+  <g transform="translate(30, 500)">
+    <text x="0" y="0" class="label" font-size="11">CANVA SETUP:</text>
+    <text x="0" y="18" class="caption">1. 1080x1920 canvas — bg #0A0A0A with starry overlay (Elements → "starry sky" → 15% opacity)</text>
+    <text x="0" y="33" class="caption">2. Title: "Today's Stoic Prompt" — Raleway 18pt, #D4AF37 — animate: Fade in</text>
+    <text x="0" y="48" class="caption">3. Prompt: Playfair Display, 36pt, #F5F5F5, centered, drop shadow — animate: Fade up (2s)</text>
+    <text x="0" y="63" class="caption">4. Reflection cue: Raleway 16pt italic, #C9A96E — animate: Fade in at 8s</text>
+    <text x="0" y="78" class="caption">5. CTA: "@stoiczodiac" bottom — animate: Fade out</text>
+  </g>
+
+  <g transform="translate(30, 600)">
+    <text x="0" y="0" class="label" font-size="11">CAPCUT TIMELINE (15s):</text>
+    <text x="0" y="18" class="caption">Track 1 (Video): Starry/motion background or gentle animated texture — 15s</text>
+    <text x="0" y="33" class="caption">Track 2 (Text): Title — Fade in at 0s, fade out at 2s</text>
+    <text x="0" y="48" class="caption">Track 3 (Text): Prompt — Fade up at 2s, hold to 12s, fade out</text>
+    <text x="0" y="63" class="caption">Track 4 (Text): Reflection cue — Fade in at 8s, hold to 12s</text>
+    <text x="0" y="78" class="caption">Track 5 (Text): CTA — Appears at 12s, holds to 15s</text>
+    <text x="0" y="93" class="caption">Track 6 (Audio): Gentle chime at 0s, soft pad throughout, fade out at 13s</text>
+  </g>
+
+  <g transform="translate(30, 720)">
+    <text x="0" y="0" class="label" font-size="11">AUDIO SCRIPT (ElevenLabs — 10 words, ~12s):</text>
+    <text x="0" y="18" class="caption" font-size="10" fill="#E8E8E8">[0:00] (gentle chime)</text>
+    <text x="0" y="35" class="caption" font-size="10" fill="#E8E8E8">[0:02] "What would you do if failure was not an option?"</text>
+    <text x="0" y="52" class="caption" font-size="10" fill="#E8E8E8">[0:08] "Reflect on this today."</text>
+    <text x="0" y="69" class="caption" font-size="10" fill="#E8E8E8">[0:12] "Follow @stoiczodiac."</text>
+  </g>
+
+  <g transform="translate(30, 810)">
+    <text x="0" y="0" class="label" font-size="11">TIMELINE VISUALIZATION:</text>
+    <rect x="0" y="8" width="1140" height="20" fill="#1A1A2E" rx="3"/>
+    <rect x="0" y="8" width="150" height="20" fill="#6D2E5C" rx="3" opacity="0.7"/>
+    <text x="75" y="22" class="caption" text-anchor="middle" font-size="8" fill="#FFF">Title (2s)</text>
+    <rect x="155" y="8" width="455" height="20" fill="#457B9D" rx="3" opacity="0.7"/>
+    <text x="382" y="22" class="caption" text-anchor="middle" font-size="8" fill="#FFF">Prompt Text (6s)</text>
+    <rect x="615" y="8" width="305" height="20" fill="#2D6A4F" rx="3" opacity="0.7"/>
+    <text x="767" y="22" class="caption" text-anchor="middle" font-size="8" fill="#FFF">Reflection Cue (4s)</text>
+    <rect x="925" y="8" width="225" height="20" fill="#D4AF37" rx="3" opacity="0.7"/>
+    <text x="1037" y="22" class="caption" text-anchor="middle" font-size="8" fill="#000">CTA (3s)</text>
+  </g>
+</svg>

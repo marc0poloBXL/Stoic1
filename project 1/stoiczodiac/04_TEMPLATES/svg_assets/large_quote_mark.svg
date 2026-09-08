@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Opening quote mark - decorative, large, serif style -->
+  <text x="20" y="175" font-family="Georgia, 'Playfair Display', serif" font-size="220" font-weight="bold" fill="url(#goldGrad)" opacity="0.15" filter="url(#glow)">"</text>
+  <!-- Subtle second mark offset -->
+  <text x="35" y="175" font-family="Georgia, 'Playfair Display', serif" font-size="220" font-weight="bold" fill="url(#goldGrad)" opacity="0.08">"</text>
+</svg>

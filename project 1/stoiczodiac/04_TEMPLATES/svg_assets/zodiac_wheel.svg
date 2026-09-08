@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="fadeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A2E" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1A1A2E" stop-opacity="1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="185" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="200" cy="200" r="178" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Inner ring -->
+  <circle cx="200" cy="200" r="140" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Center circle -->
+  <circle cx="200" cy="200" r="30" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+  <circle cx="200" cy="200" r="4" fill="#D4AF37" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- Divider lines (12 zodiac house lines) -->
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.15">
+    <!-- 12 segments, 30 degrees each -->
+    <line x1="200" y1="15" x2="200" y2="60"/>
+    <line x1="200" y1="340" x2="200" y2="385"/>
+    <line x1="15" y1="200" x2="60" y2="200"/>
+    <line x1="340" y1="200" x2="385" y2="200"/>
+    <!-- Diagonals -->
+    <line x1="69" y1="69" x2="102" y2="102"/>
+    <line x1="331" y1="331" x2="298" y2="298"/>
+    <line x1="69" y1="331" x2="102" y2="298"/>
+    <line x1="331" y1="69" x2="298" y2="102"/>
+    <!-- Intermediate -->
+    <line x1="107" y1="28" x2="130" y2="64"/>
+    <line x1="28" y1="107" x2="64" y2="130"/>
+    <line x1="293" y1="28" x2="270" y2="64"/>
+    <line x1="372" y1="107" x2="336" y2="130"/>
+    <line x1="107" y1="372" x2="130" y2="336"/>
+    <line x1="28" y1="293" x2="64" y2="270"/>
+    <line x1="293" y1="372" x2="270" y2="336"/>
+    <line x1="372" y1="293" x2="336" y2="270"/>
+  </g>
+
+  <!-- Zodiac symbols around the ring -->
+  <g font-family="serif" font-size="16" fill="url(#goldGrad)" opacity="0.6" text-anchor="middle" dominant-baseline="central">
+    <!-- Placing symbols at 30-degree intervals around the wheel -->
+    <!-- Each at radius 162 from center -->
+    <!-- Aries ♈ (0°) -->
+    <text x="200" y="38">♈</text>
+    <!-- Taurus ♉ (30°) -->
+    <text x="281" y="56">♉</text>
+    <!-- Gemini ♊ (60°) -->
+    <text x="338" y="113">♊</text>
+    <!-- Cancer ♋ (90°) -->
+    <text x="362" y="200">♋</text>
+    <!-- Leo ♌ (120°) -->
+    <text x="338" y="287">♌</text>
+    <!-- Virgo ♍ (150°) -->
+    <text x="281" y="344">♍</text>
+    <!-- Libra ♎ (180°) -->
+    <text x="200" y="362">♎</text>
+    <!-- Scorpio ♏ (210°) -->
+    <text x="119" y="344">♏</text>
+    <!-- Sagittarius ♐ (240°) -->
+    <text x="62" y="287">♐</text>
+    <!-- Capricorn ♑ (270°) -->
+    <text x="38" y="200">♑</text>
+    <!-- Aquarius ♒ (300°) -->
+    <text x="62" y="113">♒</text>
+    <!-- Pisces ♓ (330°) -->
+    <text x="119" y="56">♓</text>
+  </g>
+
+  <!-- Decorative dots at cardinal points -->
+  <circle cx="200" cy="175" r="1.5" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="200" cy="225" r="1.5" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="175" cy="200" r="1.5" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="225" cy="200" r="1.5" fill="#D4AF37" opacity="0.3"/>
+</svg>

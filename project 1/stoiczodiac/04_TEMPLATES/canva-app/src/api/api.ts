@@ -54,20 +54,27 @@ const endpoints = {
  * @param {Object} options - The options for generating images.
  * @param {string} options.prompt - The prompt for generating images.
  * @param {number} options.numberOfImages - The number of images to generate.
+ * @param {string} [options.styleUuid] - Optional Leonardo AI style preset UUID.
  * @returns {Promise<QueueImageGenerationResponse>} A promise that resolves to the created job ID.
  */
 export const queueImageGeneration = async ({
   prompt,
   numberOfImages,
+  styleUuid,
 }: {
   prompt: string;
   numberOfImages: number;
+  styleUuid?: string;
 }): Promise<QueueImageGenerationResponse> => {
   const url = new URL(endpoints.queueImageGeneration, BACKEND_HOST);
   url.searchParams.append("count", numberOfImages.toString());
   url.searchParams.append("prompt", prompt);
 
-  const result: QueueImageGenerationResponse = await sendRequest(url);
+  const result: QueueImageGenerationResponse = await sendRequest(url, {
+    method: "POST",
+    body: JSON.stringify({ styleUuid: styleUuid || undefined }),
+    headers: { "content-type": "application/json" },
+  });
 
   return result;
 };
@@ -171,11 +178,11 @@ const sendRequest = async <T>(url: URL, options?: RequestInit): Promise<T> => {
   const userToken = await auth.getCanvaUserToken();
 
   const res = await fetch(url, {
+    ...options,
     headers: {
       Authorization: `Bearer ${userToken}`,
       ...options?.headers,
     },
-    ...options,
   });
 
   if (!res.ok) {

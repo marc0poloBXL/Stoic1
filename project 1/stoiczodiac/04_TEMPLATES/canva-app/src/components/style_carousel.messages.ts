@@ -7,60 +7,63 @@ export const StyleCarouselMessages = defineMessages({
       "A label for the input field to describe what the user wants to create",
   },
   styleNone: {
-    defaultMessage: "None",
+    defaultMessage: "Cinematic",
     description:
-      "A label for the image card to describe what style image the user wants to create",
+      "A label for the image card describing a dramatic cinematic visual style",
   },
   styleHandDrawn: {
-    defaultMessage: "Hand drawn",
+    defaultMessage: "Oil painting",
     description:
-      "A label for the image card to describe what style image the user wants to create",
+      "A label for the image card describing an oil painting visual style",
   },
   styleSticker: {
-    defaultMessage: "Sticker",
+    defaultMessage: "Ethereal",
     description:
-      "A label for the image card to describe what style image the user wants to create",
+      "A label for the image card describing an ethereal, dreamy visual style",
   },
   styleLineArt: {
-    defaultMessage: "Line art",
+    defaultMessage: "Sketch",
     description:
-      "A label for the image card to describe what style image the user wants to create",
+      "A label for the image card describing a pencil sketch visual style",
   },
   styleImpasto: {
-    defaultMessage: "Impasto",
+    defaultMessage: "Minimalist",
     description:
-      "A label for the image card to describe what style image the user wants to create",
+      "A label for the image card describing a clean minimalist visual style",
   },
   styleDoodle: {
-    defaultMessage: "Doodle",
+    defaultMessage: "Mystical",
     description:
-      "A label for the image card to describe what style image the user wants to create",
+      "A label for the image card describing a mystical, glowing visual style",
   },
   altNone: {
-    defaultMessage: "No style applied",
-    description: "Alt text for the image card showing a no style applied",
+    defaultMessage: "Cinematic dramatic style example",
+    description:
+      "Alt text for the image card showing a cinematic style example",
   },
   altHandDrawn: {
-    defaultMessage: "Duck in a hand drawn style",
+    defaultMessage: "Oil painting style example",
     description:
-      "Alt text for the image card showing a duck in a hand drawn style",
+      "Alt text for the image card showing an oil painting style example",
   },
   altSticker: {
-    defaultMessage: "Duck as a sticker",
-    description: "Alt text for the image card showing a duck as a sticker",
+    defaultMessage: "Ethereal dreamy style example",
+    description:
+      "Alt text for the image card showing an ethereal dreamy style example",
   },
   altLineArt: {
-    defaultMessage: "Duck in a line art style",
+    defaultMessage: "Pencil sketch style example",
     description:
-      "Alt text for the image card showing a duck in a line art style",
+      "Alt text for the image card showing a pencil sketch style example",
   },
   altImpasto: {
-    defaultMessage: "Duck in an impasto style",
+    defaultMessage: "Minimalist clean style example",
     description:
-      "Alt text for the image card showing a duck in an impasto style",
+      "Alt text for the image card showing a minimalist clean style example",
   },
   altDoodle: {
-    defaultMessage: "Duck as a doodle",
-    description: "Alt text for the image card showing a duck as a doodle",
+    defaultMessage: "Mystical glowing style example",
+    description:
+      "Alt text for the image card showing a mystical glowing style example",
   },
 });

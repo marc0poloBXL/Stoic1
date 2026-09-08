@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Stoic Zodiac Page Token</title>
+  <style>
+    body { font-family: -apple-system, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; line-height: 1.5; }
+    h1 { font-size: 1.4em; }
+    .step { margin: 16px 0; padding: 16px; border-left: 3px solid #1877F2; background: #f8f9fa; border-radius: 0 6px 6px 0; }
+    pre { background: #f5f5f5; padding: 12px; border-radius: 6px; overflow-x: auto; word-break: break-all; user-select: all; font-size: 13px; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; }
+    .success { background: #e8f5e9; color: #0a8a0a; padding: 10px; border-radius: 6px; }
+    .error { background: #fee; color: #c00; padding: 10px; border-radius: 6px; }
+    button { background: #1877F2; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-size: 14px; cursor: pointer; margin-top: 8px; }
+    button:hover { background: #1664d9; }
+    textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 13px; box-sizing: border-box; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1>🦁 Get Stoic Zodiac Page Token</h1>
+
+  <div class="step">
+    <p><strong>Step 1:</strong> Copy the token already shown in the Graph API Explorer field, then paste it below:</p>
+    <textarea id="tokenInput" rows="3" placeholder="Paste the token EAA... from the explorer field here"></textarea>
+    <button onclick="getPages()">🔍 Get My Pages</button>
+  </div>
+
+  <div id="loading" class="step hidden">
+    <p>⏳ Looking up your pages...</p>
+  </div>
+
+  <div id="errorBox" class="error hidden"></div>
+
+  <div id="result" class="hidden">
+    <div id="successMsg" class="success"></div>
+    <p><strong>Page Token (copy this):</strong></p>
+    <pre id="pageToken"></pre>
+    <button id="copyBtn">📋 Copy to Clipboard</button>
+    <p style="font-size:14px;color:#555;margin-top:8px;">Then paste it in the terminal so I can run the setup.</p>
+  </div>
+
+  <script>
+    const API_VERSION = 'v26.0';
+    const IG_ID = '17841438935909153';
+    const CALLBACK_URL = 'https://openreply-zeta-ruby.vercel.app/api/webhook';
+    const VERIFY_TOKEN = 'stoiczodiac-webhook-2026';
+
+    async function getPages() {
+      const token = document.getElementById('tokenInput').value.trim();
+      if (!token) { alert('Paste your token first!'); return; }
+
+      document.getElementById('loading').classList.remove('hidden');
+      document.getElementById('errorBox').classList.add('hidden');
+      document.getElementById('result').classList.add('hidden');
+
+      try {
+        const resp = await fetch(`https://graph.facebook.com/${API_VERSION}/me/accounts?fields=id,name,access_token,instagram_business_account{id,username}&access_token=${encodeURIComponent(token)}`);
+        const data = await resp.json();
+
+        document.getElementById('loading').classList.add('hidden');
+
+        if (data.error) {
+          document.getElementById('errorBox').classList.remove('hidden');
+          document.getElementById('errorBox').textContent = 'Error: ' + data.error.message;
+          return;
+        }
+
+        if (!data.data || data.data.length === 0) {
+          document.getElementById('errorBox').classList.remove('hidden');
+          document.getElementById('errorBox').textContent = 'No Facebook Pages found. Make sure you have a Facebook Page.';
+          return;
+        }
+
+        // Find Stoic Zodiac page
+        const page = data.data.find(p =>
+          p.name?.toLowerCase().includes('stoic') ||
+          p.instagram_business_account?.id === IG_ID
+        );
+
+        if (!page) {
+          let html = 'No "Stoic Zodiac" page found. Available pages:<ul>';
+          for (const p of data.data) {
+            html += `<li>${p.name} ${p.instagram_business_account ? '✅ (IG linked)' : '❌ (no IG)'}</li>`;
+          }
+          html += '</ul><p>If "Stoic Zodiac" is listed above, try getting its token from the Page Token dropdown in the Explorer instead.</p>';
+          document.getElementById('errorBox').classList.remove('hidden');
+          document.getElementById('errorBox').innerHTML = html;
+          return;
+        }
+
+        document.getElementById('result').classList.remove('hidden');
+        document.getElementById('successMsg').innerHTML = `✅ <strong>Found:</strong> ${page.name}`;
+
+        const pageToken = page.access_token;
+        document.getElementById('pageToken').textContent = pageToken;
+      } catch (e) {
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('errorBox').classList.remove('hidden');
+        document.getElementById('errorBox').textContent = 'Error: ' + e.message;
+      }
+    }
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const text = document.getElementById('pageToken').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        document.getElementById('copyBtn').textContent = '✅ Copied!';
+        setTimeout(() => { document.getElementById('copyBtn').textContent = '📋 Copy to Clipboard'; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <!-- Dark void background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <!-- Gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <!-- Subtle gold glow -->
+    <filter id="goldGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Marble texture pattern -->
+    <filter id="marble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" seed="3" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+      <feComponentTransfer in="gray" result="faded">
+        <feFuncA type="linear" slope="0.06"/>
+      </feComponentTransfer>
+      <feBlend in="faded" in2="SourceGraphic" mode="overlay"/>
+    </filter>
+    <!-- Inner shadow -->
+    <filter id="innerGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="blur" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgGrad)" filter="url(#marble)"/>
+
+  <!-- Outer gold border - thin -->
+  <rect x="30" y="30" width="1020" height="1020" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Inner frame - double line effect -->
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Top accent line -->
+  <rect x="240" y="60" width="600" height="1.5" fill="url(#goldGrad)" opacity="0.5"/>
+
+  <!-- Bottom accent line -->
+  <rect x="240" y="1018" width="600" height="1.5" fill="url(#goldGrad)" opacity="0.5"/>
+
+  <!-- Corner ornament - top left -->
+  <path d="M 46 60 L 46 46 L 60 46" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <!-- Corner ornament - top right -->
+  <path d="M 1034 60 L 1034 46 L 1020 46" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <!-- Corner ornament - bottom left -->
+  <path d="M 46 1020 L 46 1034 L 60 1034" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <!-- Corner ornament - bottom right -->
+  <path d="M 1034 1020 L 1034 1034 L 1020 1034" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Center text safe area indicator (subtle) - not visible in final render -->
+  <rect x="150" y="200" width="780" height="680" fill="none" stroke="none"/>
+
+  <!-- Bottom frame - @ handle area -->
+  <line x1="300" y1="990" x2="780" y2="990" stroke="#D4AF37" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Decorative diamond accent bottom center -->
+  <polygon points="540,975 545,980 540,985 535,980" fill="#D4AF37" opacity="0.35"/>
+</svg>

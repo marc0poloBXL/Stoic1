@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="bottomFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="marble"><feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="5" seed="7" result="noise"/><feColorMatrix type="saturate" values="0" in="noise" result="gray"/><feComponentTransfer in="gray" result="faded"><feFuncA type="linear" slope="0.05"/></feComponentTransfer><feBlend in="faded" in2="SourceGraphic" mode="overlay"/></filter>
+    <filter id="textShadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/></filter>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bgGrad)" filter="url(#marble)"/>
+  <circle cx="540" cy="800" r="300" fill="#D4AF37" opacity="0.03"/>
+  <rect x="25" y="25" width="1030" height="1870" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+  <rect x="35" y="35" width="1010" height="1850" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+  <rect x="340" y="50" width="400" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+  <rect x="340" y="1860" width="400" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+  <path d="M 41 52 L 41 41 L 52 41" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1039 52 L 1039 41 L 1028 41" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 41 1868 L 41 1879 L 52 1879" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1039 1868 L 1039 1879 L 1028 1879" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <polygon points="540,1845 548,1853 540,1861 532,1853" fill="#D4AF37" opacity="0.25"/>
+  <text x="540" y="110" font-family="Raleway,sans-serif" font-size="13" font-weight="500" letter-spacing="5" fill="#D4AF37" text-anchor="middle" opacity="0.7">TODAY'S STOIC PROMPT</text>
+  <text x="540" y="180" font-family="serif" font-size="48" fill="#80CED7" text-anchor="middle" opacity="0.9">♓</text>
+  <text x="540" y="210" font-family="Raleway,sans-serif" font-size="16" font-weight="600" fill="#80CED7" text-anchor="middle" letter-spacing="3" opacity="0.6">PISCES</text>
+  <line x1="340" y1="260" x2="740" y2="260" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.2"/>
+  <text x="540" y="560" font-family="'Playfair Display',Georgia,serif" font-size="44" fill="#F5F5F5" text-anchor="middle" filter="url(#textShadow)">"What are you holding onto that you need to release?"</text>
+  <rect x="0" y="1380" width="1080" height="540" fill="url(#bottomFade)"/>
+  <text x="540" y="1520" font-family="serif" font-size="26" font-style="italic" fill="#C9A96E" text-anchor="middle">Sit with this question today.</text>
+  <line x1="420" y1="1580" x2="660" y2="1580" stroke="#C9A96E" stroke-width="0.5" opacity="0.2"/>
+  <rect x="390" y="1650" width="300" height="50" rx="25" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+  <text x="540" y="1680" font-family="Raleway,sans-serif" font-size="16" font-weight="600" letter-spacing="3" fill="#D4AF37" text-anchor="middle">@STOICZODIAC</text>
+  <text x="540" y="1800" font-family="Raleway,sans-serif" font-size="11" fill="#F5F5F5" text-anchor="middle" opacity="0.3">Reply with your answer</text>
+  <line x1="25" y1="800" x2="45" y2="800" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="25" y1="1120" x2="45" y2="1120" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="1035" y1="800" x2="1055" y2="800" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="1035" y1="1120" x2="1055" y2="1120" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+</svg>
