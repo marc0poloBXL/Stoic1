@@ -215,7 +215,7 @@ def build_brief(entries, week_number):
 - [ ] **Edit** {count_reels} Reels in CapCut → save to `reels/`
 - [ ] **Carousel** ({count_carousels}) → `carousels/`
 - [ ] **Write** 7 story prompts → `stories/`
-- [ ] **Schedule** all posts in Later
+- [ ] **Schedule/queue** all posts for the week
 - [ ] **Pre-write** engagement comments (20)
 
 ---

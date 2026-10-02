@@ -14,7 +14,7 @@
 - [ ] **Edit** 3 Reels in CapCut → save to `reels/`
 - [ ] **Carousel** (3) → `carousels/`
 - [ ] **Write** 7 story prompts → `stories/`
-- [ ] **Schedule** all posts in Later
+- [ ] **Schedule/queue** all posts for the week
 - [ ] **Pre-write** engagement comments (20)
 
 ---

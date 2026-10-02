@@ -119,5 +119,5 @@ Adjustment:  [ ]
 - [ ] Design 7 quote images in Canva (batch)
 - [ ] Edit 3 Reels in CapCut
 - [ ] Write 7 story prompts
-- [ ] Schedule all posts in Later (free tier)
+- [ ] Schedule/queue all posts for the week
 - [ ] Pre-write engagement comments for th

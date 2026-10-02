@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 5 — Instagram Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0A0A0A;
+  --surface: #111111;
+  --card-bg: #0D0D0D;
+  --gold: #D4AF37;
+  --gold-dim: rgba(212,175,55,0.12);
+  --gold-glow: rgba(212,175,55,0.06);
+  --text: #F5F5F5;
+  --text-dim: rgba(245,245,245,0.45);
+  --border: rgba(212,175,55,0.08);
+}
+
+:root[data-theme="light"] {
+  --bg: #F5F0EB;
+  --surface: #FFFFFF;
+  --card-bg: #FAFAF7;
+  --gold: #B8962E;
+  --gold-dim: rgba(184,150,46,0.10);
+  --gold-glow: rgba(184,150,46,0.04);
+  --text: #1A1A1A;
+  --text-dim: rgba(26,26,26,0.4);
+  --border: rgba(184,150,46,0.10);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 48px 24px 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.header h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+.header .sub {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--text-dim);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.header .dates {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+/* Feed grid — Instagram 3-column layout */
+.feed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+/* Post card wrapper */
+.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.post:hover {
+  transform: translateY(-3px);
+}
+
+/* Instagram-style square card (1080×1080 aspect) */
+.card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: var(--surface);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sign color wash background */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, var(--sign-glow) 0%, transparent 70%);
+  opacity: 0.15;
+}
+
+/* Subtle top-right symbol watermark */
+.card .watermark {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.6rem;
+  opacity: 0.08;
+  line-height: 1;
+}
+
+/* Decorative corner lines */
+.card .corner-tl,
+.card .corner-br {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: var(--gold);
+  opacity: 0.35;
+}
+.card .corner-tl {
+  top: 14px; left: 14px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+.card .corner-br {
+  bottom: 14px; right: 14px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+
+/* Content */
+.card-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 32px;
+  width: 100%;
+}
+
+/* Sign symbol */
+.card .sign-symbol {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Sign name */
+.card .sign-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 20px;
+}
+
+/* Gold divider */
+.card .divider {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 22px;
+}
+
+/* Theme label */
+.card .theme-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+/* The quote */
+.card .quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text);
+  font-style: italic;
+  quotes: "“" "”" "‘" "’";
+}
+
+.card .quote::before { content: "“"; }
+.card .quote::after { content: "”"; }
+
+/* Attribution */
+.card .attribution {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-top: 16px;
+}
+
+/* Challenge footer on card */
+.card .challenge {
+  position: absolute;
+  bottom: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 400;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+  max-width: 80%;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.card .challenge-label {
+  display: block;
+  font-size: 0.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 2px;
+  opacity: 0.6;
+}
+
+/* Post footer — caption preview */
+.post-footer {
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+}
+
+.post-footer .handle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 2px;
+}
+
+.post-footer .caption {
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: var(--text-dim);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-footer .hashtags {
+  font-size: 0.6rem;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Day label */
+.post .day-label {
+  font-size: 0.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  padding: 8px 14px 0;
+  background: var(--card-bg);
+}
+
+.post .engagement {
+  font-size: 0.55rem;
+  font-weight: 300;
+  color: var(--text-dim);
+  opacity: 0.65;
+  padding: 3px 14px 6px;
+  background: var(--card-bg);
+  letter-spacing: 0.02em;
+}
+
+/* Reel badge */
+.reel-badge, .carousel-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  font-size: 0.45rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.reel-badge {
+  background: rgba(212,175,55,0.15);
+  color: var(--gold);
+  border: 1px solid rgba(212,175,55,0.25);
+}
+
+.carousel-badge {
+  background: rgba(245,245,245,0.08);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .feed { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+
+@media (max-width: 500px) {
+  .feed { grid-template-columns: 1fr; max-width: 420px; gap: 20px; }
+  .header h1 { font-size: 1.8rem; }
+  .card .quote { font-size: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <h1>Week 5 Preview</h1>
+  <p class="sub">Stoic Wisdom × Zodiac Signs — Instagram Feed</p>
+  <p class="dates">Sep 7 – Sep 13, 2026 &nbsp;·&nbsp; @stoiczodiac</p>
+</header>
+
+<div class="feed" id="feed"></div>
+
+<script>
+const days = [
+  {
+    day: 'Mon', date: 'Sep 7',
+    symbol: '♌', sign: 'LEO', color: '#F4A261',
+    philosopher: 'Epictetus',
+    quote: 'People are not disturbed by things, but by the views they take of them.',
+    theme: 'True worth',
+    challenge: 'Act as if your character — not your reputation — is the only thing that matters.',
+    formats: ['Reel'],
+    engagement: '7:42 AM · Sep 7, 2026 · 28.5K Views',
+    caption: 'Your worth isn\'t measured by what happens to you, but by how you choose to respond.',
+    hashtags: '#Leo #Epictetus #StoicWisdom'
+  },
+  {
+    day: 'Tue', date: 'Sep 8',
+    symbol: '♎', sign: 'LIBRA', color: '#457B9D',
+    philosopher: 'Marcus Aurelius',
+    quote: 'Receive without pride, let go without attachment.',
+    theme: 'Balance within chaos',
+    challenge: 'Do one small thing not for applause, but because it\'s right.',
+    formats: ['Carousel'],
+    engagement: '9:15 AM · Sep 8, 2026 · 12.3K Views',
+    caption: 'Balance isn\'t something you find — it\'s something you practice, daily.',
+    hashtags: '#Libra #MarcusAurelius #Balance'
+  },
+  {
+    day: 'Wed', date: 'Sep 9',
+    symbol: '♈', sign: 'ARIES', color: '#E63946',
+    philosopher: 'Zeno',
+    quote: 'A small flame can light a great fire. Begin where you are.',
+    theme: 'The courageous beginning',
+    challenge: 'Act as if your character — not your reputation — is the only thing that matters.',
+    formats: ['Reel'],
+    engagement: '6:38 AM · Sep 9, 2026 · 34.1K Views',
+    caption: 'Every great journey starts with a single, intentional step forward.',
+    hashtags: '#Aries #Zeno #Courage'
+  },
+  {
+    day: 'Thu', date: 'Sep 10',
+    symbol: '♉', sign: 'TAURUS', color: '#2A9D8F',
+    philosopher: 'Epictetus',
+    quote: 'Wealth consists not in having great possessions, but in having few wants.',
+    theme: 'Contentment with enough',
+    challenge: 'Act as if your character — not your reputation — is the only thing that matters.',
+    formats: [],
+    engagement: '8:22 AM · Sep 10, 2026 · 4.7K Views',
+    caption: 'True wealth isn\'t what you own — it\'s what you no longer need.',
+    hashtags: '#Taurus #Epictetus #Simplicity',
+  },
+  {
+    day: 'Fri', date: 'Sep 11',
+    symbol: '♊', sign: 'GEMINI', color: '#E9C46A',
+    philosopher: 'Seneca',
+    quote: 'It is not that we have a short time to live, but that we waste a lot of it.',
+    theme: 'The focused mind',
+    challenge: 'Notice where you\'re seeking approval — and give it to yourself instead.',
+    formats: ['Reel', 'Carousel'],
+    engagement: '7:05 AM · Sep 11, 2026 · 42.8K Views',
+    caption: 'Time is the only currency you can\'t earn back. Spend it wisely.',
+    hashtags: '#Gemini #Seneca #Focus'
+  },
+  {
+    day: 'Sat', date: 'Sep 12',
+    symbol: '♋', sign: 'CANCER', color: '#A8DADC',
+    philosopher: 'Zeno',
+    quote: 'Man conquers the world by conquering himself.',
+    theme: 'The nurturing will',
+    challenge: 'Notice where you\'re seeking approval — and give it to yourself instead.',
+    formats: [],
+    engagement: '9:48 AM · Sep 12, 2026 · 3.2K Views',
+    caption: 'Your greatest conquest isn\'t the world — it\'s the battlefield within.',
+    hashtags: '#Cancer #Zeno #InnerStrength'
+  },
+  {
+    day: 'Sun', date: 'Sep 13',
+    symbol: '♌', sign: 'LEO', color: '#F4A261',
+    philosopher: 'Musonius Rufus',
+    quote: 'A human being\'s highest purpose is to serve others with wisdom and justice.',
+    theme: 'Strength in service',
+    challenge: 'Pause once before reacting. Ask — is this in my control?',
+    formats: ['Carousel'],
+    engagement: '8:57 AM · Sep 13, 2026 · 18.6K Views',
+    caption: 'Strength isn\'t about dominance — it\'s about how you lift others up.',
+    hashtags: '#Leo #MusoniusRufus #Service'
+  }
+];
+
+const feed = document.getElementById('feed');
+
+days.forEach(d => {
+  const post = document.createElement('div');
+  post.className = 'post';
+
+  // Format badges
+  const badgeHtml = d.formats.map(f =>
+    f === 'Reel' ? '<span class="reel-badge">▶ Reel</span>' :
+    '<span class="carousel-badge">◆ Carousel</span>'
+  ).join('');
+
+  post.innerHTML = `
+    <div class="day-label">${d.day} ${d.date}</div>
+    <div class="engagement">${d.engagement}</div>
+    <div class="card" style="--sign-glow: ${d.color}">
+      <span class="watermark">${d.symbol}</span>
+      <span class="corner-tl"></span>
+      <span class="corner-br"></span>
+      ${badgeHtml}
+      <div class="card-content">
+        <span class="sign-symbol">${d.symbol}</span>
+        <span class="sign-name">${d.sign} · ${d.philosopher}</span>
+        <div class="divider"></div>
+        <span class="theme-label">${d.theme}</span>
+        <div class="quote">${d.quote}</div>
+        <div class="attribution">— ${d.philosopher}</div>
+      </div>
+      <div class="challenge">
+        <span class="challenge-label">Today's Challenge</span>
+        ${d.challenge}
+      </div>
+    </div>
+    <div class="post-footer">
+      <div class="handle">@stoiczodiac</div>
+      <div class="caption">${d.caption}</div>
+      <div class="hashtags">${d.hashtags}</div>
+    </div>
+  `;
+
+  feed.appendChild(post);
+});
+</script>
+</body>
+</html>

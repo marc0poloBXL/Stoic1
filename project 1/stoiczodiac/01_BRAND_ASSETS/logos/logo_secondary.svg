@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style>
+      .ring { fill: none; stroke: #D4AF37; stroke-width: 2; }
+      .phi { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 80px; fill: #D4AF37; text-anchor: middle; }
+      .text-sub { font-family: 'Raleway', Helvetica, sans-serif; font-size: 8px; fill: #F5F5F5; text-anchor: middle; letter-spacing: 3; opacity: 0.6; }
+      .dot { fill: #D4AF37; opacity: 0.5; }
+    </style>
+  </defs>
+  <rect width="200" height="200" fill="#0A0A0A" rx="40"/>
+  <circle cx="100" cy="85" r="65" class="ring"/>
+  <circle cx="100" cy="85" r="60" class="ring" stroke-width="0.8" opacity="0.4"/>
+  <text x="100" y="115" class="phi">Φ</text>
+  <text x="100" y="165" class="text-sub">STOIC ZODIAC</text>
+  <!-- Decorative dots -->
+  <circle cx="100" cy="20" r="1.5" class="dot"/>
+  <circle cx="100" cy="150" r="1.5" class="dot"/>
+  <circle cx="35" cy="85" r="1.5" class="dot"/>
+  <circle cx="165" cy="85" r="1.5" class="dot"/>
+</svg>

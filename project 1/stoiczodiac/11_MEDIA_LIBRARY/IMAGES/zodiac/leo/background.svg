@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <radialGradient id="bgLeo" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1A1509"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <radialGradient id="glowLeo" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#F4A261" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#F4A261" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#F4A261" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lineLeo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F4A261" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#F4A261" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F4A261" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgLeo)"/>
+  <rect width="1080" height="1080" fill="url(#glowLeo)"/>
+
+  <circle cx="540" cy="540" r="480" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.12"/>
+  <circle cx="540" cy="540" r="460" fill="none" stroke="#D4AF37" stroke-width="0.3" opacity="0.08"/>
+
+  <rect x="200" y="120" width="680" height="1" fill="url(#lineLeo)" opacity="0.4"/>
+  <rect x="200" y="959" width="680" height="1" fill="url(#lineLeo)" opacity="0.4"/>
+
+  <line x1="160" y1="160" x2="200" y2="160" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="160" y1="160" x2="160" y2="200" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="160" x2="880" y2="160" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="160" x2="920" y2="200" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="160" y1="920" x2="200" y2="920" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="160" y1="920" x2="160" y2="880" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="920" x2="880" y2="920" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="920" x2="920" y2="880" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+
+  <!-- Leo symbol (Lion) -->
+  <g transform="translate(540,470)" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Lion mane - semicircle -->
+    <path d="M-90,-40 C-90,-100 90,-100 90,-40"/>
+    <!-- Mane spikes -->
+    <line x1="-90" y1="-40" x2="-100" y2="-60" stroke-width="2"/>
+    <line x1="-80" y1="-60" x2="-95" y2="-80" stroke-width="2"/>
+    <line x1="-60" y1="-75" x2="-75" y2="-95" stroke-width="2"/>
+    <line x1="-30" y1="-85" x2="-40" y2="-105" stroke-width="2"/>
+    <line x1="0" y1="-88" x2="0" y2="-108" stroke-width="2"/>
+    <line x1="30" y1="-85" x2="40" y2="-105" stroke-width="2"/>
+    <line x1="60" y1="-75" x2="75" y2="-95" stroke-width="2"/>
+    <line x1="80" y1="-60" x2="95" y2="-80" stroke-width="2"/>
+    <line x1="90" y1="-40" x2="100" y2="-60" stroke-width="2"/>
+    <!-- Lion face arc -->
+    <path d="M-40,-20 C-40,-50 40,-50 40,-20" stroke-width="2"/>
+    <!-- Curved tail -->
+    <path d="M0,-30 C30,-20 60,20 40,50 C30,65 15,60 15,50" stroke-width="2.5"/>
+    <!-- Eye -->
+    <circle cx="-12" cy="-25" r="2" fill="#F4A261" stroke="none" opacity="0.6"/>
+    <circle cx="12" cy="-25" r="2" fill="#F4A261" stroke="none" opacity="0.6"/>
+  </g>
+
+  <g opacity="0.06" fill="none" stroke="#F4A261" stroke-width="1">
+    <path d="M0,540 L1080,540"/>
+    <path d="M540,0 L540,1080"/>
+  </g>
+
+  <text x="540" y="820" font-family="'Cormorant Garamond', Georgia, serif" font-size="48" fill="#D4AF37" text-anchor="middle" letter-spacing="8" opacity="0.8">LEO</text>
+  <text x="540" y="860" font-family="'Raleway', Helvetica, sans-serif" font-size="16" fill="#F5F5F5" text-anchor="middle" letter-spacing="4" opacity="0.3">JUL 23 — AUG 22</text>
+
+  <circle cx="540" cy="140" r="2" fill="#D4AF37" opacity="0.2"/>
+  <circle cx="540" cy="940" r="2" fill="#D4AF37" opacity="0.2"/>
+</svg>
