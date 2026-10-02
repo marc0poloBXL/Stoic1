@@ -33,3 +33,8 @@ venv/
 
 # Notebook scratchpad
 scratch.ipynb
+
+# Instagram scheduler — session cookies (sensitive)
+stoiczodiac/06_AUTOMATION/stoic_scheduler/cookies/
+stoiczodiac/06_AUTOMATION/stoic_scheduler/logs/
+stoiczodiac/06_AUTOMATION/stoic_scheduler/failed/
