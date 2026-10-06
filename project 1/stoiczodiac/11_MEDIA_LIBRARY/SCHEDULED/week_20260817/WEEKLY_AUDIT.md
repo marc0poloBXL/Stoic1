@@ -26,7 +26,7 @@
 | 2 Sign Spotlights | □ | |
 | 1 Weekly Forecast | □ | |
 | 7 Story prompts | □ | |
-| Scheduled in Later | □ | |
+| Scheduled/queued | □ | |
 
 ---
 

@@ -1,19 +1,50 @@
-# Reel Voiceover Scripts — Bank of 30 Scripts
+# Reel Voiceover Scripts — Bank of 15 Scripts
 
-**Tool**: ElevenLabs (free — 10K chars/month) or TTSMaker (free — 20K chars/day)  
+**Tool used**: VibeVoice (Microsoft open-source, runs locally — free, unlimited)  
 **Voice style**: Calm, deep, authoritative — like a wise mentor  
 **Duration**: 15–25 seconds per script  
 **Production**: Generate audio → Import to CapCut → Sync with visuals
 
+All 15 voiceover files are **already generated** in `07_AUDIO/voiceover_audio/`. Pre-mixed versions (with ambient music) are in `voiceover_audio/mixed/`.
+
 ---
 
-## ⚡ ElevenLabs Free Setup
+## ⚡ Regenerating with VibeVoice (if needed)
 
-1. Sign up at [elevenlabs.io](https://elevenlabs.io) (free tier: 10K chars/month)
-2. Voice: **"Adam"** (premade, deep, authoritative) — great for stoic content
+VibeVoice lives in `05_AI_WORKFLOWS/VibeVoice/`. It runs locally — no API costs, no limits.
+
+### One-time setup
+```bash
+cd 05_AI_WORKFLOWS/VibeVoice
+pip install -e .
+# Download model weights (see README.md for model source)
+```
+
+### Generate a single voiceover
+```bash
+python generate_voiceover.py \
+  --text "Your script text here." \
+  --output "outputs/my_voiceover.wav"
+```
+
+### Batch-generate all 15 scripts
+```bash
+python batch_generate_voiceovers.py
+```
+Output lands in `voiceover_audio/` with the correct file names.
+
+### Mix with background music
+```bash
+python mix_voiceover.py
+```
+Combines each voiceover with the ambient piano tracks from `07_AUDIO/music/royalty_free/` and saves to `voiceover_audio/mixed/`.
+
+### Alternative: ElevenLabs (online, 10K chars/month)
+1. Sign up at [elevenlabs.io](https://elevenlabs.io) (free tier)
+2. Voice: **"Adam"** (deep, authoritative)
 3. Backup: **"Antoni"** (warm, conversational)
 4. Paste scripts below → Generate → Download MP3
-5. Import into CapCut → Add zen visuals → Export
+5. Import into CapCut → Add visuals → Export
 
 ---
 
@@ -261,17 +292,23 @@
 
 ## 🎬 Production Notes
 
-### Voiceover Settings (ElevenLabs)
+### Files Already Generated
+| Location | Contents |
+|----------|----------|
+| `07_AUDIO/voiceover_audio/` | 15 raw WAV files (signs 01–12 + 3 universal) |
+| `07_AUDIO/voiceover_audio/mixed/` | 15 mixed WAV files (voiceover + ambient music) |
+| `07_AUDIO/music/royalty_free/` | 2 ambient piano tracks for background |
+
+### Voiceover Settings (VibeVoice)
 | Setting | Value |
 |---------|-------|
-| Model | Eleven Turbo v2 |
-| Stability | 35% (gives natural variation) |
-| Similarity | 80% |
-| Style Exaggeration | 20% |
+| Model | VibeVoice AR + diffusion |
+| Sample rate | 24kHz, mono |
+| Duration per script | 15–25 seconds |
 
 ### Audio Processing (CapCut)
 - Add a **low-pass filter** (reverb simulation) for the "ancient" feel
-- Background: **soft ambient drone** or **cello pad** at -20dB
+- Background: **ambient piano** from `07_AUDIO/music/royalty_free/` at -20dB
 - Voice: centered, -3dB to -6dB below 0dBFS
 - Fade in: 0.5s, Fade out: 1s
 

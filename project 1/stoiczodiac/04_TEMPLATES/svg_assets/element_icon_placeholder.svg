@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#C9A96E"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Circular frame for element icons -->
+  <circle cx="40" cy="40" r="35" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="40" cy="40" r="28" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.25"/>
+  <circle cx="40" cy="40" r="3" fill="#D4AF37" opacity="0.4" filter="url(#glow)"/>
+  <!-- Subtle radial rays -->
+  <g opacity="0.12">
+    <line x1="40" y1="15" x2="40" y2="25" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="40" y1="55" x2="40" y2="65" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="15" y1="40" x2="25" y2="40" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="55" y1="40" x2="65" y2="40" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="22" y1="22" x2="29" y2="29" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="51" y1="51" x2="58" y2="58" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="22" y1="58" x2="29" y2="51" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="51" y1="29" x2="58" y2="22" stroke="#D4AF37" stroke-width="0.8"/>
+  </g>
+</svg>

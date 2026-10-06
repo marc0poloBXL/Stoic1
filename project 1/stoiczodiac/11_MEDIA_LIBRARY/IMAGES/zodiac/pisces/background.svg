@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <radialGradient id="bgPisces" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0A1618"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <radialGradient id="glowPisces" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#80CED7" stop-opacity="0.1"/>
+      <stop offset="70%" stop-color="#80CED7" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#80CED7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="linePisces" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#80CED7" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#80CED7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#80CED7" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Bubble animation gradient -->
+    <radialGradient id="bubble" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#80CED7" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#80CED7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgPisces)"/>
+  <rect width="1080" height="1080" fill="url(#glowPisces)"/>
+
+  <circle cx="540" cy="540" r="480" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.12"/>
+  <circle cx="540" cy="540" r="460" fill="none" stroke="#D4AF37" stroke-width="0.3" opacity="0.08"/>
+
+  <rect x="200" y="120" width="680" height="1" fill="url(#linePisces)" opacity="0.4"/>
+  <rect x="200" y="959" width="680" height="1" fill="url(#linePisces)" opacity="0.4"/>
+
+  <line x1="160" y1="160" x2="200" y2="160" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="160" y1="160" x2="160" y2="200" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="160" x2="880" y2="160" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="160" x2="920" y2="200" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="160" y1="920" x2="200" y2="920" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="160" y1="920" x2="160" y2="880" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="920" x2="880" y2="920" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="920" x2="920" y2="880" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+
+  <!-- Pisces symbol (Two Fish) -->
+  <g transform="translate(540,460)" fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round">
+    <!-- Fish 1 - swimming right/up -->
+    <path d="M30,40 C50,20 80,-40 70,-70 C65,-85 50,-80 50,-65"/>
+    <path d="M70,-70 C85,-75 90,-60 80,-55 C75,-52 70,-58 70,-65" stroke-width="2"/>
+    <!-- Fish 1 eye -->
+    <circle cx="55" cy="-55" r="2" fill="#80CED7" stroke="none" opacity="0.5"/>
+
+    <!-- Fish 2 - swimming left/down -->
+    <path d="M-30,-40 C-50,-20 -80,40 -70,70 C-65,85 -50,80 -50,65"/>
+    <path d="M-70,70 C-85,75 -90,60 -80,55 C-75,52 -70,58 -70,65" stroke-width="2"/>
+    <!-- Fish 2 eye -->
+    <circle cx="-55" cy="55" r="2" fill="#80CED7" stroke="none" opacity="0.5"/>
+
+    <!-- Water ripple rings -->
+    <circle cx="0" cy="0" r="45" stroke-width="1" opacity="0.3"/>
+    <circle cx="0" cy="0" r="55" stroke-width="0.5" opacity="0.15"/>
+  </g>
+
+  <!-- Bubbles -->
+  <g fill="url(#bubble)" stroke="#80CED7" stroke-width="0.5" opacity="0.15">
+    <circle cx="120" cy="180" r="6"/>
+    <circle cx="900" cy="250" r="4"/>
+    <circle cx="150" cy="750" r="5"/>
+    <circle cx="950" cy="700" r="3"/>
+    <circle cx="200" cy="400" r="3"/>
+    <circle cx="850" cy="500" r="4"/>
+    <circle cx="300" cy="850" r="2"/>
+    <circle cx="800" cy="150" r="3.5"/>
+  </g>
+
+  <g opacity="0.06" fill="none" stroke="#80CED7" stroke-width="1">
+    <path d="M0,540 L1080,540"/>
+    <path d="M540,0 L540,1080"/>
+  </g>
+
+  <text x="540" y="820" font-family="'Cormorant Garamond', Georgia, serif" font-size="48" fill="#D4AF37" text-anchor="middle" letter-spacing="8" opacity="0.8">PISCES</text>
+  <text x="540" y="860" font-family="'Raleway', Helvetica, sans-serif" font-size="16" fill="#F5F5F5" text-anchor="middle" letter-spacing="4" opacity="0.3">FEB 19 — MAR 20</text>
+
+  <circle cx="540" cy="140" r="2" fill="#D4AF37" opacity="0.2"/>
+  <circle cx="540" cy="940" r="2" fill="#D4AF37" opacity="0.2"/>
+</svg>

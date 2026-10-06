@@ -2,7 +2,7 @@
 
 **Dates**: Oct 19 – Oct 25
 **Status**: 🔵 STAGED (ready for batch production)
-**Generated**: 2026-08-17 17:54
+**Generated**: 2026-08-17 18:18
 
 ---
 
@@ -14,7 +14,7 @@
 - [ ] **Edit** 3 Reels in CapCut → save to `reels/`
 - [ ] **Carousel** (3) → `carousels/`
 - [ ] **Write** 7 story prompts → `stories/`
-- [ ] **Schedule** all posts in Later
+- [ ] **Schedule/queue** all posts for the week
 - [ ] **Pre-write** engagement comments (20)
 
 ---

@@ -1,0 +1,802 @@
+<title>Template Showcase</title>
+<style>
+  @font-face {
+    font-family: 'Playfair Display';
+    src: url(data:font/woff2;base64,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);
+  }
+</style>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0A0A0A;
+    --surface: #111;
+    --card-bg: #1A1A1A;
+    --gold: #D4AF37;
+    --bronze: #C9A96E;
+    --white: #F5F5F5;
+    --text-secondary: #999;
+  }
+  :root:not([data-theme="light"]) body { background: var(--bg); color: var(--white); }
+  :root[data-theme="dark"] body { background: var(--bg); color: var(--white); }
+  :root[data-theme="light"] body { background: #f0ede8; }
+  :root[data-theme="light"] :root { --bg: #f0ede8; --surface: #e8e4dd; --card-bg: #fff; --white: #1a1a1a; --text-secondary: #666; }
+
+  body {
+    font-family: 'Raleway', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  .container { max-width: 1320px; margin: 0 auto; padding: 60px 40px 100px; }
+
+  header { text-align: center; margin-bottom: 60px; }
+  header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-wrap: balance;
+  }
+  header h1 span { display: block; font-size: 14px; font-family: Raleway, sans-serif; font-weight: 300; color: var(--bronze); letter-spacing: 4px; margin-top: 12px; }
+  header p { color: var(--text-secondary); font-size: 15px; margin-top: 16px; letter-spacing: 0.3px; }
+
+  .section { margin-bottom: 64px; }
+  .section-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    text-wrap: balance;
+  }
+  .section-desc { color: var(--text-secondary); font-size: 13px; letter-spacing: 0.5px; margin-bottom: 28px; }
+
+  .grid { display: grid; gap: 28px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  :root[data-theme="light"] .card { border-color: #ddd; }
+  .card:hover { border-color: var(--gold); }
+
+  .card-preview {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--surface);
+    position: relative;
+    overflow: hidden;
+  }
+  .card-preview svg { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .card-preview.story { aspect-ratio: 9/16; }
+  .card-preview.wide { aspect-ratio: 16/9; padding: 16px 40px; }
+  .card-preview.slim { padding: 12px 40px; aspect-ratio: 5/1; }
+
+  .card-body { padding: 16px 20px 20px; }
+  .card-body h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 16px; color: var(--gold); margin-bottom: 4px; }
+  .card-body p { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+  .card-body .meta { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+  .card-body .tag { font-size: 10px; padding: 2px 10px; border-radius: 12px; border: 1px solid var(--gold); color: var(--gold); letter-spacing: 0.5px; }
+  .card-body .tag.bronze { border-color: var(--bronze); color: var(--bronze); }
+
+  .full-sample { margin-top: 64px; }
+  .full-sample .sample-display {
+    background: var(--surface);
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+  :root[data-theme="light"] .full-sample .sample-display { border-color: #ddd; }
+  .full-sample .sample-display svg { max-width: 540px; width: 100%; }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.2;
+    margin: 48px 0;
+  }
+
+  @media (max-width: 900px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+    .container { padding: 40px 20px 80px; }
+  }
+  @media (max-width: 600px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    header h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Template Showcase<span>Stoic Wisdom × Zodiac Signs</span></h1>
+    <p>SVG design system — upload to Canva as reusable overlay elements</p>
+  </header>
+
+  <!-- Section 1: Frames -->
+  <div class="section">
+    <h2 class="section-title">01 / Frames &amp; Layouts</h2>
+    <p class="section-desc">Drop-in template frames for quote cards, stories, and carousel slides</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-preview">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <filter id="marble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" seed="3" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+      <feComponentTransfer in="gray" result="faded">
+        <feFuncA type="linear" slope="0.06"/>
+      </feComponentTransfer>
+      <feBlend in="faded" in2="SourceGraphic" mode="overlay"/>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgGrad)" filter="url(#marble)"/>
+  <rect x="30" y="30" width="1020" height="1020" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.7"/>
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+  <rect x="240" y="60" width="600" height="1.5" fill="url(#goldGrad)" opacity="0.5"/>
+  <rect x="240" y="1018" width="600" height="1.5" fill="url(#goldGrad)" opacity="0.5"/>
+  <path d="M 46 60 L 46 46 L 60 46" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <path d="M 1034 60 L 1034 46 L 1020 46" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <path d="M 46 1020 L 46 1034 L 60 1034" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <path d="M 1034 1020 L 1034 1034 L 1020 1034" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <polygon points="540,975 545,980 540,985 535,980" fill="#D4AF37" opacity="0.35"/>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Quote Card Frame</h3>
+          <p>1080×1080 — dark marble background, double gold border, corner ornaments</p>
+          <div class="meta"><span class="tag">Quote</span><span class="tag bronze">1080×1080</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview story">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="bottomFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="marble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="5" seed="7" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+      <feComponentTransfer in="gray" result="faded">
+        <feFuncA type="linear" slope="0.05"/>
+      </feComponentTransfer>
+      <feBlend in="faded" in2="SourceGraphic" mode="overlay"/>
+    </filter>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bgGrad)" filter="url(#marble)"/>
+  <rect x="25" y="25" width="1030" height="1870" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+  <rect x="35" y="35" width="1010" height="1850" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+  <rect x="340" y="50" width="400" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+  <rect x="0" y="1480" width="1080" height="440" fill="url(#bottomFade)"/>
+  <rect x="340" y="1860" width="400" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+  <path d="M 41 52 L 41 41 L 52 41" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1039 52 L 1039 41 L 1028 41" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 41 1868 L 41 1879 L 52 1879" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1039 1868 L 1039 1879 L 1028 1879" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <circle cx="540" cy="960" r="200" fill="#D4AF37" opacity="0.03"/>
+  <polygon points="540,1845 548,1853 540,1861 532,1853" fill="#D4AF37" opacity="0.25"/>
+  <line x1="25" y1="800" x2="45" y2="800" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="25" y1="1120" x2="45" y2="1120" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="1035" y1="800" x2="1055" y2="800" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="1035" y1="1120" x2="1055" y2="1120" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Story Frame</h3>
+          <p>1080×1920 — vertical frame with fade-to-black bottom for CTA</p>
+          <div class="meta"><span class="tag">Story</span><span class="tag bronze">1080×1920</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <filter id="marble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" seed="12" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+      <feComponentTransfer in="gray" result="faded">
+        <feFuncA type="linear" slope="0.04"/>
+      </feComponentTransfer>
+      <feBlend in="faded" in2="SourceGraphic" mode="overlay"/>
+    </filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgGrad)" filter="url(#marble)"/>
+  <rect x="20" y="20" width="1040" height="1040" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.5"/>
+  <rect x="30" y="30" width="1020" height="1020" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+  <rect x="100" y="45" width="880" height="1" fill="url(#goldGrad)" opacity="0.3"/>
+  <rect x="100" y="1034" width="880" height="1" fill="url(#goldGrad)" opacity="0.3"/>
+  <path d="M 36 46 L 36 36 L 46 36" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1044 46 L 1044 36 L 1034 36" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 36 1034 L 36 1044 L 46 1044" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1044 1034 L 1044 1044 L 1034 1044" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <circle cx="540" cy="1055" r="6" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.4"/>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Carousel Page Frame</h3>
+          <p>1080×1080 — multi-page frame with header/footer lines, page number dot</p>
+          <div class="meta"><span class="tag">Carousel</span><span class="tag bronze">1080×1080</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Section 2: Decorative Elements -->
+  <div class="section">
+    <h2 class="section-title">02 / Decorative Elements</h2>
+    <p class="section-desc">Gold accents, dividers, and ornamental assets</p>
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="card-preview slim">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 20" width="400" height="20">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#D4AF37" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#C9A96E" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#D4AF37" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="20" y1="10" x2="380" y2="10" stroke="url(#goldGrad)" stroke-width="1.5"/>
+  <polygon points="200,5 205,10 200,15 195,10" fill="#D4AF37" opacity="0.8"/>
+  <circle cx="100" cy="10" r="2" fill="#D4AF37" opacity="0.4"/>
+  <circle cx="300" cy="10" r="2" fill="#D4AF37" opacity="0.4"/>
+  <circle cx="150" cy="10" r="1.5" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="250" cy="10" r="1.5" fill="#D4AF37" opacity="0.3"/>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Gold Divider</h3>
+          <p>400×20 — fade-to-gold line with center diamond accent</p>
+          <div class="meta"><span class="tag bronze">Divider</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <text x="20" y="175" font-family="Georgia, serif" font-size="220" font-weight="bold" fill="url(#goldGrad)" opacity="0.15">"</text>
+  <text x="35" y="175" font-family="Georgia, serif" font-size="220" font-weight="bold" fill="url(#goldGrad)" opacity="0.08">"</text>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Large Quote Mark</h3>
+          <p>200×200 — decorative opening quote at 15% opacity gold</p>
+          <div class="meta"><span class="tag bronze">Ornament</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#C9A96E"/>
+    </linearGradient>
+  </defs>
+  <path d="M 10 10 L 10 50 A 40 40 0 0 0 50 10 Z" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.5"/>
+  <path d="M 10 10 L 10 35 A 25 25 0 0 0 35 10 Z" fill="none" stroke="#D4AF37" stroke-width="0.6" opacity="0.3"/>
+  <polygon points="10,10 14,6 18,10 14,14" fill="#D4AF37" opacity="0.4"/>
+  <line x1="10" y1="55" x2="10" y2="65" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="55" y1="10" x2="65" y2="10" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Corner Flourish</h3>
+          <p>120×120 — ornate top-left corner, rotate 90° for other corners</p>
+          <div class="meta"><span class="tag bronze">Corner</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#C9A96E"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="35" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="40" cy="40" r="28" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.25"/>
+  <circle cx="40" cy="40" r="3" fill="#D4AF37" opacity="0.4"/>
+  <g opacity="0.12">
+    <line x1="40" y1="15" x2="40" y2="25" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="40" y1="55" x2="40" y2="65" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="15" y1="40" x2="25" y2="40" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="55" y1="40" x2="65" y2="40" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="22" y1="22" x2="29" y2="29" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="51" y1="51" x2="58" y2="58" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="22" y1="58" x2="29" y2="51" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="51" y1="29" x2="58" y2="22" stroke="#D4AF37" stroke-width="0.8"/>
+  </g>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Element Icon Frame</h3>
+          <p>80×80 — gold ring with subtle radial lines for element/symbol icons</p>
+          <div class="meta"><span class="tag bronze">Icon</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Section 3: Brand Assets -->
+  <div class="section">
+    <h2 class="section-title">03 / Brand Assets</h2>
+    <p class="section-desc">Reusable brand elements for headers, watermarks, and profile</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-preview slim">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 44" width="300" height="44">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="300" height="44" rx="22" ry="22" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.6"/>
+  <rect x="3" y="3" width="294" height="38" rx="19" ry="19" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+  <text x="150" y="28" font-family="'Raleway', 'Helvetica Neue', sans-serif" font-size="14" font-weight="600" letter-spacing="4" fill="url(#goldGrad)" text-anchor="middle" dominant-baseline="middle" opacity="0.85">STOIC WISDOM</text>
+  <circle cx="28" cy="22" r="2" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="272" cy="22" r="2" fill="#D4AF37" opacity="0.3"/>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Stoic Label Badge</h3>
+          <p>300×44 — "STOIC WISDOM" pill badge in gold, 4px letter-spacing</p>
+          <div class="meta"><span class="tag">Badge</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview" style="padding: 12px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="185" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="200" cy="200" r="178" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+  <circle cx="200" cy="200" r="140" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.2"/>
+  <circle cx="200" cy="200" r="30" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+  <circle cx="200" cy="200" r="4" fill="#D4AF37" opacity="0.4"/>
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.15">
+    <line x1="200" y1="15" x2="200" y2="60"/>
+    <line x1="200" y1="340" x2="200" y2="385"/>
+    <line x1="15" y1="200" x2="60" y2="200"/>
+    <line x1="340" y1="200" x2="385" y2="200"/>
+    <line x1="69" y1="69" x2="102" y2="102"/>
+    <line x1="331" y1="331" x2="298" y2="298"/>
+    <line x1="69" y1="331" x2="102" y2="298"/>
+    <line x1="331" y1="69" x2="298" y2="102"/>
+    <line x1="107" y1="28" x2="130" y2="64"/>
+    <line x1="28" y1="107" x2="64" y2="130"/>
+    <line x1="293" y1="28" x2="270" y2="64"/>
+    <line x1="372" y1="107" x2="336" y2="130"/>
+    <line x1="107" y1="372" x2="130" y2="336"/>
+    <line x1="28" y1="293" x2="64" y2="270"/>
+    <line x1="293" y1="372" x2="270" y2="336"/>
+    <line x1="372" y1="293" x2="336" y2="270"/>
+  </g>
+  <g font-family="serif" font-size="16" fill="url(#goldGrad)" opacity="0.6" text-anchor="middle" dominant-baseline="central">
+    <text x="200" y="38">♈</text>
+    <text x="281" y="56">♉</text>
+    <text x="338" y="113">♊</text>
+    <text x="362" y="200">♋</text>
+    <text x="338" y="287">♌</text>
+    <text x="281" y="344">♍</text>
+    <text x="200" y="362">♎</text>
+    <text x="119" y="344">♏</text>
+    <text x="62" y="287">♐</text>
+    <text x="38" y="200">♑</text>
+    <text x="62" y="113">♒</text>
+    <text x="119" y="56">♓</text>
+  </g>
+  <circle cx="200" cy="175" r="1.5" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="200" cy="225" r="1.5" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="175" cy="200" r="1.5" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="225" cy="200" r="1.5" fill="#D4AF37" opacity="0.3"/>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Zodiac Wheel</h3>
+          <p>400×400 — all 12 zodiac symbols around a double-ringed wheel with house lines</p>
+          <div class="meta"><span class="tag">Brand</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Section 4: Full Production Example -->
+  <div class="section full-sample">
+    <h2 class="section-title">04 / Finished Templates</h2>
+    <p class="section-desc">Production-ready designs with real content — upload and post</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-preview" style="background:#0A0A0A;padding:10px">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <filter id="marble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" seed="3" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+      <feComponentTransfer in="gray" result="faded"><feFuncA type="linear" slope="0.06"/></feComponentTransfer>
+      <feBlend in="faded" in2="SourceGraphic" mode="overlay"/>
+    </filter>
+    <filter id="textGlow"><feGaussianBlur stdDeviation="1" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgGrad)" filter="url(#marble)"/>
+  <rect x="30" y="30" width="1020" height="1020" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.7"/>
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+  <rect x="240" y="60" width="600" height="1.5" fill="url(#goldGrad)" opacity="0.5"/>
+  <rect x="240" y="1018" width="600" height="1.5" fill="url(#goldGrad)" opacity="0.5"/>
+  <path d="M 46 60 L 46 46 L 60 46" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <path d="M 1034 60 L 1034 46 L 1020 46" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <path d="M 46 1020 L 46 1034 L 60 1034" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <path d="M 1034 1020 L 1034 1034 L 1020 1034" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.6"/>
+  <polygon points="540,975 545,980 540,985 535,980" fill="#D4AF37" opacity="0.35"/>
+  <rect x="330" y="100" width="420" height="44" rx="22" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+  <text x="540" y="127" font-family="Raleway,sans-serif" font-size="15" font-weight="600" letter-spacing="5" fill="#D4AF37" text-anchor="middle" opacity="0.85">STOIC WISDOM</text>
+  <text x="940" y="190" font-family="serif" font-size="56" fill="#E63946" text-anchor="end" opacity="0.9">&#9800;</text>
+  <text x="940" y="220" font-family="Raleway,sans-serif" font-size="18" font-weight="600" fill="#E63946" text-anchor="end" letter-spacing="3" opacity="0.7">ARIES</text>
+  <text x="940" y="240" font-family="Raleway,sans-serif" font-size="11" fill="#E63946" text-anchor="end" letter-spacing="1" opacity="0.4">FIRE &middot; MARS</text>
+  <rect x="380" y="175" width="320" height="32" rx="16" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.4"/>
+  <text x="540" y="196" font-family="Raleway,sans-serif" font-size="12" font-weight="500" letter-spacing="2" fill="#C9A96E" text-anchor="middle" opacity="0.6">CHANNELING IMPULSE INTO PURPOSE</text>
+  <line x1="250" y1="310" x2="830" y2="310" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.2"/>
+  <text x="160" y="500" font-family="Georgia,serif" font-size="200" fill="url(#goldGrad)" opacity="0.06">"</text>
+  <text x="540" y="410" font-family="'Playfair Display',Georgia,serif" font-size="52" fill="#D4AF37" text-anchor="middle" filter="url(#textGlow)">"You have power over</text>
+  <text x="540" y="480" font-family="'Playfair Display',Georgia,serif" font-size="52" fill="#D4AF37" text-anchor="middle" filter="url(#textGlow)">your mind &mdash; not</text>
+  <text x="540" y="550" font-family="'Playfair Display',Georgia,serif" font-size="52" fill="#D4AF37" text-anchor="middle" filter="url(#textGlow)">outside events."</text>
+  <line x1="400" y1="610" x2="680" y2="610" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+  <text x="540" y="650" font-family="serif" font-size="24" font-style="italic" fill="#F5F5F5" text-anchor="middle" opacity="0.85">&mdash; Marcus Aurelius</text>
+  <line x1="200" y1="780" x2="880" y2="780" stroke="#C9A96E" stroke-width="0.5" opacity="0.15"/>
+  <text x="540" y="820" font-family="Raleway,sans-serif" font-size="16" fill="#F5F5F5" text-anchor="middle" opacity="0.6">Channel your fire. Let discipline direct your impulse.</text>
+  <rect x="340" y="870" width="400" height="38" rx="19" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+  <text x="540" y="895" font-family="Raleway,sans-serif" font-size="13" font-weight="600" fill="#D4AF37" text-anchor="middle" letter-spacing="1">TODAY: Pause before you act &rarr; Choose purpose.</text>
+  <text x="540" y="1010" font-family="Raleway,sans-serif" font-size="12" fill="#F5F5F5" text-anchor="middle" opacity="0.3" letter-spacing="2">@STOICZODIAC</text>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Quote Card — Finished</h3>
+          <p>Aries + Marcus Aurelius. Brand badge, sign accent, theme pill, quote + attribution, application line, daily challenge pill.</p>
+          <div class="meta"><span class="tag">1080×1080</span><span class="tag bronze">Ready to post</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview story" style="background:#0A0A0A;padding:12px">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="bottomFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="marble"><feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="5" seed="7" result="noise"/><feColorMatrix type="saturate" values="0" in="noise" result="gray"/><feComponentTransfer in="gray" result="faded"><feFuncA type="linear" slope="0.05"/></feComponentTransfer><feBlend in="faded" in2="SourceGraphic" mode="overlay"/></filter>
+    <filter id="textShadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/></filter>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bgGrad)" filter="url(#marble)"/>
+  <circle cx="540" cy="800" r="300" fill="#D4AF37" opacity="0.03"/>
+  <rect x="25" y="25" width="1030" height="1870" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+  <rect x="35" y="35" width="1010" height="1850" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+  <rect x="340" y="50" width="400" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+  <rect x="340" y="1860" width="400" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+  <path d="M 41 52 L 41 41 L 52 41" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1039 52 L 1039 41 L 1028 41" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 41 1868 L 41 1879 L 52 1879" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1039 1868 L 1039 1879 L 1028 1879" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <polygon points="540,1845 548,1853 540,1861 532,1853" fill="#D4AF37" opacity="0.25"/>
+  <text x="540" y="110" font-family="Raleway,sans-serif" font-size="13" font-weight="500" letter-spacing="5" fill="#D4AF37" text-anchor="middle" opacity="0.7">TODAY'S STOIC PROMPT</text>
+  <text x="540" y="180" font-family="serif" font-size="48" fill="#F4A261" text-anchor="middle" opacity="0.9">&#9804;</text>
+  <text x="540" y="210" font-family="Raleway,sans-serif" font-size="16" font-weight="600" fill="#F4A261" text-anchor="middle" letter-spacing="3" opacity="0.6">LEO</text>
+  <line x1="340" y1="260" x2="740" y2="260" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.2"/>
+  <text x="540" y="560" font-family="'Playfair Display',Georgia,serif" font-size="44" fill="#F5F5F5" text-anchor="middle" filter="url(#textShadow)">"What would you do</text>
+  <text x="540" y="630" font-family="'Playfair Display',Georgia,serif" font-size="44" fill="#F5F5F5" text-anchor="middle" filter="url(#textShadow)">today if you were</text>
+  <text x="540" y="700" font-family="'Playfair Display',Georgia,serif" font-size="44" fill="#F5F5F5" text-anchor="middle" filter="url(#textShadow)">already enough?"</text>
+  <rect x="0" y="1380" width="1080" height="540" fill="url(#bottomFade)"/>
+  <text x="540" y="1520" font-family="serif" font-size="26" font-style="italic" fill="#C9A96E" text-anchor="middle">Sit with this question for one minute.</text>
+  <line x1="420" y1="1580" x2="660" y2="1580" stroke="#C9A96E" stroke-width="0.5" opacity="0.2"/>
+  <rect x="390" y="1650" width="300" height="50" rx="25" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+  <text x="540" y="1680" font-family="Raleway,sans-serif" font-size="16" font-weight="600" letter-spacing="3" fill="#D4AF37" text-anchor="middle">@STOICZODIAC</text>
+  <text x="540" y="1800" font-family="Raleway,sans-serif" font-size="11" fill="#F5F5F5" text-anchor="middle" opacity="0.3">Reply with your answer</text>
+  <line x1="25" y1="800" x2="45" y2="800" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="25" y1="1120" x2="45" y2="1120" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="1035" y1="800" x2="1055" y2="800" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="1035" y1="1120" x2="1055" y2="1120" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Story — Finished</h3>
+          <p>Leo daily prompt. Gold label, sign badge, large reflection question, fade-to-black CTA area with @ handle pill.</p>
+          <div class="meta"><span class="tag">1080×1920</span><span class="tag bronze">Interactive</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview" style="background:#0A0A0A;padding:10px">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <filter id="marble"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" seed="12" result="noise"/><feColorMatrix type="saturate" values="0" in="noise" result="gray"/><feComponentTransfer in="gray" result="faded"><feFuncA type="linear" slope="0.04"/></feComponentTransfer><feBlend in="faded" in2="SourceGraphic" mode="overlay"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgGrad)" filter="url(#marble)"/>
+  <rect x="20" y="20" width="1040" height="1040" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.5"/>
+  <rect x="30" y="30" width="1020" height="1020" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+  <rect x="100" y="45" width="880" height="1" fill="url(#goldGrad)" opacity="0.3"/>
+  <rect x="100" y="1034" width="880" height="1" fill="url(#goldGrad)" opacity="0.3"/>
+  <path d="M 36 46 L 36 36 L 46 36" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1044 46 L 1044 36 L 1034 36" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 36 1034 L 36 1044 L 46 1044" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1044 1034 L 1044 1044 L 1034 1044" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <circle cx="540" cy="340" r="160" fill="#D4AF37" opacity="0.06" filter="url(#glow)"/>
+  <text x="540" y="300" font-family="serif" font-size="140" fill="#F4A261" text-anchor="middle" filter="url(#glow)">&#9804;</text>
+  <text x="540" y="400" font-family="Raleway,sans-serif" font-size="32" font-weight="700" letter-spacing="8" fill="#D4AF37" text-anchor="middle">LEO</text>
+  <text x="540" y="445" font-family="Raleway,sans-serif" font-size="13" letter-spacing="4" fill="#F4A261" text-anchor="middle" opacity="0.6">FIRE &middot; JUL 23 &ndash; AUG 22</text>
+  <line x1="340" y1="490" x2="740" y2="490" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
+  <text x="540" y="560" font-family="'Playfair Display',Georgia,serif" font-size="28" fill="#F5F5F5" text-anchor="middle" font-style="italic" opacity="0.8">The Stoic Lion</text>
+  <text x="540" y="620" font-family="'Playfair Display',Georgia,serif" font-size="20" fill="#C9A96E" text-anchor="middle" opacity="0.6">Humility within greatness</text>
+  <line x1="400" y1="670" x2="680" y2="670" stroke="#C9A96E" stroke-width="0.5" opacity="0.2"/>
+  <rect x="225" y="720" width="630" height="46" rx="23" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4"/>
+  <text x="540" y="748" font-family="Raleway,sans-serif" font-size="14" font-weight="500" letter-spacing="2" fill="#D4AF37" text-anchor="middle">RULING PLANET: SUN &middot; ELEMENT: FIRE &middot; FIXED</text>
+  <text x="540" y="860" font-family="serif" font-size="18" font-style="italic" fill="#C9A96E" text-anchor="middle" opacity="0.5">Swipe to discover your stoic path &rarr;</text>
+  <circle cx="540" cy="1055" r="12" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <text x="540" y="1060" font-family="Raleway,sans-serif" font-size="12" font-weight="600" fill="#D4AF37" text-anchor="middle" opacity="0.5">1/7</text>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>Carousel — Finished</h3>
+          <p>Leo Sign Spotlight page 1/7. Large symbol with gold glow, name, subtitle, element badge, pagination dot.</p>
+          <div class="meta"><span class="tag">1080×1080</span><span class="tag bronze">7 slides</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Section 5: Storyboard Samples -->
+  <div class="section">
+    <h2 class="section-title">05 / Reel Storyboard Previews</h2>
+    <p class="section-desc">Frame-by-frame visual guides for CapCut production</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-preview" style="background: #0A0A0A; padding: 16px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 500" width="300" height="500" style="max-width:180px">
+  <rect width="300" height="500" fill="#0A0A0A" rx="12"/>
+  <rect x="10" y="10" width="280" height="480" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4" rx="8"/>
+  <text x="270" y="50" font-family="serif" font-size="24" fill="#F4A261" text-anchor="end">♌</text>
+  <text x="270" y="70" font-family="sans-serif" font-size="11" fill="#F4A261" text-anchor="end" opacity="0.6">LEO</text>
+
+  <text x="150" y="190" font-family="serif" font-size="20" fill="#D4AF37" text-anchor="middle">"The obstacle</text>
+  <text x="150" y="218" font-family="serif" font-size="20" fill="#D4AF37" text-anchor="middle">is the way."</text>
+
+  <line x1="50" y1="320" x2="90" y2="320" stroke="#D4AF37" stroke-width="2" opacity="0.6"/>
+  <text x="55" y="350" font-family="serif" font-size="12" fill="#F5F5F5">Marcus Aurelius</text>
+
+  <rect x="100" y="440" width="100" height="28" fill="none" stroke="#D4AF37" stroke-width="1" rx="14" opacity="0.6"/>
+  <text x="150" y="458" font-family="sans-serif" font-size="9" fill="#D4AF37" text-anchor="middle">@stoiczodiac</text>
+
+  <text x="60" y="175" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">R1 — Quote Reel (15s)</text>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>R1 — Quote Reel</h3>
+          <p>15s — Typewriter quote + attribution fade + CTA. Monday/Wednesday/Friday.</p>
+          <div class="meta"><span class="tag">15s</span><span class="tag bronze">Typewriter</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview" style="background: #1A1A2E; padding: 16px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 500" width="300" height="500" style="max-width:180px">
+  <rect width="300" height="500" fill="#1A1A2E" rx="12"/>
+  <rect x="10" y="10" width="280" height="480" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4" rx="8"/>
+
+  <text x="150" y="100" font-family="serif" font-size="36" fill="#D4AF37" text-anchor="middle">♌</text>
+  <text x="150" y="135" font-family="sans-serif" font-size="16" fill="#D4AF37" text-anchor="middle" letter-spacing="2">LEO</text>
+
+  <circle cx="150" cy="100" r="30" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+
+  <text x="150" y="220" font-family="sans-serif" font-size="11" fill="#F4A261" text-anchor="middle" font-weight="bold">Courageous</text>
+  <text x="150" y="245" font-family="sans-serif" font-size="11" fill="#F4A261" text-anchor="middle" font-weight="bold">Confident</text>
+  <text x="150" y="270" font-family="sans-serif" font-size="11" fill="#F4A261" text-anchor="middle" font-weight="bold">Generous</text>
+
+  <rect x="100" y="430" width="100" height="28" fill="none" stroke="#D4AF37" stroke-width="1" rx="14" opacity="0.6"/>
+  <text x="150" y="448" font-family="sans-serif" font-size="9" fill="#D4AF37" text-anchor="middle">@stoiczodiac</text>
+
+  <text x="60" y="490" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">R2 — Sign Spotlight (30s)</text>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>R2 — Sign Spotlight</h3>
+          <p>30s — 4 scenes: intro, traits, insight+quote, CTA. Tuesday/Thursday.</p>
+          <div class="meta"><span class="tag">30s</span><span class="tag bronze">4 Scenes</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview" style="background: #0A0A0A; padding: 16px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 500" width="300" height="500" style="max-width:180px">
+  <rect width="300" height="500" fill="#0A0A0A" rx="12"/>
+  <rect x="10" y="10" width="280" height="480" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4" rx="8"/>
+
+  <text x="150" y="55" font-family="sans-serif" font-size="9" fill="#D4AF37" text-anchor="middle" letter-spacing="2">TODAY'S STOIC PROMPT</text>
+  <line x1="80" y1="65" x2="220" y2="65" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+
+  <text x="150" y="170" font-family="serif" font-size="16" fill="#F5F5F5" text-anchor="middle">"What would you do</text>
+  <text x="150" y="195" font-family="serif" font-size="16" fill="#F5F5F5" text-anchor="middle">if failure was</text>
+  <text x="150" y="220" font-family="serif" font-size="16" fill="#F5F5F5" text-anchor="middle">not an option?"</text>
+
+  <text x="150" y="310" font-family="serif" font-size="11" fill="#C9A96E" text-anchor="middle" font-style="italic">Reflect on this today.</text>
+
+  <text x="150" y="460" font-family="sans-serif" font-size="10" fill="#D4AF37" text-anchor="middle" opacity="0.6">@stoiczodiac</text>
+
+  <text x="60" y="490" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">R3 — Daily Prompt (15s)</text>
+</svg>
+        </div>
+        <div class="card-body">
+          <h3>R3 — Daily Prompt</h3>
+          <p>15s — Minimalist: title, prompt question, reflection cue, CTA.</p>
+          <div class="meta"><span class="tag">15s</span><span class="tag bronze">Minimal</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Section 6: Story Template -->
+  <div class="section">
+    <h2 class="section-title">06 / Story Template</h2>
+    <p class="section-desc">S1 — Daily Stoic Prompt (1080×1920)</p>
+    <div style="display:flex; justify-content:center;">
+      <div style="background: var(--surface); border: 1px solid #2a2a2a; border-radius: 8px; padding: 24px; max-width: 320px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 568" width="320" height="568">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="568" fill="url(#bgGrad)" rx="12"/>
+  <rect x="8" y="8" width="304" height="552" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4" rx="8"/>
+
+  <!-- Story safe zone -->
+  <rect x="32" y="80" width="256" height="420" fill="none" stroke="none"/>
+
+  <!-- Label top -->
+  <text x="160" y="55" font-family="sans-serif" font-size="8" fill="#D4AF37" text-anchor="middle" letter-spacing="2" opacity="0.7">TODAY'S STOIC PROMPT</text>
+
+  <!-- Sign badge -->
+  <text x="290" y="48" font-family="serif" font-size="16" fill="#D4AF37" text-anchor="end">♈</text>
+
+  <!-- Prompt text -->
+  <text x="160" y="220" font-family="serif" font-size="18" fill="#F5F5F5" text-anchor="middle" font-weight="400">"What would you do</text>
+  <text x="160" y="248" font-family="serif" font-size="18" fill="#F5F5F5" text-anchor="middle" font-weight="400">if failure was</text>
+  <text x="160" y="276" font-family="serif" font-size="18" fill="#F5F5F5" text-anchor="middle" font-weight="400">not an option?"</text>
+
+  <!-- Reflection -->
+  <text x="160" y="370" font-family="serif" font-size="12" fill="#C9A96E" text-anchor="middle" font-style="italic">Reflect on this today.</text>
+
+  <!-- CTA -->
+  <text x="160" y="530" font-family="sans-serif" font-size="9" fill="#D4AF37" text-anchor="middle" opacity="0.5">@stoiczodiac</text>
+
+  <!-- Decorative dots -->
+  <circle cx="160" cy="80" r="2" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="160" cy="496" r="2" fill="#D4AF37" opacity="0.3"/>
+</svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="divider"></div>
+  <div style="text-align: center; margin-top: 40px;">
+    <p style="color: var(--text-secondary); font-size: 12px; letter-spacing: 1px;">Upload these SVGs to Canva via <strong style="color: var(--gold);">Upload → drag onto canvas</strong></p>
+    <p style="color: var(--text-secondary); font-size: 11px; margin-top: 8px;">All assets at <code style="color: var(--bronze);">04_TEMPLATES/svg_assets/</code></p>
+  </div>
+
+</div>
+
+</body>
+</html>

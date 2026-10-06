@@ -1,0 +1,25 @@
+/* Stoic Zodiac — Color Palette Reference */
+/* Source of truth: brand_guidelines.md */
+
+:root {
+  /* Core palette */
+  --bg-primary:      #0A0A0A;  /* Deep Void — feed background, dark mode base */
+  --bg-secondary:    #1A1A2E;  /* Midnight Blue — carousel backgrounds, story BG */
+  --accent-gold:     #D4AF37;  /* Stoic Gold — headlines, highlights, borders */
+  --accent-white:    #F5F5F5;  /* Marble White — body text, quotes */
+  --accent-bronze:   #C9A96E;  /* Aged Bronze — secondary text, subtitles */
+
+  /* Zodiac sign colors (accents only) */
+  --aries-red:       #E63946;
+  --taurus-green:    #2A9D8F;
+  --gemini-yellow:   #E9C46A;
+  --cancer-silver:   #A8DADC;
+  --leo-gold:        #F4A261;
+  --virgo-brown:     #8D6E63;
+  --libra-blue:      #457B9D;
+  --scorpio-purple:  #6C3483;
+  --sag-blue:        #1D3557;
+  --cap-green:       #1B4332;
+  --aqua-blue:       #00B4D8;
+  --pisces-teal:     #80CED7;
+}

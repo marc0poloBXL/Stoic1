@@ -215,7 +215,7 @@ def build_brief(entries, week_number):
 - [ ] **Edit** {count_reels} Reels in CapCut → save to `reels/`
 - [ ] **Carousel** ({count_carousels}) → `carousels/`
 - [ ] **Write** 7 story prompts → `stories/`
-- [ ] **Schedule** all posts in Later
+- [ ] **Schedule/queue** all posts for the week
 - [ ] **Pre-write** engagement comments (20)
 
 ---
@@ -271,9 +271,11 @@ def update_tracker(week_number, date_range, week_folder_name):
     if f"## Week {week_number} —" in content:
         return  # Already tracked
 
-    # Insert before the first ⚪ FUTURE entry, or append before EOF
-    future_marker = "⚪ FUTURE"
-    future_idx = content.find(future_marker)
+    # Insert a full-line block before the first FUTURE line. Finding the marker
+    # as a raw substring is wrong: it can land mid-line (inside a table row or a
+    # caption), corrupting the tracker. Match whole lines that begin with the
+    # marker instead.
+    import re as _re
     new_block = f"""{week_line}
 
 | Item | Status |
@@ -290,10 +292,20 @@ def update_tracker(week_number, date_range, week_folder_name):
 
 """
 
-    if future_idx >= 0:
-        content = content[:future_idx] + new_block + content[future_idx:]
+    lines = content.split("\n")
+    future_line_idx = None
+    for i, line in enumerate(lines):
+        if _re.match(r"^\s*⚪ FUTURE", line):
+            future_line_idx = i
+            break
+
+    if future_line_idx is not None:
+        lines.insert(future_line_idx, new_block.rstrip("\n"))
     else:
-        content += "\n" + new_block
+        lines.append("")
+        lines.append(new_block.rstrip("\n"))
+
+    content = "\n".join(lines)
 
     with open(tracker_path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -302,30 +314,41 @@ def update_tracker(week_number, date_range, week_folder_name):
 # ── Batch history ────────────────────────────────────────────────────────
 
 def log_batch(week_number, date_range, week_folder_name):
-    """Append a log entry to BATCH_HISTORY.md."""
+    """Append a log entry to BATCH_HISTORY.md (idempotent — never duplicates)."""
     history_path = os.path.join(MEDIA_LIB, "BATCH_HISTORY.md")
     entry = f"| {datetime.now().strftime('%Y-%m-%d %H:%M')} | Week {week_number} | {date_range} | `{week_folder_name}` | [OK]  Staged |\n"
 
-    if not os.path.exists(history_path):
-        with open(history_path, "w", encoding="utf-8") as f:
-            f.write("# 📜 Batch History\n\n| Timestamp | Week | Dates | Folder | Status |\n|-----------|------|-------|--------|--------|\n")
+    # Dedupe by week folder: a re-run must not append a second row.
+    if os.path.exists(history_path):
+        existing = open(history_path, encoding="utf-8").read()
+        if f"`{week_folder_name}`" in existing:
+            print(f"  ⏭️  Batch history already has Week {week_number} — skipping")
+            return
+        with open(history_path, "a", encoding="utf-8") as f:
             f.write(entry)
     else:
-        with open(history_path, "a", encoding="utf-8") as f:
+        with open(history_path, "w", encoding="utf-8") as f:
+            f.write("# 📜 Batch History\n\n| Timestamp | Week | Dates | Folder | Status |\n|-----------|------|-------|--------|--------|\n")
             f.write(entry)
 
 
 # ── Calendar generation (via subprocess) ─────────────────────────────────
 
 def run_generator(week_number, days=7):
-    """Run the batch_content_generator.py via subprocess."""
+    """Run the batch_content_generator.py via subprocess.
+
+    Raises on failure so callers don't log a failed stage as [OK].
+    """
     gen_path = os.path.join(SCRIPT_DIR, "batch_content_generator.py")
     output_dir = GENERATED_DIR
     cmd = [sys.executable, gen_path, "--week", str(week_number), "--days", str(days),
            "--output-dir", output_dir]
-    result = subprocess.run(cmd, capture_output=True, text=True, cwd=SCRIPT_DIR)
+    result = subprocess.run(cmd, capture_output=True, text=True, cwd=SCRIPT_DIR,
+                            encoding="utf-8")
     if result.returncode != 0:
-        print(f"  [WARN]  Generator warning: {result.stderr.strip()}")
+        raise RuntimeError(
+            f"Generator failed (exit {result.returncode}): {result.stderr.strip()[:300]}"
+        )
     return result.stdout
 
 
@@ -345,9 +368,15 @@ def stage_week(week_number):
     week_folder_name = f"week_{start.strftime('%Y%m%d')}"
     week_folder = os.path.join(MEDIA_LIB, week_folder_name)
 
-    # 1. Generate calendar
+    # 1. Generate calendar — abort the whole stage on failure so a broken run
+    #    is never logged as [OK] Staged.
     print(f"  [Cal]  Generating calendar (Week {week_number}, {start} – {end})...")
-    gen_output = run_generator(week_number)
+    try:
+        gen_output = run_generator(week_number)
+    except RuntimeError as e:
+        print(f"  [FAIL] {e}")
+        print("  ✋ Aborting stage — generator failed, nothing was logged.")
+        return None
 
     # 2. Create folders
     print(f"  [Dir]  Creating folders...")

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <radialGradient id="bgAries" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#1A0A0A"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <radialGradient id="glowAries" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0.15"/>
+      <stop offset="70%" stop-color="#E63946" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lineAries" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E63946" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#E63946" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#E63946" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgAries)"/>
+  <rect width="1080" height="1080" fill="url(#glowAries)"/>
+
+  <!-- Outer ring -->
+  <circle cx="540" cy="540" r="480" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.12"/>
+  <circle cx="540" cy="540" r="460" fill="none" stroke="#D4AF37" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Top and bottom accent lines -->
+  <rect x="200" y="120" width="680" height="1" fill="url(#lineAries)" opacity="0.4"/>
+  <rect x="200" y="959" width="680" height="1" fill="url(#lineAries)" opacity="0.4"/>
+
+  <!-- Corner ornaments -->
+  <line x1="160" y1="160" x2="200" y2="160" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="160" y1="160" x2="160" y2="200" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="160" x2="880" y2="160" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="160" x2="920" y2="200" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="160" y1="920" x2="200" y2="920" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="160" y1="920" x2="160" y2="880" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="920" x2="880" y2="920" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+  <line x1="920" y1="920" x2="920" y2="880" stroke="#D4AF37" stroke-width="1" opacity="0.25"/>
+
+  <!-- Aries symbol (Ram head) -->
+  <g transform="translate(540,480)" fill="none" stroke="#D4AF37" stroke-width="3">
+    <!-- Stylized ram horns -->
+    <path d="M-80,-20 C-60,-60 -20,-80 0,-40 C20,-80 60,-60 80,-20" stroke-linecap="round"/>
+    <!-- Lower arc -->
+    <path d="M-70,-10 C-50,-30 -20,-40 0,-20 C20,-40 50,-30 70,-10" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <!-- Central diamond -->
+    <polygon points="0,-35 12,-20 0,0 -12,-20" fill="#E63946" stroke="none" opacity="0.4"/>
+  </g>
+
+  <!-- Text area hint - subtle ram head geometric pattern -->
+  <g opacity="0.06" fill="none" stroke="#E63946" stroke-width="1">
+    <path d="M0,540 L1080,540"/>
+    <path d="M540,0 L540,1080"/>
+  </g>
+
+  <!-- Bottom label area -->
+  <text x="540" y="820" font-family="'Cormorant Garamond', Georgia, serif" font-size="48" fill="#D4AF37" text-anchor="middle" letter-spacing="8" opacity="0.8">ARIES</text>
+  <text x="540" y="860" font-family="'Raleway', Helvetica, sans-serif" font-size="16" fill="#F5F5F5" text-anchor="middle" letter-spacing="4" opacity="0.3">MAR 21 — APR 19</text>
+
+  <!-- Decorative dots -->
+  <circle cx="540" cy="140" r="2" fill="#D4AF37" opacity="0.2"/>
+  <circle cx="540" cy="940" r="2" fill="#D4AF37" opacity="0.2"/>
+</svg>

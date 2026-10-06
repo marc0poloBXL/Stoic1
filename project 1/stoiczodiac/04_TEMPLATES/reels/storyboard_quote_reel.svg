@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <style>
+      .title { font-family: 'Raleway', sans-serif; font-size: 14px; fill: #D4AF37; font-weight: bold; }
+      .label { font-family: 'Raleway', sans-serif; font-size: 11px; fill: #C9A96E; }
+      .time { font-family: monospace; font-size: 10px; fill: #888; }
+      .caption { font-family: 'Raleway', sans-serif; font-size: 9px; fill: #AAA; }
+      .frame-bg { fill: #0A0A0A; stroke: #333; stroke-width: 1; }
+      .frame-text { font-family: 'Playfair Display', serif; fill: #D4AF37; }
+      .frame-text-sm { font-family: 'Raleway', sans-serif; }
+    </style>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#1A1A1A" rx="8"/>
+  <!-- Header -->
+  <text x="600" y="30" class="title" text-anchor="middle" font-size="16">REEL STORYBOARD — R1: Quote Narration</text>
+  <text x="600" y="48" class="label" text-anchor="middle">Duration: 15s | Format: 1080×1920 | Voiceover + Text</text>
+  <line x1="20" y1="56" x2="1180" y2="56" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Frame 1: 0:00-0:03 Opening -->
+  <g transform="translate(30, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:00 - 0:03</text>
+    <!-- Phone frame mockup -->
+    <rect x="60" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <text x="130" y="100" class="label" text-anchor="middle" font-size="10">Sign | Element</text>
+    <circle cx="130" cy="130" r="20" fill="none" stroke="#D4AF37" stroke-width="0.8" opacity="0.5"/>
+    <text x="130" y="135" text-anchor="middle" font-family="serif" fill="#D4AF37" font-size="12" opacity="0.6">♈</text>
+    <text x="130" y="160" class="label" text-anchor="middle" font-size="8">ARIES</text>
+    <!-- Background hint -->
+    <text x="130" y="260" class="caption" text-anchor="middle">Dark bg + marble</text>
+    <text x="130" y="275" class="caption" text-anchor="middle">Texture overlay</text>
+    <text x="130" y="290" class="caption" text-anchor="middle">+ Ambient audio</text>
+    <!-- Arrow -->
+    <text x="130" y="340" text-anchor="middle" fill="#D4AF37" font-size="14" opacity="0.4">↓ FADE IN</text>
+    <!-- Caption -->
+    <text x="10" y="370" class="caption">OPENING: Dark canvas</text>
+    <text x="10" y="380" class="caption">Sign appears top-right.</text>
+  </g>
+
+  <!-- Arrow between frames -->
+  <text x="300" y="260" text-anchor="middle" fill="#D4AF37" font-size="18" opacity="0.3">→</text>
+
+  <!-- Frame 2: 0:03-0:10 Quote Appears -->
+  <g transform="translate(310, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:03 - 0:10</text>
+    <rect x="60" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <!-- Quote text -->
+    <text x="130" y="130" text-anchor="middle" class="frame-text" font-size="10">"The obstacle</text>
+    <text x="130" y="148" text-anchor="middle" class="frame-text" font-size="10">is the way."</text>
+    <!-- Typewriter cursor -->
+    <text x="145" y="150" fill="#D4AF37" font-size="8" opacity="0.7">|</text>
+    <text x="130" y="200" class="caption" text-anchor="middle">Playfair Display, 48pt</text>
+    <text x="130" y="215" class="caption" text-anchor="middle">Gold #D4AF37</text>
+    <text x="130" y="230" class="caption" text-anchor="middle">Centered</text>
+    <text x="130" y="260" class="label" text-anchor="middle" font-size="8">VOICEOVER:</text>
+    <text x="130" y="275" class="caption" text-anchor="middle">"The obstacle is</text>
+    <text x="130" y="290" class="caption" text-anchor="middle">the way..."</text>
+    <text x="130" y="320" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">TYPEWRITER ANIMATION</text>
+    <text x="10" y="370" class="caption">QUOTE: Typewriter effect</text>
+    <text x="10" y="380" class="caption">3-4 sec per line.</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="580" y="260" text-anchor="middle" fill="#D4AF37" font-size="18" opacity="0.3">→</text>
+
+  <!-- Frame 3: 0:10-0:12 Attribution -->
+  <g transform="translate(590, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:10 - 0:12</text>
+    <rect x="60" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <!-- Quote persists smaller -->
+    <text x="130" y="120" text-anchor="middle" class="frame-text" font-size="8" opacity="0.6">"The obstacle is the way."</text>
+    <!-- Attribution fades in -->
+    <line x1="70" y1="155" x2="190" y2="155" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+    <text x="130" y="180" text-anchor="middle" class="frame-text-sm" fill="#F5F5F5" font-size="9">— Marcus Aurelius</text>
+    <text x="130" y="195" text-anchor="middle" class="caption" font-size="7">Raleway, 20pt, White</text>
+    <text x="130" y="210" text-anchor="middle" class="caption" font-size="7">Bottom-left</text>
+    <text x="130" y="260" class="label" text-anchor="middle" font-size="8">VOICEOVER:</text>
+    <text x="130" y="275" class="caption" text-anchor="middle">"— Marcus Aurelius"</text>
+    <text x="130" y="320" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">FADE IN</text>
+    <text x="10" y="370" class="caption">ATTRIBUTION: Fades in</text>
+    <text x="10" y="380" class="caption">bottom-left, 2 sec hold.</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="860" y="260" text-anchor="middle" fill="#D4AF37" font-size="18" opacity="0.3">→</text>
+
+  <!-- Frame 4: 0:12-0:15 CTA -->
+  <g transform="translate(870, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:12 - 0:15</text>
+    <rect x="60" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <!-- All content contracts -->
+    <text x="130" y="130" text-anchor="middle" class="frame-text" font-size="7" opacity="0.4">"The obstacle is the way."</text>
+    <text x="130" y="148" text-anchor="middle" class="frame-text-sm" fill="#F5F5F5" font-size="7" opacity="0.4">— Marcus Aurelius</text>
+    <!-- CTA appears bottom-center -->
+    <rect x="70" y="240" width="120" height="25" fill="none" stroke="#D4AF37" stroke-width="0.8" rx="4" opacity="0.6"/>
+    <text x="130" y="257" text-anchor="middle" class="frame-text-sm" fill="#D4AF37" font-size="7">@stoiczodiac</text>
+    <text x="130" y="210" class="caption" text-anchor="middle">Follow CTA appears</text>
+    <text x="130" y="225" class="caption" text-anchor="middle">Scale-up animation</text>
+    <text x="130" y="285" class="label" text-anchor="middle" font-size="8">AUDIO:</text>
+    <text x="130" y="298" class="caption" text-anchor="middle">Fade out ambient</text>
+    <text x="130" y="320" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">SCALE UP</text>
+    <text x="10" y="370" class="caption">CTA: "Follow @stoiczodiac"</text>
+    <text x="10" y="380" class="caption">Gold border pill, scale up.</text>
+  </g>
+
+  <!-- Bottom production notes -->
+  <line x1="20" y1="470" x2="1180" y2="470" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+  <text x="30" y="490" class="label" font-size="13">PRODUCTION NOTES — Reel R1</text>
+
+  <g transform="translate(30, 500)">
+    <text x="0" y="0" class="label" font-size="11">CANVA SETUP:</text>
+    <text x="0" y="18" class="caption">1. 1080x1920 canvas, bg #0A0A0A + marble texture (Elements, opacity 10%)</text>
+    <text x="0" y="33" class="caption">2. Sign text: Cormorant Garamond, 24pt, sign color, top-right</text>
+    <text x="0" y="48" class="caption">3. Quote: Playfair Display, 48pt, #D4AF37, centered — animate: Typewriter</text>
+    <text x="0" y="63" class="caption">4. Attribution: Raleway, 20pt, #F5F5F5, bottom-left — animate: Fade in</text>
+    <text x="0" y="78" class="caption">5. CTA: Rounded rect + "@stoiczodiac", bottom-center — animate: Scale up</text>
+  </g>
+
+  <g transform="translate(30, 600)">
+    <text x="0" y="0" class="label" font-size="11">CAPCUT TIMELINE:</text>
+    <text x="0" y="18" class="caption">Track 1 (Video): Static dark background or subtle moving marble texture — 15s</text>
+    <text x="0" y="33" class="caption">Track 2 (Text): Quote — Typewriter each line 0.5s apart — start at 3s, end at 12s</text>
+    <text x="0" y="48" class="caption">Track 3 (Text): Attribution — Fade in at 10s, hold to 15s</text>
+    <text x="0" y="63" class="caption">Track 4 (Text): CTA — Scale up at 12s, hold to 15s</text>
+    <text x="0" y="78" class="caption">Track 5 (Audio): Voiceover — sync quote start at 3s, attribution at 10s</text>
+    <text x="0" y="93" class="caption">Track 6 (Music): Ambient drone/Lo-fi — -20dB, fade in 0.5s, fade out 1s</text>
+  </g>
+
+  <g transform="translate(30, 720)">
+    <text x="0" y="0" class="label" font-size="11">AUDIO SCRIPT (copy to ElevenLabs):</text>
+    <text x="0" y="18" class="caption" font-size="10" fill="#E8E8E8">[3s] "The obstacle is the way."</text>
+    <text x="0" y="35" class="caption" font-size="10" fill="#E8E8E8">[10s] "Marcus Aurelius."</text>
+    <text x="0" y="52" class="caption" font-size="10" fill="#E8E8E8">[12s] CTA: "Follow @stoiczodiac for daily wisdom."</text>
+  </g>
+
+  <g transform="translate(30, 800)">
+    <text x="0" y="0" class="label" font-size="11">TIMELINE VISUALIZATION:</text>
+    <rect x="0" y="8" width="1140" height="20" fill="#1A1A2E" rx="3"/>
+    <rect x="0" y="8" width="180" height="20" fill="#6D2E5C" rx="3" opacity="0.7"/>
+    <text x="90" y="22" class="caption" text-anchor="middle" font-size="8" fill="#FFF">Opening (0-3s)</text>
+    <rect x="185" y="8" width="420" height="20" fill="#457B9D" rx="3" opacity="0.7"/>
+    <text x="395" y="22" class="caption" text-anchor="middle" font-size="8" fill="#FFF">Quote - Typewriter (3-10s)</text>
+    <rect x="610" y="8" width="150" height="20" fill="#2D6A4F" rx="3" opacity="0.7"/>
+    <text x="685" y="22" class="caption" text-anchor="middle" font-size="8" fill="#FFF">Attribution (10-12s)</text>
+    <rect x="765" y="8" width="185" height="20" fill="#D4AF37" rx="3" opacity="0.7"/>
+    <text x="857" y="22" class="caption" text-anchor="middle" font-size="8" fill="#000">CTA (12-15s)</text>
+  </g>
+</svg>

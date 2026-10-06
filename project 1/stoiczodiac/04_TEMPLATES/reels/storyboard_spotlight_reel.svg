@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <style>
+      .title { font-family: 'Raleway', sans-serif; font-size: 14px; fill: #D4AF37; font-weight: bold; }
+      .label { font-family: 'Raleway', sans-serif; font-size: 11px; fill: #C9A96E; }
+      .time { font-family: monospace; font-size: 10px; fill: #888; }
+      .caption { font-family: 'Raleway', sans-serif; font-size: 9px; fill: #AAA; }
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="#1A1A1A" rx="8"/>
+  <text x="600" y="30" class="title" text-anchor="middle" font-size="16">REEL STORYBOARD — R2: Sign Spotlight</text>
+  <text x="600" y="48" class="label" text-anchor="middle">Duration: 30s | Format: 1080×1920 | 4 Scenes | Voiceover + Visuals</text>
+  <line x1="20" y1="56" x2="1180" y2="56" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Frame 1: 0:00-0:05 Sign Intro -->
+  <g transform="translate(30, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:00 - 0:05</text>
+    <rect x="60" y="40" width="140" height="300" fill="#1A1A2E" stroke="#333" stroke-width="1" rx="8"/>
+    <!-- Large sign symbol -->
+    <text x="130" y="140" text-anchor="middle" font-family="serif" fill="#D4AF37" font-size="36" filter="url(#glow)">♌</text>
+    <text x="130" y="175" text-anchor="middle" class="label" font-size="12">LEO</text>
+    <text x="130" y="195" text-anchor="middle" class="caption" font-size="7">Jul 23 - Aug 22</text>
+    <text x="130" y="220" class="caption" text-anchor="middle">Gold glow effect</text>
+    <text x="130" y="235" class="caption" text-anchor="middle">Cinematic hit audio</text>
+    <text x="130" y="310" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">GOLD GLOW</text>
+    <text x="10" y="370" class="caption">INTRO: Sign symbol large,</text>
+    <text x="10" y="380" class="caption">name + dates below.</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="300" y="260" text-anchor="middle" fill="#D4AF37" font-size="18" opacity="0.3">→</text>
+
+  <!-- Frame 2: 0:05-0:12 Traits -->
+  <g transform="translate(310, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:05 - 0:12</text>
+    <rect x="60" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <text x="130" y="80" class="label" text-anchor="middle" font-size="8">KEY TRAITS</text>
+    <line x1="80" y1="88" x2="180" y2="88" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+    <text x="130" y="115" text-anchor="middle" fill="#F4A261" font-size="9" font-weight="bold">Courageous</text>
+    <text x="130" y="140" text-anchor="middle" fill="#F4A261" font-size="9" font-weight="bold">Confident</text>
+    <text x="130" y="165" text-anchor="middle" fill="#F4A261" font-size="9" font-weight="bold">Generous</text>
+    <text x="80" y="165" text-anchor="end" fill="#D4AF37" font-size="7" opacity="0.5">✦</text>
+    <text x="200" y="140" text-anchor="start" fill="#D4AF37" font-size="7" opacity="0.5">✦</text>
+    <text x="130" y="210" class="caption" text-anchor="middle">Staggered animation</text>
+    <text x="130" y="225" class="caption" text-anchor="middle">0.5s between each</text>
+    <text x="130" y="240" class="caption" text-anchor="middle">Sign color #F4A261</text>
+    <text x="130" y="310" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">STAGGERED RISE</text>
+    <text x="10" y="370" class="caption">TRAITS: 3 key words</text>
+    <text x="10" y="380" class="caption">appear one by one.</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="580" y="260" text-anchor="middle" fill="#D4AF37" font-size="18" opacity="0.3">→</text>
+
+  <!-- Frame 3: 0:12-0:25 Stoic Insight + Quote -->
+  <g transform="translate(590, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:12 - 0:20</text>
+    <rect x="60" y="40" width="140" height="300" fill="#0A0A0A" stroke="#333" stroke-width="1" rx="8"/>
+    <text x="130" y="80" class="label" text-anchor="middle" font-size="8">STOIC INSIGHT</text>
+    <line x1="80" y1="88" x2="180" y2="88" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+    <text x="130" y="120" text-anchor="middle" fill="#D4AF37" font-size="8">"Your light draws</text>
+    <text x="130" y="135" text-anchor="middle" fill="#D4AF37" font-size="8">people, but true</text>
+    <text x="130" y="150" text-anchor="middle" fill="#D4AF37" font-size="8">leaders serve."</text>
+    <text x="130" y="200" text-anchor="middle" fill="#F5F5F5" font-size="7">— Seneca</text>
+    <text x="130" y="240" class="caption" text-anchor="middle">Cormorant 28pt Gold</text>
+    <text x="130" y="255" class="caption" text-anchor="middle">Quote: Playfair 22pt White</text>
+    <text x="130" y="310" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">FADE UP</text>
+    <text x="10" y="370" class="caption">INSIGHT: Insight text</text>
+    <text x="10" y="380" class="caption">then philosopher quote.</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="860" y="260" text-anchor="middle" fill="#D4AF37" font-size="18" opacity="0.3">→</text>
+
+  <!-- Frame 4: 0:25-0:30 CTA -->
+  <g transform="translate(870, 70)">
+    <rect width="260" height="380" class="frame-bg" rx="4"/>
+    <rect x="10" y="10" width="240" height="360" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3" rx="2"/>
+    <text x="130" y="25" class="time" text-anchor="middle">0:20 - 0:30</text>
+    <rect x="60" y="40" width="140" height="300" fill="#1A1A2E" stroke="#333" stroke-width="1" rx="8"/>
+    <!-- Sign symbol faded -->
+    <text x="130" y="110" text-anchor="middle" font-family="serif" fill="#D4AF37" font-size="24" opacity="0.3">♌</text>
+    <rect x="75" y="170" width="110" height="28" fill="none" stroke="#D4AF37" stroke-width="1" rx="5" opacity="0.7"/>
+    <text x="130" y="189" text-anchor="middle" class="label" font-size="8">@stoiczodiac</text>
+    <text x="130" y="230" text-anchor="middle" class="caption" font-size="7">Save for your sign</text>
+    <text x="130" y="245" text-anchor="middle" class="caption" font-size="7">Follow for daily wisdom</text>
+    <text x="130" y="290" class="caption" text-anchor="middle">Sign symbol faded</text>
+    <text x="130" y="305" class="caption" text-anchor="middle">CTA button scale up</text>
+    <text x="130" y="320" text-anchor="middle" fill="#D4AF37" font-size="10" opacity="0.4">SCALE UP</text>
+    <text x="10" y="370" class="caption">CTA: Symbol faded bg</text>
+    <text x="10" y="380" class="caption">"Save for your sign"</text>
+  </g>
+
+  <!-- Bottom notes -->
+  <line x1="20" y1="470" x2="1180" y2="470" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+  <text x="30" y="490" class="label" font-size="13">PRODUCTION NOTES — Reel R2</text>
+
+  <g transform="translate(30, 500)">
+    <text x="0" y="0" class="label" font-size="11">CANVA SETUP:</text>
+    <text x="0" y="18" class="caption">1. 1080x1920 canvas — bg: #1A1A2E for intro/outro, #0A0A0A for middle</text>
+    <text x="0" y="33" class="caption">2. Scene 1: Sign symbol at 40% canvas size + gold glow (#D4AF37, blur 15px, 30% opacity)</text>
+    <text x="0" y="48" class="caption">3. Scene 2: Traits staggered — Raleway 24pt, sign accent color — animate: Rise</text>
+    <text x="0" y="63" class="caption">4. Scene 3: Insight Cormorant 28pt Gold, Quote Playfair 22pt White</text>
+    <text x="0" y="78" class="caption">5. Scene 4: Faded sign + CTA pill — animate: Scale up</text>
+  </g>
+
+  <g transform="translate(30, 600)">
+    <text x="0" y="0" class="label" font-size="11">CAPCUT TIMELINE (30s):</text>
+    <text x="0" y="18" class="caption">Scene 1: 0:00-0:05 — Sign intro (video clip + symbol overlay)</text>
+    <text x="0" y="33" class="caption">Scene 2: 0:05-0:12 — Traits appear (3 text tracks staggered 0.5s)</text>
+    <text x="0" y="48" class="caption">Scene 3: 0:12-0:25 — Insight + Quote (film strip transition from Scene 2)</text>
+    <text x="0" y="63" class="caption">Scene 4: 0:25-0:30 — CTA (crossfade from Scene 3, 0.5s)</text>
+    <text x="0" y="78" class="caption">Audio: Cinematic hit at 0:00, soft pulse bg, fade voiceover slightly above music</text>
+  </g>
+
+  <g transform="translate(30, 720)">
+    <text x="0" y="0" class="label" font-size="11">AUDIO SCRIPT (ElevenLabs — 25 words, ~22s):</text>
+    <text x="0" y="18" class="caption" font-size="10" fill="#E8E8E8">[0:00] "Leo."</text>
+    <text x="0" y="35" class="caption" font-size="10" fill="#E8E8E8">[0:05] "Courageous. Confident. Generous."</text>
+    <text x="0" y="52" class="caption" font-size="10" fill="#E8E8E8">[0:12] "Your light draws people, but true leaders serve, not shine."</text>
+    <text x="0" y="69" class="caption" font-size="10" fill="#E8E8E8">[0:22] "Seneca said: Wherever there is a human, there is opportunity for kindness."</text>
+    <text x="0" y="86" class="caption" font-size="10" fill="#E8E8E8">[0:27] "Save for your sign. Follow @stoiczodiac."</text>
+  </g>
+
+  <g transform="translate(30, 810)">
+    <text x="0" y="0" class="label" font-size="11">TIMELINE VISUALIZATION:</text>
+    <rect x="0" y="8" width="1140" height="20" fill="#1A1A2E" rx="3"/>
+    <rect x="0" y="8" width="190" height="20" fill="#6D2E5C" rx="3" opacity="0.7"/>
+    <text x="95" y="22" class="caption" text-anchor="middle" font-size="8" fill="#FFF">Intro (5s)</text>
+    <rect x="195" y="8" width="265" height="20" fill="#457B9D" rx="3" opacity="0.7"/>
+    <text x="327" y="22" class="caption" text-anchor="middle" font-size="8" fill="#FFF">Traits (7s)</text>
+    <rect x="465" y="8" width="495" height="20" fill="#2D6A4F" rx="3" opacity="0.7"/>
+    <text x="712" y="22" class="caption" text-anchor="middle" font-size="8" fill="#FFF">Insight + Quote (13s)</text>
+    <rect x="965" y="8" width="185" height="20" fill="#D4AF37" rx="3" opacity="0.7"/>
+    <text x="1057" y="22" class="caption" text-anchor="middle" font-size="8" fill="#000">CTA (5s)</text>
+  </g>
+</svg>

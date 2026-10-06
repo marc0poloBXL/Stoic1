@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="bottomFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="marble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="5" seed="7" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+      <feComponentTransfer in="gray" result="faded">
+        <feFuncA type="linear" slope="0.05"/>
+      </feComponentTransfer>
+      <feBlend in="faded" in2="SourceGraphic" mode="overlay"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#bgGrad)" filter="url(#marble)"/>
+
+  <!-- Outer gold border -->
+  <rect x="25" y="25" width="1030" height="1870" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+
+  <!-- Inner border -->
+  <rect x="35" y="35" width="1010" height="1850" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Top accent bar -->
+  <rect x="340" y="50" width="400" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+
+  <!-- Bottom fade overlay for CTA area -->
+  <rect x="0" y="1480" width="1080" height="440" fill="url(#bottomFade)"/>
+
+  <!-- Bottom accent bar -->
+  <rect x="340" y="1860" width="400" height="1.5" fill="url(#goldGrad)" opacity="0.4"/>
+
+  <!-- Corner ornaments -->
+  <path d="M 41 52 L 41 41 L 52 41" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1039 52 L 1039 41 L 1028 41" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 41 1868 L 41 1879 L 52 1879" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+  <path d="M 1039 1868 L 1039 1879 L 1028 1879" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5"/>
+
+  <!-- Text safe area guides (90% center) - not visible -->
+  <rect x="108" y="250" width="864" height="1400" fill="none" stroke="none"/>
+
+  <!-- Decorative center glow dot -->
+  <circle cx="540" cy="960" r="200" fill="#D4AF37" opacity="0.03" filter="url(#softGlow)"/>
+
+  <!-- Bottom diamond accent -->
+  <polygon points="540,1845 548,1853 540,1861 532,1853" fill="#D4AF37" opacity="0.25"/>
+
+  <!-- Small side ornaments - left edge -->
+  <line x1="25" y1="800" x2="45" y2="800" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="25" y1="1120" x2="45" y2="1120" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+
+  <!-- Small side ornaments - right edge -->
+  <line x1="1035" y1="800" x2="1055" y2="800" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  <line x1="1035" y1="1120" x2="1055" y2="1120" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+</svg>

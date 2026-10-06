@@ -47,8 +47,8 @@ stoiczodiac/
 ├── 06_AUTOMATION/
 │   ├── dm_sequences/
 │   │   └── dm_welcome_sequence.md  ← 4-message DM flow
-│   └── scheduler_setup/
-│       └── later_setup_guide.md          ← Later + Buffer free tier config
+│   └── stoic_scheduler/                ← Self-hosted IG auto-poster (Playwright)
+│       └── scheduler.py                ← Run this (queue + schedule + post)
 │
 ├── 07_AUDIO/
 │   ├── music/                        ← Background music (royalty-free + original)
@@ -104,7 +104,7 @@ stoiczodiac/
 | 2 | Generate 30 quotes via ChatGPT | `05_AI_WORKFLOWS/prompts/master_prompt_library.md` → Prompt 1 |
 | 3 | Build hashtag library | `08_HASHTAG_LIBRARY/hashtag_library.md` |
 | 4 | Design 30 quote images | Canva template batch |
-| 5 | Set up Later scheduler | `06_AUTOMATION/scheduler_setup/later_setup_guide.md` |
+| 5 | Set up scheduling tool | (optional — Buffer or post manually) |
 | 5-6 | Edit 3 Reels | `07_AUDIO/voiceover_scripts/reel_voiceover_bank.md` + CapCut |
 | 6 | Set up DM automation (OpenReply) | `06_AUTOMATION/dm_sequences/dm_welcome_sequence.md` |
 | **7** | **LAUNCH DAY** | `03_CONTENT_CALENDAR/week1_template.md` |
@@ -140,7 +140,7 @@ stoiczodiac/
 | **CapCut Desktop** | Full suite | Needs install |
 | **ElevenLabs** | 10K chars/month | Needs signup |
 | **Pexels** | Unlimited | ✅ Ready |
-| **Later** | 30 posts/month | Needs signup |
+| **Stoic Scheduler** | Self-hosted | Needs setup |
 | **OpenReply** | Self-hosted (free) | Needs setup |
 | **Gumroad** | Free (10% fee) | For PDF sales |
 | **Substack** | Free | For newsletter |

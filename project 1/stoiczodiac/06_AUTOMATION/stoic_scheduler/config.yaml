@@ -1,0 +1,77 @@
+# ═══════════════════════════════════════════════════
+# Stoic Scheduler — Configuration
+# ═══════════════════════════════════════════════════
+
+# --- Instagram Account ---
+# Credentials are read from .env file or environment variables.
+# See .env.example for the required variables.
+instagram:
+  username: "stoiczodiac"  # Leave empty to use INSTAGRAM_USERNAME from .env
+
+# --- Posting Schedule ---
+# Times to post each day (24h format, local time).
+# The more slots, the more items get posted per day.
+# Scheduler runs every 15 min via Task Scheduler and posts one item per slot.
+schedule:
+  times:
+    monday:    ["07:00", "12:00", "18:00"]
+    tuesday:   ["07:00", "12:00", "18:00"]
+    wednesday: ["07:00", "12:00", "18:00"]
+    thursday:  ["07:00", "12:00", "18:00"]
+    friday:    ["07:00", "12:00", "18:00"]
+    saturday:  ["07:00", "18:00"]
+    sunday:    ["09:00", "18:00"]
+
+  # Tolerance window in minutes — how close to a scheduled time we'll post.
+  # With Task Scheduler running every 15 min, 2 min tolerance is enough.
+  tolerance_minutes: 2
+
+# --- Queue Settings ---
+queue:
+  # Main queue folder — drop images + matching .txt caption files here
+  folder: "queued"
+
+  # After posting, items are moved here with a timestamp
+  posted_folder: "posted"
+
+  # Failed items are moved here after exhausting retries
+  failed_folder: "failed"
+
+  # Auto-import from weekly batch folders
+  auto_import:
+    enabled: true
+    # The scheduler scans 11_MEDIA_LIBRARY/SCHEDULED/week_*/ automatically.
+    # Optional additional glob patterns (relative to this script's folder):
+    source_patterns: []
+
+  # Require a matching .txt caption file for each image
+  require_caption: true
+
+  # Supported image extensions
+  image_extensions: [".png", ".jpg", ".jpeg"]
+
+# --- Browser Settings ---
+browser:
+  headless: true           # Set false to watch the browser (debugging)
+  slow_mo: 300             # Milliseconds between actions (anti-detection)
+  timeout: 30000           # Page load timeout in ms
+  cookies_dir: "cookies"   # Where session cookies are stored
+  viewport_width: 1280
+  viewport_height: 720
+
+# --- Error Recovery ---
+recovery:
+  max_retries: 3
+  retry_delay_minutes: 15
+  rate_limit_cooldown_minutes: 60
+
+# --- Meta Graph API (for carousels, reels, stories) ---
+# Credentials are read from .env — see .env.example.
+meta:
+  api_version: "v20.0"
+  # Which content types go through the Meta API vs browser automation.
+  # 'browser' = Playwright web (existing), 'api' = Meta Graph API (needs setup)
+  route_images_via: browser
+  route_carousels_via: api
+  route_reels_via: api
+  route_stories_via: api

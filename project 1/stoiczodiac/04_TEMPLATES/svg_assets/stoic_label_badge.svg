@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 44" width="300" height="44">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+  <!-- Badge background -->
+  <rect x="0" y="0" width="300" height="44" rx="22" ry="22" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" opacity="0.6"/>
+  <rect x="3" y="3" width="294" height="38" rx="19" ry="19" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+  <!-- Text -->
+  <text x="150" y="28" font-family="'Raleway', 'Helvetica Neue', sans-serif" font-size="14" font-weight="600" letter-spacing="4" fill="url(#goldGrad)" text-anchor="middle" dominant-baseline="middle" opacity="0.85">STOIC WISDOM</text>
+  <!-- Side dots -->
+  <circle cx="28" cy="22" r="2" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="272" cy="22" r="2" fill="#D4AF37" opacity="0.3"/>
+</svg>

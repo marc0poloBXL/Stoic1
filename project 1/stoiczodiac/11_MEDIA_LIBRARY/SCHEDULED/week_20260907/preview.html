@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 4 Preview — Stoic Wisdom × Zodiac</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0A0A0A; color: #F5F5F5; font-family: -apple-system, sans-serif; padding: 32px 20px; }
+  h1 { font-family: Georgia, serif; color: #D4AF37; text-align: center; font-weight: 400; letter-spacing: 2px; margin-bottom: 6px; }
+  p.sub { text-align: center; color: #C9A96E; font-size: 14px; letter-spacing: 2px; margin-bottom: 40px; }
+  .section { max-width: 1200px; margin: 0 auto 48px; }
+  h2 { font-family: Georgia, serif; color: #D4AF37; font-weight: 400; font-size: 20px; letter-spacing: 1px; margin-bottom: 16px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .item { border: 1px solid #2a2a2a; border-radius: 8px; overflow: hidden; background: #111; }
+  .item svg { width: 100%; height: auto; display: block; }
+  .item .label { padding: 10px 14px; font-size: 12px; color: #999; letter-spacing: 0.5px; }
+  .item .label strong { color: #D4AF37; font-weight: 600; }
+  .note { max-width: 1200px; margin: 0 auto; background: #1A1A2E; border: 1px solid #D4AF37; border-radius: 8px; padding: 20px 24px; font-size: 14px; line-height: 1.7; }
+  .note strong { color: #D4AF37; }
+</style>
+</head>
+<body>
+
+<h1>Week 4 Production Batch</h1>
+<p class="sub">SEP 7 – 13 · STOIC WISDOM × ZODIAC</p>
+
+<div class="section">
+  <h2>Quote Cards (7 daily posts)</h2>
+  <div class="grid" id="quotes"></div>
+</div>
+
+<div class="section">
+  <h2>Stories (7 daily prompts)</h2>
+  <div class="grid" id="stories"></div>
+</div>
+
+<div class="section">
+  <h2>Carousels — Aquarius Spotlight</h2>
+  <div class="grid" id="carousel-aquarius"></div>
+</div>
+
+<div class="section">
+  <h2>Carousels — Taurus Spotlight</h2>
+  <div class="grid" id="carousel-taurus"></div>
+</div>
+
+<div class="section">
+  <div class="note">
+    <strong>How to use:</strong> Open each SVG file from the folders below, or upload the whole folder to Canva →
+    drag onto canvas → export as PNG. All files are ready to post.
+    <br><br>
+    <strong>Location:</strong> <code>11_MEDIA_LIBRARY/SCHEDULED/week_20260907/</code>
+  </div>
+</div>
+
+<script>
+// Load all SVGs by embedding them. Since they're local files, we use fetch.
+const groups = [
+  { id: "quotes", dir: "quotes", files: ["quote_sep_7_capricorn_epictetus", "quote_sep_8_aquarius_marcus_aurelius", "quote_sep_9_pisces_seneca", "quote_sep_10_aries_epictetus", "quote_sep_11_taurus_zeno", "quote_sep_12_gemini_marcus_aurelius", "quote_sep_13_cancer_seneca"] },
+  { id: "stories", dir: "stories", files: ["story_sep_7_capricorn", "story_sep_8_aquarius", "story_sep_9_pisces", "story_sep_10_aries", "story_sep_11_taurus", "story_sep_12_gemini", "story_sep_13_cancer"] },
+  { id: "carousel-aquarius", dir: "carousels/spotlight_aquarius", files: ["slide_1_of_7","slide_2_of_7","slide_3_of_7","slide_4_of_7","slide_5_of_7","slide_6_of_7","slide_7_of_7"] },
+  { id: "carousel-taurus", dir: "carousels/spotlight_taurus", files: ["slide_1_of_7","slide_2_of_7","slide_3_of_7","slide_4_of_7","slide_5_of_7","slide_6_of_7","slide_7_of_7"] },
+];
+
+// This preview works when served from the folder via a local server.
+// For direct file:// viewing, use the data embedded below.
+</script>
+
+</body>
+</html>

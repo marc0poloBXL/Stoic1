@@ -1,4 +1,4 @@
-# 🦁 Stoic Wisdom × Zodiac Signs — Phase 1: Basic Setup
+ # 🦁 Stoic Wisdom × Zodiac Signs — Phase 1: Basic Setup
 
 **Operator**: Marc | **Role**: Elite Content & Automation Operator  
 **Launch Window**: 30 Days | **Budget**: $0 (Free AI Tools Only)  
@@ -32,8 +32,7 @@ This is a **high-engagement, low-competition niche intersection**:
 | **Voiceover** | ElevenLabs | 10K chars/month |
 | **Voiceover** | TTSMaker | 20K chars/day |
 | **Stock Footage** | Pexels / Pixabay | Unlimited |
-| **Scheduling** | Later | 30 posts/month |
-| **Scheduling** | Buffer | 10 scheduled posts |
+| **Scheduling** | Stoic Scheduler (self-hosted Playwright) | Unlimited |
 | **Analytics** | Instagram Insights | Native |
 | **Hashtag Research** | Display Purposes | Free |
 | **Caption Writing** | ChatGPT Free | Unlimited |
@@ -65,7 +64,7 @@ This is a **high-engagement, low-competition niche intersection**:
 - [ ] **Day 3**: Build hashtag library (150+ tags)
 - [ ] **Day 4**: Design 30 quote images (Canva batch)
 - [ ] **Day 4**: Write caption bank (30 captions)
-- [ ] **Day 5**: Set up scheduling tool (Later / Buffer)
+- [ ] **Day 5**: Set up scheduling tool (Stoic Scheduler — `06_AUTOMATION/stoic_scheduler/`)
 - [ ] **Day 5–6**: Film/edit 3 Reels (CapCut)
 - [ ] **Day 6**: Set up DM automation sequence (OpenReply)
 - [ ] **Day 7**: First post goes live — **LAUNCH DAY**

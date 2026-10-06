@@ -3,12 +3,12 @@ import { defineMessages } from "react-intl";
 export const PromptInputMessages = defineMessages({
   /** Messages related to prompts and user input validation. */
   promptInspireMe: {
-    defaultMessage: "Inspire me",
+    defaultMessage: "Inspire me, Stoic",
     description:
       "A button label to generate a prompt automatically, which may inspire the user to write their own",
   },
   promptTryAnother: {
-    defaultMessage: "Inspire again",
+    defaultMessage: "Another inspiration",
     description: "A button label to try another image generation prompt",
   },
   promptMissingErrorMessage: {
