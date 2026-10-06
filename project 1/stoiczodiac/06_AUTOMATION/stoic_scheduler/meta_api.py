@@ -204,7 +204,8 @@ class MetaClient:
 
     async def _wait_for_container(self, container_id: str) -> bool:
         """Poll container status until FINISHED or timeout."""
-        for attempt in range(15):  # ~75 seconds max
+        # Reels can take minutes to process; poll up to 300s (60 × 5s).
+        for attempt in range(60):  # ~300 seconds max
             try:
                 resp = await self._get(f"/{container_id}", {
                     "fields": "status_code",
@@ -222,7 +223,7 @@ class MetaClient:
             except Exception as e:
                 logger.warning(f"Status poll failed for {container_id}: {e}")
             await asyncio.sleep(5)
-        logger.warning(f"Container {container_id} timed out after 75s")
+        logger.warning(f"Container {container_id} timed out after 300s")
         return False
 
     async def _publish(self, container_id: str) -> bool:
@@ -256,13 +257,37 @@ class MetaClient:
         return await self._request("POST", path, data=data)
 
     async def _request(self, method: str, path: str, **kwargs) -> Dict:
-        """Generic async HTTP request via httpx."""
+        """Generic async HTTP request via httpx.
+
+        Access tokens are sent as a form field for POST and a query param for
+        GET — never interpolated into the URL string, so they can't leak into
+        logs or error messages. Graph error bodies are parsed before deciding
+        how to fail, since raise_for_status() alone would mask the API's
+        structured error and log the raw URL (including any token).
+        """
         import httpx
         url = f"{self.base_url}{path}"
-        async with httpx.AsyncClient(timeout=60.0) as client:
+        timeout = httpx.Timeout(60.0)
+        async with httpx.AsyncClient(timeout=timeout) as client:
             if method == "GET":
                 resp = await client.get(url, params=kwargs.get("params", {}))
             else:
                 resp = await client.post(url, data=kwargs.get("data", {}))
-            resp.raise_for_status()
-            return resp.json()
+
+        body = resp.text
+        try:
+            payload = resp.json()
+        except ValueError:
+            payload = None
+
+        # Graph errors come back as HTTP 400 with a structured error body.
+        if resp.status_code >= 400:
+            msg = "HTTP error"
+            if payload and isinstance(payload, dict):
+                err = payload.get("error", {})
+                msg = f"{err.get('type', '')} {err.get('code', '')}: {err.get('message', body[:200])}"
+            raise Exception(f"Graph API {resp.status_code} — {msg}")
+
+        if payload is None:
+            raise Exception(f"Graph API returned non-JSON body: {body[:200]}")
+        return payload

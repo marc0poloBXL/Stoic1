@@ -106,21 +106,22 @@ def validate_config(config: dict) -> bool:
     if not password:
         print("  ⚠  Instagram password not set. Set INSTAGRAM_PASSWORD in .env file.")
 
-    # Meta API check (optional — warn only if routing says api but no creds)
+    # Meta API check (optional — warn once for missing creds)
     meta = config.get("meta", {})
-    for content_type in ["carousels", "reels", "stories"]:
-        route = meta.get(f"route_{content_type}_via", "api")
-        if route == "api":
-            page_token = os.getenv("META_PAGE_ACCESS_TOKEN", "")
-            ig_user_id = os.getenv("META_IG_USER_ID", "")
-            blob_token = os.getenv("BLOB_READ_WRITE_TOKEN", "")
-            if not page_token:
-                print(f"  ⚠  {content_type} routed via API but META_PAGE_ACCESS_TOKEN not set")
-                print(f"     Carousel/reel/story items will be skipped until set up.")
-            if not blob_token:
-                print(f"  ⚠  BLOB_READ_WRITE_TOKEN not set — required for media hosting")
-            if not ig_user_id:
-                print(f"  ℹ   META_IG_USER_ID not set — will auto-resolve on first post")
+    api_types = [t for t in ["carousels", "reels", "stories"]
+                 if meta.get(f"route_{t}_via", "api") == "api"]
+    if api_types:
+        page_token = os.getenv("META_PAGE_ACCESS_TOKEN", "")
+        blob_token = os.getenv("BLOB_READ_WRITE_TOKEN", "")
+        ig_user_id = os.getenv("META_IG_USER_ID", "")
+        types_str = ", ".join(api_types)
+        if not page_token:
+            print(f"  ⚠  {types_str} route via API but META_PAGE_ACCESS_TOKEN not set")
+            print(f"     Carousel/reel/story items will be skipped until set up.")
+        if not blob_token:
+            print(f"  ⚠  BLOB_READ_WRITE_TOKEN not set — required for media hosting")
+        if not ig_user_id:
+            print(f"  ℹ   META_IG_USER_ID not set — will auto-resolve on first post")
 
     if ok:
         print("✅ Config validation passed")
@@ -150,10 +151,9 @@ async def post_next_item(config: dict):
         logger.info("Nothing to post — queue is empty")
         return
 
-    item = queued_items[0]
-    logger.info(f"Posting: [{item.post_type}] {item.filename}")
-
-    # Determine which poster to use
+    # Determine which poster to use, and find the FIRST item whose route is
+    # actually usable. Previously the run picked queued_items[0] and returned
+    # on a misconfigured route — the head item blocked the whole queue forever.
     meta_routing = config.get("meta", {})
     route_map = {
         "image": meta_routing.get("route_images_via", "browser"),
@@ -161,7 +161,43 @@ async def post_next_item(config: dict):
         "reel": meta_routing.get("route_reels_via", "api"),
         "story": meta_routing.get("route_stories_via", "api"),
     }
-    method = route_map.get(item.post_type, "browser")
+    meta_configured = MetaClient(config).is_configured
+    password = os.getenv("INSTAGRAM_PASSWORD", "")
+
+    item = None
+    for candidate in queued_items:
+        method = route_map.get(candidate.post_type, "browser")
+        if method == "api" and not meta_configured:
+            # Route unusable for this item — move it out of the queue so it
+            # can't block, then try the next one.
+            logger.warning(
+                f"[{candidate.post_type}] {candidate.filename}: Meta API not configured — "
+                f"moving to failed/ so it cannot block the queue"
+            )
+            queue.move_to_failed(
+                candidate,
+                "Route is 'api' but META_PAGE_ACCESS_TOKEN is not configured",
+            )
+            continue
+        if method == "browser" and not password:
+            logger.warning(
+                f"[{candidate.post_type}] {candidate.filename}: browser route needs "
+                f"INSTAGRAM_PASSWORD — moving to failed/"
+            )
+            queue.move_to_failed(
+                candidate,
+                "Route is 'browser' but INSTAGRAM_PASSWORD is not configured",
+            )
+            continue
+        item = candidate
+        method = route_map.get(candidate.post_type, "browser")
+        break
+
+    if item is None:
+        logger.info("No queue item has a usable route — nothing to post")
+        return
+
+    logger.info(f"Posting: [{item.post_type}] {item.filename}")
 
     if method == "browser":
         # Playwright web automation (existing)

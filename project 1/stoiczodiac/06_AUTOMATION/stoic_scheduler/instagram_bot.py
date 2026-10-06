@@ -69,14 +69,16 @@ class InstagramBot:
             totp_secret=self.totp_secret,
         )
 
-        if login_manager.load_session():
+        # Both methods are async — awaiting is required. Without it the
+        # coroutine object is always truthy and the bot skips login entirely.
+        if await login_manager.load_session():
             return True
 
         if not self.username or not self.password:
             logger.error("No Instagram credentials configured. Set INSTAGRAM_USERNAME and INSTAGRAM_PASSWORD in .env")
             return False
 
-        return login_manager.login_fresh(self.username, self.password)
+        return await login_manager.login_fresh(self.username, self.password)
 
     async def post_image(self, image_path: Path, caption: str = "") -> bool:
         """

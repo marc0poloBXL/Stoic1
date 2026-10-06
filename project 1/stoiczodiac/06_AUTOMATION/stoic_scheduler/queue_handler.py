@@ -144,9 +144,14 @@ class QueueHandler:
         for folder in sorted(self.carousels_dir.iterdir()):
             if not folder.is_dir():
                 continue
-            slides = sorted(
+            # Natural sort by leading number in filename so slide_10 sorts
+            # after slide_2 (a plain string sort would order 1, 10, 2, ...).
+            slides = [
                 p for p in folder.iterdir()
                 if p.suffix.lower() in self.image_extensions
+            ]
+            slides.sort(
+                key=lambda p: int("".join(ch for ch in p.stem if ch.isdigit())[:6] or 0)
             )
             if not slides:
                 continue
@@ -374,8 +379,11 @@ class QueueHandler:
                     if not carousel_folder.is_dir():
                         continue
                     dest = self.carousels_dir / carousel_folder.name
-                    if dest.exists():
-                        continue  # already imported
+                    # Skip if already queued, posted, or failed (prevents re-imports)
+                    if dest.exists() \
+                       or self._exists_in_suffix(self.posted_dir, carousel_folder.name) \
+                       or self._exists_in_suffix(self.failed_dir, carousel_folder.name):
+                        continue
                     # Copy the whole folder
                     shutil.copytree(str(carousel_folder), str(dest), dirs_exist_ok=True)
                     imported += 1
@@ -386,7 +394,9 @@ class QueueHandler:
             if reels_dir.exists():
                 for vid in sorted(reels_dir.glob("*.mp4")):
                     dest = self.reels_dir / vid.name
-                    if dest.exists():
+                    if dest.exists() \
+                       or self._exists_in_suffix(self.posted_dir, vid.name) \
+                       or self._exists_in_suffix(self.failed_dir, vid.name):
                         continue
                     shutil.copy2(str(vid), str(dest))
                     # Find matching caption
@@ -402,7 +412,9 @@ class QueueHandler:
                 for ext in self.image_extensions:
                     for story_img in sorted(stories_dir.glob(f"*{ext}")):
                         dest = self.stories_dir / story_img.name
-                        if dest.exists():
+                        if dest.exists() \
+                           or self._exists_in_suffix(self.posted_dir, story_img.name) \
+                           or self._exists_in_suffix(self.failed_dir, story_img.name):
                             continue
                         shutil.copy2(str(story_img), str(dest))
                         cap_src = stories_dir / f"{story_img.stem}.txt"
@@ -414,15 +426,34 @@ class QueueHandler:
         logger.info(f"Auto-import: {imported} new item(s) added to queue")
         return imported
 
+    def _exists_in_suffix(self, folder: Path, name: str) -> bool:
+        """True if any entry in `folder` ends with `name`.
+
+        Posted/failed files are stored as `{timestamp}_{type}_{name}`, so
+        exact-name comparison misses them; a suffix match does not.
+        """
+        if not folder.exists():
+            return False
+        for entry in folder.iterdir():
+            if entry.name.endswith(name):
+                return True
+        return False
+
     def _import_image(self, img_path: Path, week_path: Optional[Path] = None,
                       skip_if_has_quotes_dir: bool = False) -> bool:
         """
         Import a single image from a batch folder into the queue.
         Also looks for a matching caption file.
         """
-        # Skip if already in queue
-        dest_image = self.queue_dir / img_path.name
-        if dest_image.exists():
+        # Skip if already in queue, already posted, or already failed.
+        # Without the posted/failed checks, content that leaves the queue is
+        # re-imported forever and posted again. Posted/failed files carry a
+        # `{timestamp}_{type}_` prefix, so match by suffix, not exact name.
+        if (self.queue_dir / img_path.name).exists():
+            return False
+        if self._exists_in_suffix(self.posted_dir, img_path.name):
+            return False
+        if self._exists_in_suffix(self.failed_dir, img_path.name):
             return False
 
         # Skip if there's a quotes/ subfolder and we're in the root of the week
@@ -465,6 +496,7 @@ class QueueHandler:
                 break
 
         # Copy image to queue
+        dest_image = self.queue_dir / img_path.name
         try:
             shutil.copy2(str(img_path), str(dest_image))
         except Exception as e:

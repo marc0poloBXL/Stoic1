@@ -141,11 +141,23 @@ def select_quote(quotes, theme, used_texts=None):
     return scored[0][1]
 
 
-def format_application(sign_name, philosopher_name, quote_text, theme):
-    """Generate a 2-3 sentence application of the quote to the sign."""
+def format_application(sign_name, philosopher_name, quote_text, theme, element=None):
+    """Generate a 2-3 sentence application of the quote to the sign.
+
+    Templates are element-aware so, e.g., a water sign never gets
+    "ground your natural fire" wording.
+    """
+    element_clauses = {
+        "fire": "whose element drives you to lead with passion — let this wisdom temper your natural fire",
+        "earth": "whose element makes you steady and deliberate — let this wisdom soften your fixed habits",
+        "air": "whose element keeps you curious and analytical — let this wisdom bring your ideas to rest",
+        "water": "whose element makes you deep and feeling — let this wisdom steady your shifting tide",
+    }
+    clause = element_clauses.get(element or "") or "whose element shapes how you meet the world"
+
     templates = [
-        f"For {sign_name}, whose element drives you to lead with passion, this wisdom cuts through the noise. "
-        f"Let {philosopher_name}'s words ground your natural fire — the lesson isn't in what you do, but in how you choose to see it. "
+        f"For {sign_name}, {clause}. "
+        f"The lesson isn't in what you do, but in how you choose to see it. "
         f"This week, let this truth settle into your daily rhythm.",
 
         f"As a {sign_name}, your strength can become your shadow if left unchecked. "
@@ -218,9 +230,41 @@ def format_story_prompt(sign_name, sign_symbol, philosopher_name, theme):
 
 
 # ── Content generation ─────────────────────────────────────────────────────
+def load_used_quotes(exclude_week_folder=None):
+    """Scan all previously generated week folders for quote texts.
+
+    Quote files embed the quote as `> "..."`, so we collect every quoted line
+    across existing weeks to keep the used-quote set persistent between runs.
+    Without this, quotes repeat across weeks.
+    """
+    used = set()
+    if not SCHEDULED_DIR.exists():
+        return used
+    for folder in SCHEDULED_DIR.iterdir():
+        if not folder.is_dir() or folder.name == "week_manual":
+            continue
+        if exclude_week_folder and folder == exclude_week_folder:
+            continue
+        quotes_dir = folder / "quotes"
+        if not quotes_dir.exists():
+            continue
+        for f in quotes_dir.glob("*.md"):
+            try:
+                text = f.read_text(encoding="utf-8")
+            except Exception:
+                continue
+            for line in text.splitlines():
+                line = line.strip()
+                if line.startswith("> \""):
+                    quote = line[3:].strip().strip('"')
+                    if quote:
+                        used.add(quote)
+    return used
+
+
 def generate_week_content(rotation_map, sign_map, quote_map, start_day, end_day, week_folder, dry_run=False):
     """Generate all content for one week's day range."""
-    used_quotes = set()
+    used_quotes = load_used_quotes(exclude_week_folder=week_folder if not dry_run else None)
 
     subfolders = {
         "quotes": week_folder / "quotes",
@@ -230,8 +274,13 @@ def generate_week_content(rotation_map, sign_map, quote_map, start_day, end_day,
 
     results = []
 
+    rotation_len = len(rotation_map)
+
     for day_num in range(start_day, end_day + 1):
-        entry = rotation_map.get(day_num)
+        # Rotation repeats every 90 days — wrap day numbers so weeks 14+
+        # keep generating instead of silently skipping.
+        wrapped_day = ((day_num - 1) % rotation_len) + 1
+        entry = rotation_map.get(wrapped_day)
         if not entry:
             print(f"  ⚠️  Day {day_num}: no rotation entry found, skipping")
             continue
@@ -267,7 +316,7 @@ def generate_week_content(rotation_map, sign_map, quote_map, start_day, end_day,
         used_quotes.add(quote["text"])
 
         # Generate content
-        application = format_application(sign_name, philosopher, quote["text"], theme)
+        application = format_application(sign_name, philosopher, quote["text"], theme, element=sign.get("element"))
         challenge = format_challenge(sign_name, theme, philosopher, quote["text"])
         caption = format_caption(sign_name, sign_symbol, philosopher, quote["text"], theme)
         story_prompt = format_story_prompt(sign_name, sign_symbol, philosopher, theme)

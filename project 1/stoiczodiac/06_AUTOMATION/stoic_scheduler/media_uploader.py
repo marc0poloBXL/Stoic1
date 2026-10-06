@@ -4,6 +4,7 @@ Uploads local files to Vercel Blob for public HTTPS URLs,
 then optionally cleans up after posting via Meta Graph API.
 """
 
+import asyncio
 import io
 import os
 from pathlib import Path
@@ -39,7 +40,9 @@ class MediaUploader:
         from vercel_blob import put
         data = await self._read_file(file_path)
         pathname = f"{prefix}/{file_path.name}"
-        result = await put(pathname, data, options={
+        # vercel_blob.put is synchronous — run it in a thread so awaiting
+        # doesn't TypeError AND doesn't block the event loop.
+        result = await asyncio.to_thread(put, pathname, data, {
             "access": "public",
             "token": self.token,
         })
@@ -69,7 +72,7 @@ class MediaUploader:
             jpg_name = file_path.stem + ".jpg"
             pathname = f"{prefix}/{jpg_name}"
             from vercel_blob import put
-            result = await put(pathname, buf.getvalue(), options={
+            result = await asyncio.to_thread(put, pathname, buf.getvalue(), {
                 "access": "public",
                 "token": self.token,
             })
@@ -90,7 +93,8 @@ class MediaUploader:
             return
         try:
             from vercel_blob import delete as _delete
-            await _delete(url, options={"token": self.token})
+            # Synchronous — run in a thread (see upload_image).
+            await asyncio.to_thread(_delete, url, {"token": self.token})
             logger.info(f"Deleted blob: {url}")
         except Exception as e:
             logger.warning(f"Failed to delete blob {url}: {e}")

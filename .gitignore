@@ -35,6 +35,8 @@ venv/
 scratch.ipynb
 
 # Instagram scheduler — session cookies (sensitive)
-stoiczodiac/06_AUTOMATION/stoic_scheduler/cookies/
-stoiczodiac/06_AUTOMATION/stoic_scheduler/logs/
-stoiczodiac/06_AUTOMATION/stoic_scheduler/failed/
+**/stoic_scheduler/cookies/
+**/stoic_scheduler/logs/
+**/stoic_scheduler/queued/
+**/stoic_scheduler/posted/
+**/stoic_scheduler/failed/
