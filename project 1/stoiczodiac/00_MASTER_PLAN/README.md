@@ -29,7 +29,7 @@ This is a **high-engagement, low-competition niche intersection**:
 | **Image Generation** | Bing Image Creator | 15 boosts/day |
 | **Design** | Canva | 250K+ templates, 5GB cloud |
 | **Video Editing** | CapCut Desktop | Full suite, no watermark |
-| **Voiceover** | ElevenLabs | 10K chars/month |
+| **Voiceover** | **VibeVoice** (self-hosted, replaces ElevenLabs) | Unlimited |
 | **Voiceover** | TTSMaker | 20K chars/day |
 | **Stock Footage** | Pexels / Pixabay | Unlimited |
 | **Scheduling** | Stoic Scheduler (self-hosted Playwright) | Unlimited |
