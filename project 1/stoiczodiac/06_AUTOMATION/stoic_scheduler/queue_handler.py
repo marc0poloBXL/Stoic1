@@ -373,7 +373,12 @@ class QueueHandler:
                             imported += 1
 
             # --- Carousels from carousels/ (subfolders with slides + caption) ---
+            # Slides are authored as SVGs and rendered to PNGs by render_pngs.js
+            # into the sibling carousels_png/ folder. Prefer the rendered PNGs —
+            # the scanner only accepts .png/.jpg/.jpeg, so copying the SVG source
+            # folders silently produces empty, unscannable carousel items.
             car_dir = week_path / "carousels"
+            car_png_dir = week_path / "carousels_png"
             if car_dir.exists():
                 for carousel_folder in sorted(car_dir.iterdir()):
                     if not carousel_folder.is_dir():
@@ -384,8 +389,11 @@ class QueueHandler:
                        or self._exists_in_suffix(self.posted_dir, carousel_folder.name) \
                        or self._exists_in_suffix(self.failed_dir, carousel_folder.name):
                         continue
-                    # Copy the whole folder
-                    shutil.copytree(str(carousel_folder), str(dest), dirs_exist_ok=True)
+                    # Source: rendered PNGs when available, else the SVG source
+                    png_src = car_png_dir / carousel_folder.name
+                    src = png_src if png_src.exists() else carousel_folder
+                    # Copy the whole folder (only postable formats get scanned)
+                    shutil.copytree(str(src), str(dest), dirs_exist_ok=True)
                     imported += 1
                     logger.info(f"Imported carousel: {carousel_folder.name}")
 
