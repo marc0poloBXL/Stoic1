@@ -39,12 +39,10 @@ python mix_voiceover.py
 ```
 Combines each voiceover with the ambient piano tracks from `07_AUDIO/music/royalty_free/` and saves to `voiceover_audio/mixed/`.
 
-### Alternative: ElevenLabs (online, 10K chars/month)
-1. Sign up at [elevenlabs.io](https://elevenlabs.io) (free tier)
-2. Voice: **"Adam"** (deep, authoritative)
-3. Backup: **"Antoni"** (warm, conversational)
-4. Paste scripts below → Generate → Download MP3
-5. Import into CapCut → Add visuals → Export
+### ⚠️ Tool change: VibeVoice replaces ElevenLabs
+> ElevenLabs has been replaced by **VibeVoice** — self-hosted, unlimited, at no monthly char limit.
+> The voiceover scripts below feed into `05_AI_WORKFLOWS/VibeVoice` (see `batch_generate_voiceovers.py`).
+> Generate with VibeVoice → Download MP3 → Import into CapCut → Add visuals → Export.
 
 ---
 

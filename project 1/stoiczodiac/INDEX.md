@@ -39,16 +39,30 @@ stoiczodiac/
 ├── 05_AI_WORKFLOWS/
 │   ├── prompts/
 │   │   └── master_prompt_library.md  ← 10 ChatGPT prompts (copy-paste)
+│   ├── outputs/                      ← Audio samples, exports
 │   └── scripts/
 │       ├── batch_content_generator.py   ← Python calendar generator (--week N flag)
 │       ├── batch_content_generator.ps1  ← PowerShell version
-│       └── run_weekly_batch.py          ← One-command weekly batch routine
+│       ├── generate_weekly_content.py   ← Sign-quote-application generator
+│       ├── generate_carousels.js        ← Carousel asset builder
+│       ├── generate_quote_cards.js      ← Quote card builder
+│       ├── generate_stories_and_captions.js ← Story/caption generator
+│       ├── generate_weekly_forecast.js  ← Weekly forecast builder
+│       ├── render_pngs.js              ← PNG render pipeline
+│       └── run_weekly_batch.py         ← One-command weekly batch routine
 │
 ├── 06_AUTOMATION/
-│   ├── dm_sequences/
-│   │   └── dm_welcome_sequence.md  ← 4-message DM flow
-│   └── stoic_scheduler/                ← Self-hosted IG auto-poster (Playwright)
-│       └── scheduler.py                ← Run this (queue + schedule + post)
+│   ├── stoic_scheduler/                ← Self-hosted IG auto-poster (Playwright + Meta API)
+│   │   ├── scheduler.py                ← Main entry (queue + schedule + post)
+│   │   ├── queue_handler.py            ← Folder-based queue management
+│   │   ├── meta_api.py                 ← Meta Graph API client
+│   │   ├── instagram_bot.py            ← Playwright browser automation
+│   │   ├── media_uploader.py           ← Vercel Blob uploads for API posting
+│   │   └── config.yaml                 ← Post schedule + folder routing
+│   ├── openreply/                      ← DM automation (Next.js app)
+│   ├── instagram_dm.py                 ← Instagram DM helper
+│   ├── create_campaigns.mjs            ← OpenReply campaign creator
+│   └── get_fb_token.html               ← Facebook token guide
 │
 ├── 07_AUDIO/
 │   ├── music/                        ← Background music (royalty-free + original)
@@ -67,15 +81,28 @@ stoiczodiac/
 │   └── weekly_audit_template.md         ← Weekly audit template + KPIs
 │
 ├── 11_MEDIA_LIBRARY/                    ← All visual media + batch production
-│   ├── IMAGES/zodiac/{12 signs}        ← Sign-specific imagery
-│   ├── IMAGES/backgrounds/             ← Backgrounds, textures, gradients
-│   ├── IMAGES/stock/                   ← Licensed stock photography
-│   ├── VIDEO/reels/                    ← Reel exports
-│   ├── VIDEO/animations/               ← Motion graphics, Lottie, GIFs
-│   ├── GRAPHICS/overlays/             ← Text overlays, stickers, frames
-│   ├── GRAPHICS/icons/                 ← Zodiac symbols, social icons
-│   ├── SCREENSHOTS/                    ← App UI + analytics screenshots
+│   ├── IMAGES/
+│   │   ├── zodiac/{12 signs}/          ← Sign-specific imagery
+│   │   ├── backgrounds/                ← Backgrounds, textures, gradients
+│   │   ├── quotes/                     ← Designed quote exports
+│   │   └── stock/                      ← Licensed stock photography
+│   ├── VIDEO/
+│   │   ├── reels/                      ← Reel exports
+│   │   ├── animations/                 ← Motion graphics, Lottie, GIFs
+│   │   ├── b_roll/                     ← B-roll clips
+│   │   └── intros_outros/              ← Reel intros + outros
+│   ├── GRAPHICS/
+│   │   ├── overlays/                   ← Text overlays, stickers, frames
+│   │   ├── icons/                      ← Zodiac symbols, social icons
+│   │   ├── templates/                  ← Reusable design templates
+│   │   └── thumbnails/                 ← Reel/template thumbnails
+│   ├── SCREENSHOTS/
+│   │   ├── analytics/                  ← Performance screenshots
+│   │   └── app_ui/                     ← App interface screenshots
 │   └── SCHEDULED/                      ← Weekly batch production folders
+│       ├── draft/                      ← In-progress weeks
+│       ├── review/                     ← Weeks awaiting QC
+│       ├── approved/                   ← QC-passed weeks (ready to queue)
 │       ├── week_YYYYMMDD/              ← One per week (auto-created)
 │       │   ├── WEEKLY_BATCH_BRIEF.md   ← Sign assignments + pre-filled prompts
 │       │   ├── quotes/                 → Drop designed quote images
@@ -87,7 +114,8 @@ stoiczodiac/
 │       ├── BATCH_PROMPT_CARDS.md       ← Quick-copy AI prompts
 │       └── BATCH_HISTORY.md            ← Log of all batch runs
 │
-└── _ARCHIVE/                            ← Spent/deleted content goes here
+├── _ARCHIVE/                            ← Spent/deleted content goes here
+└── 05_AI_WORKFLOWS/VibeVoice/           ← Voiceover generator (submodule — replaces ElevenLabs)
 ```
 
 ---
@@ -106,7 +134,7 @@ stoiczodiac/
 | 4 | Design 30 quote images | Canva template batch |
 | 5 | Set up scheduling tool | (optional — Buffer or post manually) |
 | 5-6 | Edit 3 Reels | `07_AUDIO/voiceover_scripts/reel_voiceover_bank.md` + CapCut |
-| 6 | Set up DM automation (OpenReply) | `06_AUTOMATION/dm_sequences/dm_welcome_sequence.md` |
+| 6 | Set up DM automation (OpenReply) | `06_AUTOMATION/openreply/README.md` |
 | **7** | **LAUNCH DAY** | `03_CONTENT_CALENDAR/week1_template.md` |
 
 ### Week 2: Build Momentum (Days 8–14)
@@ -138,10 +166,10 @@ stoiczodiac/
 | **Canva** | 250K+ templates | Needs setup |
 | **Leonardo AI** | 150 credits/day | Needs signup |
 | **CapCut Desktop** | Full suite | Needs install |
-| **ElevenLabs** | 10K chars/month | Needs signup |
+| **VibeVoice** (replaces ElevenLabs) | Self-hosted (free / unlimited) | ✅ Ready — `05_AI_WORKFLOWS/VibeVoice` |
 | **Pexels** | Unlimited | ✅ Ready |
-| **Stoic Scheduler** | Self-hosted | Needs setup |
-| **OpenReply** | Self-hosted (free) | Needs setup |
+| **Stoic Scheduler** | Self-hosted | ✅ Running (auto-poster) |
+| **OpenReply** | Self-hosted (free) | ✅ Running (DM automation) |
 | **Gumroad** | Free (10% fee) | For PDF sales |
 | **Substack** | Free | For newsletter |
 
