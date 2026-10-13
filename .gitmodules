@@ -1,3 +1,6 @@
 [submodule "project 1/stoiczodiac/05_AI_WORKFLOWS/VibeVoice"]
 	path = project 1/stoiczodiac/05_AI_WORKFLOWS/VibeVoice
 	url = https://github.com/vibevoice-community/VibeVoice.git
+[submodule "project 1/stoiczodiac/06_AUTOMATION/openreply"]
+	path = project 1/stoiczodiac/06_AUTOMATION/openreply
+	url = https://github.com/marc0poloBXL/openreply.git

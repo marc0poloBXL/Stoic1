@@ -1,0 +1,751 @@
+<title>Stoic Wealth Practice</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #0a0a0f;
+    --bg-card: #111118;
+    --bg-elevated: #181822;
+    --border: #1e1e2a;
+    --gold: #d4a047;
+    --gold-dim: #a07830;
+    --gold-glow: rgba(212, 160, 71, 0.15);
+    --teal: #2a8a8a;
+    --teal-dim: #1d6b6b;
+    --text: #e8e6e3;
+    --text-dim: #9a9790;
+    --text-muted: #6b6862;
+    --off-white: #f0ede8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* --- scrollbar --- */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  /* --- hero --- */
+  .hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    right: -20%;
+    height: 80%;
+    background: radial-gradient(ellipse at 50% 30%, var(--gold-glow) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--off-white);
+    position: relative;
+    text-wrap: balance;
+    max-width: 900px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-dim);
+    margin-top: 1.2rem;
+    max-width: 600px;
+    position: relative;
+    text-wrap: balance;
+  }
+
+  .hero-stamp {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    position: relative;
+  }
+
+  .hero-stamp .dot {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  /* --- divider --- */
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-dim));
+    margin: 0 auto;
+  }
+
+  .divider--section {
+    margin: 3rem auto;
+  }
+
+  /* --- sections --- */
+  .section {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section-wide {
+    max-width: 880px;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-header .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 600;
+    color: var(--off-white);
+    text-wrap: balance;
+  }
+
+  .section-header p {
+    color: var(--text-dim);
+    margin-top: 0.8rem;
+    font-size: 1rem;
+  }
+
+  /* --- intro --- */
+  .intro {
+    padding: 0 0 3rem;
+  }
+
+  .intro p {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 1.2rem;
+  }
+
+  .intro .pullquote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1.5;
+    padding: 2rem 0 1.5rem;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .intro .attribution {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  /* --- chart / visualization --- */
+  .chart-section {
+    padding: 2rem 0 3rem;
+  }
+
+  .chart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .chart-cell {
+    background: var(--bg-card);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .chart-cell .number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .chart-cell .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+  }
+
+  .chart-cell .sub {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+  }
+
+  /* --- habits grid --- */
+  .habits {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem 0 2rem;
+  }
+
+  .habit-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    transition: border-color 0.3s;
+  }
+
+  .habit-card:hover {
+    border-color: var(--gold-dim);
+  }
+
+  .habit-card .num {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.15;
+    line-height: 1;
+  }
+
+  .habit-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .habit-card .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.8rem;
+  }
+
+  .habit-card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .habit-card blockquote {
+    border-left: 2px solid var(--gold-dim);
+    padding-left: 1rem;
+    margin: 1rem 0 0;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  /* --- traps --- */
+  .traps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0 2rem;
+  }
+
+  .trap-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.8rem;
+  }
+
+  .trap-card .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .trap-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 0.5rem;
+  }
+
+  .trap-card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* --- practice box --- */
+  .practice-box {
+    background: linear-gradient(135deg, var(--bg-elevated), var(--bg-card));
+    border: 1px solid var(--gold-dim);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    position: relative;
+  }
+
+  .practice-box::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--gold-dim), transparent 50%, var(--gold-dim));
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  .practice-box .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .practice-box h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    color: var(--off-white);
+    margin-bottom: 1rem;
+  }
+
+  .practice-box ol {
+    list-style: none;
+    counter-reset: step;
+  }
+
+  .practice-box ol li {
+    counter-increment: step;
+    padding: 0.75rem 0 0.75rem 2.5rem;
+    position: relative;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .practice-box ol li:last-child {
+    border-bottom: none;
+  }
+
+  .practice-box ol li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: var(--gold);
+    color: var(--bg);
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* --- question --- */
+  .question-box {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .question-box .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.75rem;
+  }
+
+  .question-box .question {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-style: italic;
+    color: var(--off-white);
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+
+  /* --- preview / CTA --- */
+  .preview-section {
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-card) 100%);
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .preview-section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    color: var(--off-white);
+    margin-bottom: 1rem;
+    text-wrap: balance;
+  }
+
+  .preview-section p {
+    color: var(--text-dim);
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--bg);
+  }
+
+  .btn-primary:hover {
+    background: #bf8f3a;
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--text-muted);
+  }
+
+  /* --- footer --- */
+  .footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+  }
+
+  .footer a {
+    color: var(--gold-dim);
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    color: var(--gold);
+  }
+
+  /* --- responsive --- */
+  @media (max-width: 640px) {
+    .hero { min-height: 60vh; padding: 3rem 1.5rem 2rem; }
+    .chart-grid { grid-template-columns: 1fr; }
+    .traps { grid-template-columns: 1fr; }
+    .habit-card { padding: 1.5rem; }
+    .practice-box { padding: 1.8rem; }
+    .btn-group { flex-direction: column; align-items: center; }
+  }
+
+  /* --- dark theme --- */
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #f7f5f0;
+      --bg-card: #ffffff;
+      --bg-elevated: #f0ede8;
+      --border: #e0dbd2;
+      --gold: #b8862d;
+      --gold-dim: #8a6420;
+      --gold-glow: rgba(184, 134, 45, 0.08);
+      --teal: #1d7a7a;
+      --teal-dim: #155a5a;
+      --text: #1a1a1a;
+      --text-dim: #5a554f;
+      --text-muted: #8a857e;
+      --off-white: #1a1a1a;
+    }
+
+    :root:not([data-theme="dark"]) .hero::before {
+      background: radial-gradient(ellipse at 50% 30%, rgba(184, 134, 45, 0.06) 0%, transparent 70%);
+    }
+
+    :root:not([data-theme="dark"]) .btn-primary {
+      color: #fff;
+    }
+  }
+
+  :root[data-theme="light"] {
+    --bg: #f7f5f0;
+    --bg-card: #ffffff;
+    --bg-elevated: #f0ede8;
+    --border: #e0dbd2;
+    --gold: #b8862d;
+    --gold-dim: #8a6420;
+    --gold-glow: rgba(184, 134, 45, 0.08);
+    --teal: #1d7a7a;
+    --teal-dim: #155a5a;
+    --text: #1a1a1a;
+    --text-dim: #5a554f;
+    --text-muted: #8a857e;
+    --off-white: #1a1a1a;
+  }
+
+  :root[data-theme="light"] .hero::before {
+    background: radial-gradient(ellipse at 50% 30%, rgba(184, 134, 45, 0.06) 0%, transparent 70%);
+  }
+
+  :root[data-theme="light"] .btn-primary {
+    color: #fff;
+  }
+</style>
+
+<!-- hero -->
+<section class="hero">
+  <div class="hero-label">Stoic Wealth Practice &middot; No. 5</div>
+  <h1>The <em>Unshakable</em> Investor</h1>
+  <p class="hero-sub">A Stoic reflection on wealth, patience, and self-command &mdash; written for you, born July 7, 1977.</p>
+  <div class="hero-stamp">
+    <span class="dot"></span>
+    Cancer Sun &middot; Life Path 11 &middot; Age 49
+    <span class="dot"></span>
+  </div>
+</section>
+
+<!-- main content -->
+<div class="section intro">
+  <div class="pullquote">
+    &ldquo;Wealth is the slave of a wise man. The master of a fool.&rdquo;
+  </div>
+  <p class="attribution">&mdash; Seneca, <em>Moral Letters to Lucilius</em></p>
+
+  <p>You were born under the Crab &mdash; a Cardinal Water sign ruled by the Moon. In the old symbol-book, that means you build, protect, and feel deeply beneath a hard shell. The Cancerian instinct is to gather resources, to fortify the den, to compound slowly. You are not wired for reckless gambles. You are wired to <em>hold</em>.</p>
+
+  <p>Your Life Path is 11 &mdash; the Visionary. Not a number of counting coins, but of <em>seeing what others miss</em>. Together these symbols sketch an investor who reads the room before the room reads itself. Someone whose edge is patience married to insight.</p>
+
+  <p>The Stoics would recognise you. They taught that money is indifferent &mdash; not bad, but indifferent. What matters is your <em>relationship</em> to it: your discipline, your clarity, your refusal to let fear or greed steer. This reading is a mirror, not a prophecy. Look into it, test what fits, discard what does not.</p>
+</div>
+
+<div class="divider divider--section"></div>
+
+<!-- chart / snapshot -->
+<div class="section section-wide chart-section">
+  <div class="section-header">
+    <div class="eyebrow">Your Symbolic Snapshot</div>
+    <h2>Three Numbers, One Picture</h2>
+  </div>
+  <div class="chart-grid">
+    <div class="chart-cell">
+      <div class="number">♋</div>
+      <div class="label">Cancer Sun</div>
+      <div class="sub">Protector &middot; Builder</div>
+    </div>
+    <div class="chart-cell">
+      <div class="number">11</div>
+      <div class="label">Life Path</div>
+      <div class="sub">Visionary &middot; Intuitive</div>
+    </div>
+    <div class="chart-cell">
+      <div class="number">49</div>
+      <div class="label">Your Age</div>
+      <div class="sub">Prime Wisdom Phase</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider divider--section"></div>
+
+<!-- strengths / habits -->
+<div class="section">
+  <div class="section-header">
+    <div class="eyebrow">Habits to Strengthen</div>
+    <h2>Three Financial Disciplines</h2>
+    <p>Stoic virtues you already carry &mdash; sharpened.</p>
+  </div>
+
+  <div class="habits">
+    <div class="habit-card">
+      <span class="num">01</span>
+      <span class="tag">Prudence &middot; &#x1F4C�;</span>
+      <h3>Compound Patience</h3>
+      <p>You do not need to swing at every pitch. The Cancer instinct to protect capital is not timidity &mdash; it is the <em>long view</em>. Every decision you make today is a seed planted for a decade from now. The market rewards those who sit still while others scramble. Let your portfolio speak through time, not noise.</p>
+      <blockquote>&ldquo;We suffer more often in imagination than in reality.&rdquo; &mdash; Seneca</blockquote>
+    </div>
+
+    <div class="habit-card">
+      <span class="num">02</span>
+      <span class="tag">Wisdom &middot; &#x1F4A1;</span>
+      <h3>Signal Before Noise</h3>
+      <p>With the Visionary&rsquo;s eye, you can sense trends before they surface. Trust your pattern recognition &mdash; but verify it with data. The greatest investment edge is not intelligence but <em>temperament</em>. Read the annual report, not the daily headline. Your gut, disciplined by knowledge, is your strongest tool.</p>
+      <blockquote>&ldquo;First learn the meaning of what you say, and then speak.&rdquo; &mdash; Epictetus</blockquote>
+    </div>
+
+    <div class="habit-card">
+      <span class="num">03</span>
+      <span class="tag">Justice &middot; &#x1F30D;</span>
+      <h3>Wealth as Stewardship</h3>
+      <p>The Stoics believed that wealth exists to be used for the common good, not hoarded. At 49, you are entering the phase where the question shifts from <em>&ldquo;How much can I make?&rdquo;</em> to <em>&ldquo;What am I building that outlasts me?&rdquo;</em> Whether through mentorship, family provision, or investment in businesses that matter &mdash; money is a tool. The purpose is the life it serves.</p>
+      <blockquote>&ldquo;Wherever there is a human being, there is an opportunity for kindness.&rdquo; &mdash; Seneca</blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="divider divider--section"></div>
+
+<!-- traps -->
+<div class="section">
+  <div class="section-header">
+    <div class="eyebrow">Blind Spots</div>
+    <h2>Two Emotional Traps to Watch</h2>
+    <p>The quiet patterns that can undo discipline.</p>
+  </div>
+
+  <div class="traps">
+    <div class="trap-card">
+      <div class="icon">&#x1F98B;</div>
+      <h3>The Shell</h3>
+      <p>Cancer protects itself by retreating. In investing, this becomes <em>analysis paralysis</em> &mdash; waiting for perfect information that never arrives. The Stoic cure: define your criteria beforehand, then act when they are met. Not every decision needs seven layers of review. Some need courage.</p>
+    </div>
+    <div class="trap-card">
+      <div class="icon">&#x1F314;</div>
+      <h3>The Vision Trap</h3>
+      <p>Life Path 11 sees the future vividly. The danger is falling in love with your own narrative &mdash; holding a position because it confirms your story, not because the facts still support it. The Stoic cure: detach from outcomes. Love the process, not the prediction. Let the evidence, not your ego, decide the exit.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider divider--section"></div>
+
+<!-- 30-day practice -->
+<div class="section">
+  <div class="section-header">
+    <div class="eyebrow">Practice</div>
+    <h2>The 30-Day Wealth Audit</h2>
+    <p>One small discipline to reshape your relationship with money.</p>
+  </div>
+
+  <div class="practice-box">
+    <div class="eyebrow">&#x1F9F0; 30-Day Exercise</div>
+    <h3>The Stoic Ledger</h3>
+    <ol>
+      <li><strong>Morning (2 min):</strong> Before you check any portfolio, ask &mdash; <em>&ldquo;What decision today would my future self thank me for?&rdquo;</em> Write the answer in one sentence.</li>
+      <li><strong>Evening (3 min):</strong> Review: did I act from <em>fear</em>, <em>greed</em>, or <em>principle</em> today? Mark each financial action with one of these three words. No judgment &mdash; just awareness.</li>
+      <li><strong>Weekly (10 min):</strong> Read your week&rsquo;s notes. Look for patterns. Which emotion appeared most often? That is the one to watch.</li>
+      <li><strong>Day 30:</strong> Destroy the ledger (or archive it). You no longer need it &mdash; the habit of awareness is now inside you.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="divider divider--section"></div>
+
+<!-- journal question -->
+<div class="section">
+  <div class="section-header">
+    <div class="eyebrow">Journal Question</div>
+  </div>
+
+  <div class="question-box">
+    <div class="eyebrow">&#x270D;&#xFE0F; Reflect on this</div>
+    <p class="question">&ldquo;If I could not measure my success by my net worth, what would I measure it by &mdash; and am I investing enough in <em>that</em>?&rdquo;</p>
+  </div>
+</div>
+
+<!-- next page preview / CTA -->
+<section class="preview-section">
+  <h2>The Deeper Chart Awaits</h2>
+  <p>This free reading used your birth date and the symbolic language of numerology and the zodiac. A full natal-chart reading &mdash; using your <strong>exact birth time and birthplace</strong> &mdash; would reveal the specific houses where your wealth patterns live, the aspects between planets that shape your risk personality, and the timing cycles that influence major financial decisions.</p>
+  <p>One question it could answer: <em>What blind spot in your investment approach is tied to an unconscious emotional pattern you have never named?</em></p>
+
+  <div class="btn-group">
+    <button class="btn btn-primary" onclick="alert('Thank you! To save this reading and receive the next chapter, email marc@stoiczodiac.com with your consent. We will never share your data.')">&#x2709;&#xFE0F; Save This Reading</button>
+    <button class="btn btn-secondary" onclick="alert('For a full natal-chart wealth reading including your birth time and birthplace, reach out to marc@stoiczodiac.com. This is a paid deep-dive service.')">&#x1F50D; Explore the Full Reading</button>
+  </div>
+  <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">You can opt out of any communication at any time. Your data is never shared.</p>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+  <p>Stoic Zodiac &mdash; <em>&ldquo;Know yourself. Govern yourself.&rdquo;</em></p>
+  <p style="margin-top: 0.5rem;">
+    <a href="#" onclick="alert('This reading is a symbolic reflection, not a financial prediction or professional advice. Consult a licensed financial advisor for investment decisions.'); return false;">Disclaimer</a>
+  </p>
+</footer>
