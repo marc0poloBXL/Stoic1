@@ -22,11 +22,10 @@ Use 3–4 per post from this group.
 | #philosophy | 5M+ | Broad |
 | #wisdom | 3M+ | Broad |
 | #mindset | 10M+ | Broad |
-| #stoicismdaily | 100K+ | Niche |
-| #dailystoic | 150K+ | Niche |
-| #stoicmindset | 200K+ | Niche |
+| #stoicismdaily | 100K+ | Broad |
+| #stoicmindset | 200K+ | Broad |
 | #stoicquotes | 500K+ | Broad |
-| #philosophyquotes | 100K+ | Niche |
+| #philosophyquotes | 100K+ | Broad |
 
 ---
 
@@ -69,7 +68,6 @@ Use 3–4 per post from this group. These are your **discovery tags**.
 | #zodiacmindset | 15K+ | Niche |
 | #astrologydaily | 50K+ | Niche |
 | #spiritualgrowth | 500K+ | Broad |
-| #selfmastery | 50K+ | Niche |
 
 ---
 

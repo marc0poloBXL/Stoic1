@@ -18,6 +18,12 @@ MASTER_DATA_PATH = os.path.join(
     "sign_master_data.json",
 )
 
+# Resolve default output dir from script location (not cwd)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.normpath(os.path.join(SCRIPT_DIR, '..', '..'))
+DEFAULT_OUTPUT_DIR = os.path.join(PROJECT_ROOT, '03_CONTENT_CALENDAR', 'generated')
+
+
 REEL_TYPES = [
     "Quote Narration",
     "Sign Comparison",
@@ -178,7 +184,7 @@ def main():
                         help="Start date YYYY-MM-DD (default: next Monday)")
     parser.add_argument("--week", type=int, default=None,
                         help="Week number from launch (week 1 = Aug 17, 2026). Overrides --start-date")
-    parser.add_argument("--output-dir", default=os.path.join("..", "..", "03_CONTENT_CALENDAR", "generated"),
+    parser.add_argument("--output-dir", default=DEFAULT_OUTPUT_DIR,
                         help="Output directory")
     parser.add_argument("--master-data", default=None,
                         help="Path to sign_master_data.json (auto-detected by default)")

@@ -27,7 +27,16 @@ Central repository for all visual and audiovisual assets used across the Stoic Z
 └── SCHEDULED/        # Content in pre/post-production pipeline
     ├── draft/        # Work-in-progress assets
     ├── review/       # Assets pending approval
-    └── approved/     # Final assets ready for posting
+    ├── approved/     # Final assets ready for posting
+    └── week_YYYYMMDD/   # One per week
+        ├── quotes/       # Quote PNGs + captions
+        ├── quotes_svg/   # SVG quote card sources
+        ├── quotes_png/   # PNG quote cards (1080x1080, rendered)
+        ├── stories/      # Story PNGs + prompts
+        ├── stories_svg/  # SVG story card sources
+        ├── stories_png/  # PNG stories (1080x1920, rendered)
+        ├── carousels/    # Carousel slides by type (subfolders)
+        └── reels/        # Reel videos (MP4)
 ```
 
 ## Related Folders

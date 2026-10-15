@@ -425,9 +425,16 @@ class QueueHandler:
                            or self._exists_in_suffix(self.failed_dir, story_img.name):
                             continue
                         shutil.copy2(str(story_img), str(dest))
-                        cap_src = stories_dir / f"{story_img.stem}.txt"
-                        if cap_src.exists():
-                            shutil.copy2(str(cap_src), self.stories_dir / cap_src.name)
+                        # Try .txt caption, then .md (generate .txt from .md)
+                        cap_src_txt = stories_dir / f"{story_img.stem}.txt"
+                        cap_src_md = stories_dir / f"{story_img.stem}.md"
+                        if cap_src_txt.exists():
+                            shutil.copy2(str(cap_src_txt), self.stories_dir / cap_src_txt.name)
+                        elif cap_src_md.exists():
+                            txt_content = self._clean_caption(cap_src_md)
+                            dest_txt = self.stories_dir / f"{story_img.stem}.txt"
+                            with open(dest_txt, "w", encoding="utf-8") as f:
+                                f.write(txt_content)
                         imported += 1
                         logger.info(f"Imported story: {story_img.name}")
 
@@ -477,7 +484,20 @@ class QueueHandler:
         stem = img_path.stem  # e.g. 2026-09-21_virgo_quote
         base = _re.sub(r"_quote$", "", stem)  # e.g. 2026-09-21_virgo
 
-        caption_sources = [
+        caption_sources = []
+
+        # Source of truth: captions/ subfolder
+        if week_path:
+            caps_dir = week_path / "captions"
+            caption_sources += [
+                caps_dir / f"{base}_caption.txt",
+                caps_dir / f"{base}_caption.md",
+                caps_dir / f"{stem}.txt",
+                caps_dir / f"{stem}.md",
+            ]
+
+        # Fallback: same-stem sidecar next to the image
+        caption_sources += [
             img_path.with_suffix(".txt"),                          # same stem
             img_path.with_suffix(".md"),
         ]
@@ -485,16 +505,6 @@ class QueueHandler:
             caption_sources += [
                 img_path.with_name(f"{base}_caption.txt"),
                 img_path.with_name(f"{base}_caption.md"),
-            ]
-
-        # Also look in the captions/ subfolder if provided week_path
-        if week_path:
-            caps_dir = week_path / "captions"
-            caption_sources += [
-                caps_dir / f"{stem}.txt",
-                caps_dir / f"{stem}.md",
-                caps_dir / f"{base}_caption.txt",
-                caps_dir / f"{base}_caption.md",
             ]
 
         caption_path = None

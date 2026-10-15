@@ -152,17 +152,17 @@ Slide 11: CTA — "Save this. Check your sign. Follow @stoiczodiac"
 | Zodiac Sign | Stoic Philosopher | Reason |
 |-------------|-------------------|--------|
 | ♈ Aries | Marcus Aurelius | Warrior-emperor, action-oriented |
-| ♉ Taurus | Zeno of Citium | Founder, grounded, enduring |
-| ♊ Gemini | Chrysippus | Brilliant logician, prolific writer |
-| ♋ Cancer | Musonius Rufus | Teacher of compassion, Roman Socrates |
+| ♉ Taurus | Seneca | Practical wisdom, wealth and freedom |
+| ♊ Gemini | Epictetus | Clear thinking, sharp discernment |
+| ♋ Cancer | Marcus Aurelius | Nurturing strength, inner steadfastness |
 | ♌ Leo | Seneca | Powerful advisor, eloquent, wise |
 | ♍ Virgo | Epictetus | Discipline, precision, clarity |
-| ♎ Libra | Cicero (Stoic-leaning) | Justice, balance, rhetoric |
-| ♏ Scorpio | Marcus Aurelius | Depth, transformation, inner strength |
-| ♐ Sagittarius | Zeno of Citium | Explorer of ideas, founder’s spirit |
-| ♑ Capricorn | Epictetus | Discipline, endurance, mastery |
+| ♎ Libra | Marcus Aurelius | Justice, fairness, inner balance |
+| ♏ Scorpio | Seneca | Depth, transformation, resilience |
+| ♐ Sagittarius | Epictetus | Freedom through inner discipline |
+| ♑ Capricorn | Marcus Aurelius | Endurance, duty, self-mastery |
 | ♒ Aquarius | Seneca | Big-picture thinker, humanitarian |
-| ♓ Pisces | Musonius Rufus | Deep empathy, soul teacher |
+| ♓ Pisces | Epictetus | Empathy, surrender, flow |
 
 ---
 

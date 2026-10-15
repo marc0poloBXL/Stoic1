@@ -2,7 +2,7 @@
 """
 generate_all_svgs.py — Generate SVG quote cards + stories for ALL weeks.
 Reads existing text content (quotes/*.md, stories/*.md) from each week folder
-and produces matching SVGs, then converts them to PNGs via render_pngs.js.
+and produces matching SVGs, then converts them to PNGs (--png flag, via Playwright).
 
 Usage:
     python generate_all_svgs.py                    # Process all weeks
@@ -36,7 +36,7 @@ with open(SIGN_MASTER_PATH, "r", encoding="utf-8") as f:
     sign_data = json.load(f)
 
 sign_map = {s["id"]: s for s in sign_data["signs"]}
-philosopher_map = {p["name"]: p for p in sign_data["philosophers"]}
+# philosopher_map is unused — sign/philosopher data accessed via sign_data["philosophers"] directly
 
 # ── Helper: parse a quote .md file ──
 def parse_quote_file(filepath):
@@ -47,10 +47,10 @@ def parse_quote_file(filepath):
     quote_match = re.search(r'>\s*"(.+?)"', text, re.DOTALL)
     quote = quote_match.group(1).strip() if quote_match else ""
 
-    app_match = re.search(r'## Application\n\n(.+?)(?=\n##|\Z)', text, re.DOTALL)
+    app_match = re.search(r'## Application\n(.+?)(?=\n## |\Z)', text, re.DOTALL)
     application = app_match.group(1).strip() if app_match else ""
 
-    chal_match = re.search(r'## Daily Challenge\n\n(.+?)$', text, re.DOTALL)
+    chal_match = re.search(r'## Daily Challenge\n(.+?)(?=\n#|\Z)', text, re.DOTALL)
     challenge = chal_match.group(1).strip() if chal_match else ""
 
     # Extract sign and theme from first lines
