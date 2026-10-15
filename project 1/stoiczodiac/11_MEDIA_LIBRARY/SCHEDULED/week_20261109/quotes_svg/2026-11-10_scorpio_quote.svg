@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad)"/>
+  <rect x="30" y="30" width="1020" height="1020" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.7"/>
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+  <line x1="240" y1="60" x2="840" y2="60" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="240" y1="1018" x2="840" y2="1018" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.5"/>
+
+  <rect x="340" y="100" width="400" height="44" rx="22" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+  <text x="540" y="127" font-family="Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="5" fill="#D4AF37" text-anchor="middle" opacity="0.85">STOIC WISDOM</text>
+
+  <text x="940" y="190" font-family="serif" font-size="56" fill="#6C3483" text-anchor="end" opacity="0.9">♏</text>
+  <text x="940" y="220" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#6C3483" text-anchor="end" letter-spacing="3" opacity="0.7">SCORPIO</text>
+  <text x="940" y="240" font-family="Arial, sans-serif" font-size="11" fill="#6C3483" text-anchor="end" letter-spacing="1" opacity="0.4">WATER</text>
+
+  <rect x="380" y="175" width="320" height="32" rx="16" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.4"/>
+  <text x="540" y="196" font-family="Arial, sans-serif" font-size="12" font-weight="500" letter-spacing="2" fill="#C9A96E" text-anchor="middle" opacity="0.6">THE REBORN SOUL</text>
+
+  <line x1="250" y1="280" x2="830" y2="280" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.2"/>
+
+    <text x="540" y="380" font-family="Georgia, serif" font-size="36" fill="#D4AF37" text-anchor="middle" font-style="italic">\u201cWe suffer more often in imagination than in</text>
+  <text x="540" y="438" font-family="Georgia, serif" font-size="36" fill="#D4AF37" text-anchor="middle" font-style="italic">reality.\u201d</text>
+
+
+  <line x1="400" y1="610" x2="680" y2="610" stroke="#D4AF37" stroke-width="0.5" opacity="0.2"/>
+  <text x="540" y="640" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#F5F5F5" text-anchor="middle" opacity="0.85">— Seneca</text>
+
+  <line x1="200" y1="770" x2="880" y2="770" stroke="#C9A96E" stroke-width="0.5" opacity="0.15"/>
+  <text x="540" y="810" font-family="Arial, sans-serif" font-size="15" fill="#F5F5F5" text-anchor="middle" opacity="0.6"></text>
+
+  <rect x="340" y="860" width="400" height="38" rx="19" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+  <text x="540" y="885" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#D4AF37" text-anchor="middle" letter-spacing="1">TODAY: </text>
+
+  <text x="540" y="1000" font-family="Arial, sans-serif" font-size="12" fill="#F5F5F5" text-anchor="middle" opacity="0.3" letter-spacing="2">@STOICZODIAC</text>
+</svg>
