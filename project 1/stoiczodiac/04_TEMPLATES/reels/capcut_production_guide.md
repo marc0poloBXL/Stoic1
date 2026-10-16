@@ -13,7 +13,7 @@
 1. Open CapCut → **New Project** → Settings: 1080×1920, 30fps
 2. **Import Media**:
    - Background video clips (Pexels: dark marble, stars, flames, ocean — slow motion)
-   - Voiceover MP3 files (from ElevenLabs or TTSMaker)
+   - Voiceover MP3 files (from VibeVoice — self-hosted, replaces ElevenLabs — or TTSMaker)
    - Music track (royalty-free ambient/lo-fi)
 3. **Import Text Assets**: (optional, Canva-designed title cards)
 
@@ -71,7 +71,7 @@ CapCut doesn't support project file import, but the three templates below give y
    - Animation: "Scale up"
 
 ### Audio Sync
-1. Import voiceover MP3 (from ElevenLabs)
+1. Import voiceover MP3 (from VibeVoice — replaces ElevenLabs)
 2. Place at 3:00 on timeline
 3. Generate captions: **Text → Auto Captions** → Language: English
 4. Style captions: Raleway 14pt, Gold, transparent background
@@ -217,7 +217,7 @@ Once built, save each as a **CapCut Template**:
 [ ] 0:02–0:08 — Replace B-roll clip with correct sign's visual
 [ ] 0:08–0:12 — Update text: sign, quote, philosopher name
 [ ] 0:12–0:15 — Update sign accent color in text elements
-[ ] 0:15–0:20 — Import new voiceover from ElevenLabs → sync
+[ ] 0:15–0:20 — Import new voiceover from VibeVoice (replaces ElevenLabs) → sync
 [ ] 0:20–0:25 — Adjust auto-captions timing
 [ ] 0:25–0:28 — Add/review hashtag overlay (last frame)
 [ ] 0:28–0:30 — Export: MP4, H.264, 30fps, 1080×1920
@@ -249,12 +249,14 @@ reel_[type]_[sign]_[YYYYMMDD].mp4
 
 ## 🎧 Audio Sources
 
-### Voiceover (ElevenLabs Free — 10K chars/month)
+### Voiceover (VibeVoice — self-hosted, replaces ElevenLabs)
+> ⚠️ **Tool change**: ElevenLabs has been replaced by **VibeVoice** — self-hosted, unlimited.
+> Generate voices via `05_AI_WORKFLOWS/VibeVoice` (see its README), then download MP3.
+
 1. Copy script from `07_AUDIO/voiceover_scripts/reel_voiceover_bank.md`
-2. Paste into ElevenLabs
-3. Voice: "Adam" (premade)
-4. Settings: Stability 35%, Similarity 80%, Style Exaggeration 20%
-5. Generate → Download MP3 → Import to CapCut
+2. Generate voiceover in VibeVoice (via `05_AI_WORKFLOWS/VibeVoice/batch_generate_voiceovers.py`)
+3. Tune voice settings within VibeVoice
+4. Download MP3 → Import to CapCut
 
 ### Background Music (Royalty-Free)
 | Mood | Search Term | Source |

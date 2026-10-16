@@ -55,7 +55,20 @@
 
 ---
 
-## Week 4 — Sep 7–13 ## Week 10 — Oct 19 – Oct 25 🟡 IN PROGRESS
+## Week 4 — Sep 7–13 🔵 STAGED
+
+| Item | Status |
+|------|--------|
+| Batch brief | ✅ |
+| Quotes + Captions | □ |
+| Reels | □ |
+| Carousels | □ |
+
+> **Batch brief**: `week_20260907/WEEKLY_BATCH_BRIEF.md`
+
+---
+
+## Week 10 — Oct 19 – Oct 25 🟡 IN PROGRESS
 
 
 | Item | Status |
@@ -206,8 +219,3 @@
 ---
 
 ⚪ FUTURE
-## Week 5 — Sep 14–20 ⚪ FUTURE
-## Week 6 — Sep 21–27 ⚪ FUTURE
-## Week 7 — Sep 28–Oct 4 ⚪ FUTURE
-## Week 8 — Oct 5–11 ⚪ FUTURE
-## Week 9 — Oct 12–15 ⚪ FUTURE

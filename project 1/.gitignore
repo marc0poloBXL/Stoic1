@@ -1,0 +1,40 @@
+# --- Secrets & Environment ---
+.env
+.env.*
+!.env.example
+
+# --- Dependencies ---
+node_modules/
+
+# --- Build Output ---
+dist/
+
+# --- Junk clone (3GB, accidental) ---
+voltagent/
+
+# --- Vercel ---
+.vercel
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# --- IDE ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Generated assets (track intentionally, never blindly) ---
+stoiczodiac/06_AUTOMATION/stoic_scheduler/queued_carousels/*.png
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
