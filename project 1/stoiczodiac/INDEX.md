@@ -11,6 +11,7 @@
 stoiczodiac/
 │
 ├── INDEX.md                          ← YOU ARE HERE
+├── zodiac-gallery.html               ← Gallery page (CDN images, cdn.leonardo.ai)
 ├── 00_MASTER_PLAN/
 │   └── README.md                     ← The core blueprint (start here)
 │
